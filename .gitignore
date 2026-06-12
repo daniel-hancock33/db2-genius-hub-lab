@@ -1,0 +1,24 @@
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor directories
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*.bak
+*.tmp
+
+# MkDocs (if someone tries to use it)
+site/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
