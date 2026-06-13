@@ -162,6 +162,6 @@ Available performance simulation scenarios:
 ---
 ### Next Steps
 
-This completes the introduction of Db2 Genius Hub. Proceed to [Section 2. The Setup](01_setup.md).
+This completes the introduction of Db2 Genius Hub. Proceed to [Section 2. The Setup](01-setup.md).
 
 ---
