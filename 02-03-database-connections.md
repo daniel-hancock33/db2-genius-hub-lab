@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.3 — Database Connections</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Database Connections</h2>
 
 From the side menu, go to the Db2 Genius Hub home page **(a)**.
 

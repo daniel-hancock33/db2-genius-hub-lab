@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.1 — Login and Repository Setup</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Genius Hub Login</h2>
 
 Open a browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari) and navigate to the Db2 Genius Hub URL provided by your instructor.
 

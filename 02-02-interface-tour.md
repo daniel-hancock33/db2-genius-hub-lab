@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.2 — Interface Tour</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Getting to Know the Main Interfaces</h2>
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Home Page</h3>
 

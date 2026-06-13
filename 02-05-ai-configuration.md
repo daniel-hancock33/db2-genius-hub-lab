@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.5 — AI Configuration and Event Monitors</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Set Up Your AI Configuration</h2>
 
 To enable the Db2 Agentic AI service in Genius Hub, you need to create an organization and API key from [db2.ibm.com](https://db2.ibm.com), then configure Genius Hub to use it.
 

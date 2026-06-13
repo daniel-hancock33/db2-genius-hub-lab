@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">4.4 — Alerts and Jobs</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Alerts</h2>
 
 Now that you have identified an anomaly, configure alerts so you are notified if it recurs.
 

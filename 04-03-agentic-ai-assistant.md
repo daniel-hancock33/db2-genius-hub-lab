@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">4.3 — Agentic AI Assistant</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Using the Agentic AI Assistant</h2>
 
 1. Click the **Agentic AI Assistant (a)** menu item.
 

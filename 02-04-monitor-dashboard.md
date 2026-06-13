@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.4 — Monitor Dashboard</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Monitor Dashboard</h2>
 
 From the side menu, click **Monitor (a)**.
 

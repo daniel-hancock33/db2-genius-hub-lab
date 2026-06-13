@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">3.2 — Visual Explain</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Visual Explain</h2>
 
 1. Go back to the **second tab (a)**. Select the query with the **CODE = 2512** WHERE clause **(b)** and click **Explain the statement (c)**.
 

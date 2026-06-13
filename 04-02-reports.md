@@ -1,6 +1,5 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">4.2 — Reports</h1>
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Reports</h2>
 
 Now that you have identified the cause of the CPU spike, generate a report to document the findings. Reports can be shared, kept for historical reference, or scheduled to run automatically.
 
