@@ -802,7 +802,7 @@ Before starting the data load in the next section, add the **Utilities** and **U
 
 ---
 
-### 2.10 Next Steps
+### 2.10 Next
 
 This completes the Basics of Db2 Genius Hub. Proceed to [Section 3. SQL Workbench](03-workbench.md).
 
