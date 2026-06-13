@@ -1,22 +1,14 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
-
-
-# Section 1 — The Setup
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 1 — The Setup</h1>
 
 This lab uses a single virtual machine on an IBM Cloud environment that includes Db2, Db2 Genius Hub, and an Agentic Application to simulate workload scenarios.
 
 ---
 
-## Environment Overview
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Environment Overview</h2>
 
 The lab environment is fully provisioned — all required components are pre-installed so you can focus on exploration and hands-on tasks rather than installation.
 
-### Installed Components
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Installed Components</h3>
 
 | Component | Version |
 |---|---|
@@ -24,7 +16,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 | Db2 Genius Hub | 1.1.2.0 |
 | Agentic Demo UI | — |
 
-### Pre-Configured Databases
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Pre-Configured Databases</h3>
 
 | Database | Notes |
 |---|---|
@@ -32,7 +24,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 | `demo_row` | Row-organized database |
 | `REPODB` | Created on first Genius Hub login |
 
-### Utility Scripts
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Utility Scripts</h3>
 
 | Script | Purpose |
 |---|---|
@@ -45,7 +37,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
-## Accessing the Lab Environment
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing the Lab Environment</h2>
 
 | Service | Endpoint |
 |---|---|
@@ -60,16 +52,16 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
-## Default Credentials
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Default Credentials</h2>
 
-### Genius Hub UI
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Genius Hub UI</h3>
 
 | Field | Value |
 |---|---|
 | Username | `admin` |
 | Password | `Db2ghPassw0rd#1` |
 
-### Db2 Users
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Db2 Users</h3>
 
 The following users are pre-configured. All share the same password.
 
@@ -81,13 +73,13 @@ The following users are pre-configured. All share the same password.
 
 ---
 
-## Setup and Configuration
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup and Configuration</h2>
 
 Follow these steps to prepare the environment for the lab.
 
 ---
 
-### Step 1 — Student SSH Access
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Student SSH Access</h3>
 
 This guide will help you connect to your IBM TechZone lab environment using SSH (Secure Shell). Your instructor will provide:
 
@@ -96,7 +88,7 @@ This guide will help you connect to your IBM TechZone lab environment using SSH 
 
 All students connect as the `db2demo` user on their own dedicated VM.
 
-#### Prerequisites
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Prerequisites</h4>
 
 **Windows Users** — You'll need an SSH client:
 
@@ -109,7 +101,7 @@ All students connect as the `db2demo` user on their own dedicated VM.
 
 ---
 
-#### Step 1a — Get Your PEM File and IP Address
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1a — Get Your PEM File and IP Address</h4>
 
 Your instructor will provide:
 - Your `.pem` file (e.g., `student_01.pem`)
@@ -119,7 +111,7 @@ Write them down — you'll need them throughout the lab.
 
 ---
 
-#### Step 1b — Set File Permissions
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1b — Set File Permissions</h4>
 
 > **🔒 Security requirement:** SSH requires that your private key file is not publicly readable.
 
@@ -150,7 +142,7 @@ icacls student_01.pem /grant:r "%USERNAME%:F"
 
 ---
 
-#### Step 1c — Connect via SSH
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1c — Connect via SSH</h4>
 
 **Mac/Linux/Windows (PowerShell or Command Prompt):**
 
@@ -202,7 +194,7 @@ Then connect using PuTTY:
 
 ---
 
-### Step 2 — Start Genius Hub Services
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Start Genius Hub Services</h3>
 
 Switch to the `db2ghadm` user:
 
@@ -269,7 +261,7 @@ Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
 
 ---
 
-## Architecture Summary
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Architecture Summary</h2>
 
 | Layer | Technology |
 |---|---|
@@ -281,7 +273,7 @@ Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
 
 ---
 
-## What You Will Achieve
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">What You Will Achieve</h2>
 
 By completing this section, you will:
 
@@ -296,10 +288,10 @@ By completing this section, you will:
 
 ---
 
-## Next Steps
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
 This completes the setup of Db2 Genius Hub.
 
-**[→ Proceed to Part 2: The Basics](02-basics.md)**
+**[→ Proceed to Section 2: The Basics](02-basics.md)**
 
 ---

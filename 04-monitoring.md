@@ -1,12 +1,4 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
-
-
-# Section 4 — Monitoring Databases
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 4 — Monitoring Databases</h1>
 
 Now that you have learned the basics, let's start monitoring databases.
 
@@ -22,7 +14,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-## Start the Data Load
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Start the Data Load</h2>
 
 1. SSH into the VM as `db2demo`. See [Section 1 — Student SSH Access](01-setup.md#step-1--student-ssh-access) for instructions.
 
@@ -85,7 +77,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-## Using Drill-Down for Investigation
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Using Drill-Down for Investigation</h2>
 
 1. Click the small dot **(a)** to drill down for more details.
 
@@ -95,7 +87,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
    <img src="images/GH-drill-down-result.png" width="800"/>
 
-### Checking the Utilities
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Checking the Utilities</h3>
 
 3. Click **View more charts (a)** to collapse extra charts.
 
@@ -121,7 +113,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-## Reports
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Reports</h2>
 
 Now that you have identified the cause of the CPU spike, generate a report to document the findings. Reports can be shared, kept for historical reference, or scheduled to run automatically.
 
@@ -208,7 +200,7 @@ Now that you have identified the cause of the CPU spike, generate a report to do
 
 ---
 
-## Using the Agentic AI Assistant
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Using the Agentic AI Assistant</h2>
 
 1. Click the **Agentic AI Assistant (a)** menu item.
 
@@ -311,7 +303,7 @@ Now that you have identified the cause of the CPU spike, generate a report to do
 
 ---
 
-### Database Assistant Operation Modes
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Database Assistant Operation Modes</h3>
 
 Db2 Genius Hub provides 2 additional operation modes for the Database Assistant:
 
@@ -326,7 +318,7 @@ Db2 Genius Hub provides 2 additional operation modes for the Database Assistant:
 2. The assistant streams progress updates: planning, researching, validating, and report generation.
 3. When complete, view both the answer and detailed research activity with citations.
 
-#### Agent Mode Sample Questions
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Agent Mode Sample Questions</h4>
 
 Ensure **Agent Mode (a)** is selected, then try:
 
@@ -346,7 +338,7 @@ Agent Mode also handles:
 | Text2SQL | Natural language to SQL |
 | Conversational search | Ask questions in plain English |
 
-#### Deep Research Sample Questions
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Deep Research Sample Questions</h4>
 
 - `How to set up HADR in db2?`
 - `Are there any queuing taking place? If so, can you tell me which is in the head of the queue?`
@@ -358,7 +350,7 @@ Agent Mode also handles:
 - `What activities are currently running in my database?`
 - `How much of my transaction log space is currently being used?`
 
-#### Close the Agentic AI Assistant
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Close the Agentic AI Assistant</h4>
 
 Click the **Close (a)** button in the top right corner of the Agentic AI Assistant window.
 
@@ -366,7 +358,7 @@ Click the **Close (a)** button in the top right corner of the Agentic AI Assista
 
 ---
 
-## Alerts
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Alerts</h2>
 
 Now that you have identified an anomaly, configure alerts so you are notified if it recurs.
 
@@ -427,7 +419,7 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
 ---
 
-## Query Monitoring
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Query Monitoring</h2>
 
 1. SSH into the VM as `db2demo` and run the workload exerciser script:
 
@@ -629,7 +621,7 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
 ---
 
-## Jobs
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Jobs</h2>
 
 You can use Db2 Genius Hub to create and schedule jobs.
 
@@ -727,10 +719,10 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 ---
 
-## Next Steps
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
 This completes the Monitoring Databases section.
 
-**[→ Proceed to Part 5: Agentic AI Simulator](05-agentic-ai-simulator.md)**
+**[→ Proceed to Section 5: Agentic AI Simulator](05-agentic-ai-simulator.md)**
 
 ---

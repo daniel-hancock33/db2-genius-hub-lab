@@ -1,12 +1,4 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
-
-
-# Section 3 — SQL Workbench
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 3 — SQL Workbench</h1>
 
 You can use the Workbench to run SQL statements, generate Visual Explains, tune queries, run What-If Analysis, and run Impact Analysis reports.
 
@@ -14,7 +6,7 @@ You can use the Workbench to run SQL statements, generate Visual Explains, tune 
 
 ---
 
-## SQL Editor
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">SQL Editor</h2>
 
 1. From the side menu, select **SQL Workbench (a)**.
 
@@ -39,7 +31,7 @@ For this lab, we will use manual entry.
 
 ---
 
-### Create a Table and Insert Data
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Create a Table and Insert Data</h3>
 
 3. Use the new tab to create a table and insert the first rows using the following SQL:
 
@@ -65,7 +57,7 @@ For this lab, we will use manual entry.
 
 ---
 
-### Explore Table Details
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Explore Table Details</h3>
 
 6. Reload the object list to see your new table:
 
@@ -115,7 +107,7 @@ For this lab, we will use manual entry.
 
 ---
 
-### Run Queries
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Run Queries</h3>
 
 11. On the left side, right-click **`MYTABLE` (b)**. Select **Generate DML (c)** → **Select (d)**.
 
@@ -151,7 +143,7 @@ For this lab, we will use manual entry.
 
 ---
 
-### Generate a Large Dataset
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Generate a Large Dataset</h3>
 
 15. Copy/paste the following insert statements **(b)** to generate 17,000 rows:
 
@@ -187,7 +179,7 @@ For this lab, we will use manual entry.
 
 ---
 
-## Visual Explain
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Visual Explain</h2>
 
 1. Go back to the **second tab (a)**. Select the query with the **CODE = 2512** WHERE clause **(b)** and click **Explain the statement (c)**.
 
@@ -205,7 +197,7 @@ For this lab, we will use manual entry.
 
 ---
 
-## Query Tuning
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Query Tuning</h2>
 
 1. From the Visual Explain results, click **Tune query (a)** at the lower-right side of the screen.
 
@@ -303,7 +295,7 @@ For this lab, we will use manual entry.
 
 ---
 
-## Query Plan Comparison
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Query Plan Comparison</h2>
 
 The tables below compare the two execution plans — with and without the index applied.
 
@@ -322,7 +314,7 @@ The tables below compare the two execution plans — with and without the index 
 
 ---
 
-## What-If Analysis *(Coming Soon)*
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">What-If Analysis *(Coming Soon)*</h2>
 
 > **📌 Placeholder:** This section is reserved for future lab tasks.
 
@@ -330,7 +322,7 @@ The what-if analysis shows how a query will behave if an index is applied — wi
 
 ---
 
-## Impact Analysis *(Coming Soon)*
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Impact Analysis *(Coming Soon)*</h2>
 
 > **📌 Placeholder:** This section is reserved for future lab tasks.
 
@@ -338,7 +330,7 @@ The Impact Analysis report shows how the recommended index will affect the perfo
 
 ---
 
-## Query Workload *(Coming Soon)*
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Query Workload *(Coming Soon)*</h2>
 
 > **📌 Placeholder:** This section is reserved for future lab tasks.
 
@@ -346,10 +338,10 @@ The Query Workload feature tunes several queries simultaneously and recommends i
 
 ---
 
-## Next Steps
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
 This completes the SQL Workbench section.
 
-**[→ Proceed to Part 4: Monitoring Databases](04-monitoring.md)**
+**[→ Proceed to Section 4: Monitoring Databases](04-monitoring.md)**
 
 ---

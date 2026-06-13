@@ -1,12 +1,4 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
-
-
-# Section 2 — The Basics
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 2 — The Basics</h1>
 
 In the previous section, you connected to your dedicated virtual machine and started the Db2 Genius Hub services. This section shifts focus to the Genius Hub UI itself — learning your way around the interface and understanding the key pages and features you'll use throughout the rest of the lab.
 
@@ -14,7 +6,7 @@ In the previous section, you connected to your dedicated virtual machine and sta
 
 ---
 
-## Genius Hub Login
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Genius Hub Login</h2>
 
 Open a browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari) and navigate to the Db2 Genius Hub URL provided by your instructor.
 
@@ -35,11 +27,11 @@ Click **Accept all** *(c)*, then click **Login** *(d)*.
 
 ---
 
-## Configure Repository (First Login Setup)
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Configure Repository (First Login Setup)</h2>
 
 At first login, you must configure the repository database to initialize the IBM Db2 Genius Hub environment.
 
-### Step 1 — Configure Repository
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Configure Repository</h3>
 
 After logging in, you will be automatically taken to the **Configure repository** page.
 
@@ -74,7 +66,7 @@ Click **Next** *(g)* to continue.
 
 ---
 
-### Step 2 — Set Statistics Event Monitor Opt-In
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Set Statistics Event Monitor Opt-In</h3>
 
 <img src="images/stats-monitor-opt-in.png" width="800"/>
 
@@ -88,7 +80,7 @@ Click **Next** to continue.
 
 ---
 
-### Step 3 — Connection and Database
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Connection and Database</h3>
 
 Configure the connection parameters to establish a connection to your Db2 database.
 
@@ -147,9 +139,9 @@ After clicking **Save**, you will be brought to the **Success!** page. Click **G
 
 ---
 
-## Getting to Know the Main Interfaces
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Getting to Know the Main Interfaces</h2>
 
-### Home Page
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Home Page</h3>
 
 The Db2 Genius Hub home page provides a summary of all databases being monitored, showing alerts, key insights, and the list of database connections.
 
@@ -157,7 +149,7 @@ The Db2 Genius Hub home page provides a summary of all databases being monitored
 
 ---
 
-### Key Insights Section
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Key Insights Section</h3>
 
 In the upper-middle section, Db2 Genius Hub shows performance metrics for five databases:
 
@@ -170,7 +162,7 @@ In the upper-middle section, Db2 Genius Hub shows performance metrics for five d
 
 ---
 
-### Heading Icons
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Heading Icons</h3>
 
 In the upper-right corner you'll find 4 icon buttons. The **Notification Center (Alerts)** and **Database Assistant** will be explored in more detail later in the lab.
 
@@ -178,9 +170,9 @@ In the upper-right corner you'll find 4 icon buttons. The **Notification Center 
 
 ---
 
-### Exploring the Menus
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Exploring the Menus</h3>
 
-#### Side Menu
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Side Menu</h4>
 
 During the labs, you will use the side menu to access all major features. Click the **hamburger menu (☰)** on the top left to expand.
 
@@ -188,13 +180,13 @@ During the labs, you will use the side menu to access all major features. Click 
 
 ---
 
-#### Help Menu
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Help Menu</h4>
 
 On the lower-left side of the home page, you'll find 4 icons:
 
 <img src="images/GH-help-menu-expanded.png" width="200"/>
 
-##### About
+<h4 style="padding-left:14px; border-left:4px solid #888780;">About</h4>
 
 1. From the help menu, click **About (a)**.
 
@@ -206,7 +198,7 @@ On the lower-left side of the home page, you'll find 4 icons:
 
 ---
 
-##### APIs
+<h4 style="padding-left:14px; border-left:4px solid #888780;">APIs</h4>
 
 1. From the help menu, click **APIs (b)**.
 
@@ -227,7 +219,7 @@ On the lower-left side of the home page, you'll find 4 icons:
 
 ---
 
-##### IBM Documentation
+<h4 style="padding-left:14px; border-left:4px solid #888780;">IBM Documentation</h4>
 
 1. From the help menu, click **IBM Documentation (c)**.
 
@@ -239,7 +231,7 @@ On the lower-left side of the home page, you'll find 4 icons:
 
 ---
 
-##### Community
+<h4 style="padding-left:14px; border-left:4px solid #888780;">Community</h4>
 
 1. From the help menu, click **Db2 Community page (d)**.
 
@@ -251,7 +243,7 @@ On the lower-left side of the home page, you'll find 4 icons:
 
 ---
 
-## Database Connections
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Database Connections</h2>
 
 From the side menu, go to the Db2 Genius Hub home page **(a)**.
 
@@ -259,7 +251,7 @@ From the side menu, go to the Db2 Genius Hub home page **(a)**.
 
 ---
 
-### Database Tags
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Database Tags</h3>
 
 Db2 Genius Hub allows you to tag databases to separate views by group — for example, by department, data center, or criticality. Selecting a tag filters the database list to show only databases assigned to that tag.
 
@@ -287,7 +279,7 @@ Db2 Genius Hub allows you to tag databases to separate views by group — for ex
 
 ---
 
-### Customize Columns
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Customize Columns</h3>
 
 The database list shows all monitored databases with a summary of their main metrics. You can add or remove metrics from this view.
 
@@ -305,7 +297,7 @@ The database list shows all monitored databases with a summary of their main met
 
 ---
 
-### Add a Database
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Add a Database</h3>
 
 Add the other pre-defined database for this lab.
 
@@ -364,7 +356,7 @@ Add the other pre-defined database for this lab.
 
 ---
 
-### Add a Tag to the New Database
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Add a Tag to the New Database</h3>
 
 1. Wait until `demo_row` shows a green checkmark. Click **+ (a)** next to the "columnar" tab.
 
@@ -388,7 +380,7 @@ The **All databases** section now shows two databases: `demo_col` and `demo_row`
 
 ---
 
-## Monitor Dashboard
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Monitor Dashboard</h2>
 
 From the side menu, click **Monitor (a)**.
 
@@ -400,7 +392,7 @@ The Monitor dashboard shows detailed information for a specific database. Use th
 
 ---
 
-### Filters
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Filters</h3>
 
 The filter bar shows **Real Time** data by default.
 
@@ -416,7 +408,7 @@ The filter bar shows **Real Time** data by default.
 
 ---
 
-### Details Tabs and Manage Tabs
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Details Tabs and Manage Tabs</h3>
 
 Each Details tab is populated with data from the selected time period.
 
@@ -432,7 +424,7 @@ Each Details tab is populated with data from the selected time period.
 
 ---
 
-### Refresh and Pause
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Refresh and Pause</h3>
 
 The screen auto-refreshes every 2 minutes. Use these buttons to control the display:
 
@@ -447,7 +439,7 @@ The screen auto-refreshes every 2 minutes. Use these buttons to control the disp
 
 ---
 
-### Charts
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Charts</h3>
 
 The upper section shows 3 default charts: **Time spent**, **Resource utilization**, and **Throughput**.
 
@@ -473,11 +465,11 @@ The upper section shows 3 default charts: **Time spent**, **Resource utilization
 
 ---
 
-## Set Up Your AI Configuration
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Set Up Your AI Configuration</h2>
 
 To enable the Db2 Agentic AI service in Genius Hub, you need to create an organization and API key from [db2.ibm.com](https://db2.ibm.com), then configure Genius Hub to use it.
 
-### Part 1 — Create an Organization and Get Your API Key
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 1 — Create an Organization and Get Your API Key</h3>
 
 1. Open a new browser tab and navigate to [db2.ibm.com](https://db2.ibm.com). Log in with your IBMid.
 
@@ -499,7 +491,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-### Part 2 — Configure AI in Genius Hub
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 2 — Configure AI in Genius Hub</h3>
 
 6. Return to the **Genius Hub** browser tab. From the side menu select **Administration → Console**.
 
@@ -533,7 +525,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-### Part 3 — Verify the Agentic AI Service is Running
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 3 — Verify the Agentic AI Service is Running</h3>
 
 13. SSH into the VM as `db2ghadm`. See [Section 1 — Student SSH Access](01-setup.md#step-1--student-ssh-access).
 
@@ -580,7 +572,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-## Modify the Monitoring Profile Collection Interval
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Modify the Monitoring Profile Collection Interval</h2>
 
 Change the collection interval from 5 minutes to 1 minute for faster data capture during the lab.
 
@@ -608,7 +600,7 @@ Change the collection interval from 5 minutes to 1 minute for faster data captur
 
 ---
 
-## Turning on Event Monitors
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Turning on Event Monitors</h2>
 
 Some Db2 Genius Hub features require event monitors to capture performance data:
 
@@ -743,7 +735,7 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
 ---
 
-## Configure Tabs for Utilities Monitoring
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Configure Tabs for Utilities Monitoring</h2>
 
 Before starting the data load, add the **Utilities** and **Utilities event monitor** tabs to the Monitor dashboard so you can observe load activity in real time.
 
@@ -759,7 +751,7 @@ Before starting the data load, add the **Utilities** and **Utilities event monit
 
 ---
 
-## Next Steps
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
 This completes the Basics of Db2 Genius Hub.
 

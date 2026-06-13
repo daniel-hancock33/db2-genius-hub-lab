@@ -1,14 +1,6 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 5 — Agentic AI Simulator</h1>
 
-
-# Section 5 — Agentic AI Simulator
-
-## Overview
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Overview</h2>
 
 The Db2 Agentic AI Simulator is a separate, as-is application provided for hands-on lab tasks. It allows you to trigger events that demonstrate how the Db2 agentic AI service detects and solves problems.
 
@@ -26,7 +18,7 @@ The Db2 Agentic AI Simulator is a separate, as-is application provided for hands
 
 ---
 
-## Accessing the Simulator
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing the Simulator</h2>
 
 Open a browser and navigate to:
 
@@ -36,13 +28,13 @@ http://<public-ip>:3000
 
 ---
 
-## Simulate Sort Memory Queuing
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Simulate Sort Memory Queuing</h2>
 
 This simulation constrains sort memory resources at the database level to trigger queuing by the adaptive workload manager.
 
 ---
 
-### Step 1 — Establish Database Connection
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Establish Database Connection</h3>
 
 1. Click the top right icon **Connect DB** to connect to the `DEMO_COL` database.
 
@@ -58,7 +50,7 @@ This simulation constrains sort memory resources at the database level to trigge
 
 ---
 
-### Step 2 — Load TPCH Dataset
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Load TPCH Dataset</h3>
 
 4. In the TPCH Dataset section, click **Load Data**.
 
@@ -84,7 +76,7 @@ This simulation constrains sort memory resources at the database level to trigge
 
 ---
 
-### Step 3 — Run the WLM Sort Scenario
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Run the WLM Sort Scenario</h3>
 
 9. Click **WLM Queuing (a)** to open the WLM Sort Memory scenario.
 
@@ -96,7 +88,7 @@ This simulation constrains sort memory resources at the database level to trigge
 
 ---
 
-### Step 4 — Monitor Inflight Queries in Genius Hub
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Monitor Inflight Queries in Genius Hub</h3>
 
 1. In **Genius Hub**, click **Monitor (a)** in the side menu.
 
@@ -112,7 +104,7 @@ This simulation constrains sort memory resources at the database level to trigge
 
 ---
 
-### Step 5 — Use the Agentic AI Agent to Investigate
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Use the Agentic AI Agent to Investigate</h3>
 
 1. Click **Agentic AI (a)** in the side menu and expand the **Assistant** window **(b)**.
 
@@ -174,7 +166,7 @@ This simulation constrains sort memory resources at the database level to trigge
 
 ---
 
-## Summary
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Summary</h2>
 
 In this lab, you:
 

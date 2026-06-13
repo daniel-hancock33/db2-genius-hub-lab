@@ -1,12 +1,4 @@
-<style>
-h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
-h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
-h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
-h4 { padding-left: 14px; border-left: 4px solid #888780; }
-</style>
-
-
-# IBM Db2 Genius Hub — Hands-On Lab
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">IBM Db2 Genius Hub — Hands-On Lab</h1>
 
 **Author:** Daniel Hancock — Daniel.Hancock@us.ibm.com  
 **Role:** World-wide Technology Sales — Databases
@@ -24,7 +16,7 @@ h4 { padding-left: 14px; border-left: 4px solid #888780; }
 
 ---
 
-## Table of Contents
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Table of Contents</h2>
 
 | # | Section |
 |---|---------|
@@ -37,11 +29,11 @@ h4 { padding-left: 14px; border-left: 4px solid #888780; }
 
 ---
 
-## Introduction
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Introduction</h2>
 
 IBM Db2 Genius Hub is a web-based, AI-driven management console for Db2 LUW. It provides intelligent recommendations, data usage insights, and automation tools for quality and performance tuning. By bringing AI-powered observability and guidance, it simplifies administration, enhances performance, reduces operational costs, and lowers management complexity — helping DBAs of all levels manage databases more efficiently and make better decisions.
 
-### Key Capabilities
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Key Capabilities</h3>
 
 | Capability | Description |
 |---|---|
@@ -57,13 +49,13 @@ IBM Db2 Genius Hub is a web-based, AI-driven management console for Db2 LUW. It 
 
 ---
 
-## About This Hands-On Lab
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">About This Hands-On Lab</h2>
 
 This lab showcases the new features of Db2 Genius Hub and how they assist DBAs in administering Db2 databases using AI. The lab is organized into five parts:
 
 ---
 
-### Part 1 — The Setup
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 1 — The Setup</h3>
 
 > Work within a pre-configured environment providing access to IBM Db2, Db2 Genius Hub, and an Agentic AI application. Become familiar with the environment and perform initial configuration of Db2 Genius Hub.
 
@@ -71,7 +63,7 @@ This lab showcases the new features of Db2 Genius Hub and how they assist DBAs i
 
 ---
 
-### Part 2 — The Basics
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 2 — The Basics</h3>
 
 > Learn the fundamentals of Db2 Genius Hub pages and configure event monitors to collect additional performance data.
 
@@ -79,7 +71,7 @@ This lab showcases the new features of Db2 Genius Hub and how they assist DBAs i
 
 ---
 
-### Part 3 — SQL Workbench
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 3 — SQL Workbench</h3>
 
 > Use the Workbench to manage tables and the AI Query Tuner to generate index recommendations, analyze impact using what-if analysis, and review impact analysis reports.
 
@@ -94,7 +86,7 @@ Topics include:
 
 ---
 
-### Part 4 — Monitoring Databases
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 4 — Monitoring Databases</h3>
 
 > Analyze database performance issues by drilling into detailed graphs. Leverage recommendations to prevent future occurrences and configure alerts for proactive monitoring.
 
@@ -108,7 +100,7 @@ Topics include:
 
 ---
 
-### Part 5 — Db2 Agentic AI Simulator
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 5 — Db2 Agentic AI Simulator</h3>
 
 > Interact with the Db2 Agentic AI Simulator to trigger performance scenarios and see how the AI service detects and resolves issues.
 
@@ -127,9 +119,9 @@ Capabilities include:
 
 ---
 
-## Available Datasets
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Available Datasets</h2>
 
-### Text2SQL
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Text2SQL</h3>
 
 | Dataset | Description |
 |---|---|
@@ -137,7 +129,7 @@ Capabilities include:
 | **Supply Chain Data** | Products, inventory, orders, and shipments |
 | **TPC-H Benchmark** | Decision support data: suppliers, customers, orders, and parts |
 
-### Performance Simulator
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Performance Simulator</h3>
 
 | Dataset | Description |
 |---|---|
@@ -159,10 +151,10 @@ Capabilities include:
 
 ---
 
-## Next Steps
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
 This completes the introduction to Db2 Genius Hub.
 
-**[→ Proceed to Part 1: The Setup](01-setup.md)**
+**[→ Proceed to Section 1: The Setup](01-setup.md)**
 
 ---
