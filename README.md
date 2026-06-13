@@ -1,80 +1,72 @@
-# DB2 Genius Hub Hands-on Lab
+# IBM Db2 Genius Hub — Hands-On Lab
 
-Welcome to the DB2 Genius Hub hands-on lab! This comprehensive lab provides training on IBM DB2 Genius Hub features and capabilities.
-
-## 📚 Lab Contents
-
-### [Part 1: Introduction](00-introduction.md)
-Overview of DB2 Genius Hub, lab objectives, and what you'll learn
-
-### [Part 2: Setup](01-setup.md)
-Initial setup, environment access, and configuration
-
-### [Part 3: Basics](02-basics.md)
-- Connecting to databases
-- Navigating the Genius Hub interface
-- Creating and managing tags
-- Setting up monitoring profiles
-- Configuring event monitors
-
-### [Part 4: Workbench](03-workbench.md)
-- SQL execution and query management
-- Query tuning and optimization
-- Index recommendations
-- Explain plans and performance analysis
-
-### [Part 5: Monitoring](04-monitoring.md)
-- Real-time performance monitoring
-- Anomaly detection and alerts
-- Using the Agentic AI assistant
-- Report generation and analysis
-- Job scheduling and automation
-
-### [Part 6: Agentic AI Simulator](05-agentic-ai-simulator.md)
-- Workload simulation and testing
-- AI-powered troubleshooting
-- Performance optimization with AI assistance
-
-## 🚀 Getting Started
-
-1. Start with the [Introduction](00-introduction.md) to understand the lab objectives
-2. Follow the [Setup](01-setup.md) guide to access your environment
-3. Work through each section in order - each builds on previous knowledge
-4. Take your time with hands-on exercises
-
-## 📋 Prerequisites
-
-- Access to IBM DB2 Genius Hub environment (provided in lab)
-- Basic SQL knowledge
-- Web browser (Chrome, Firefox, or Safari recommended)
-- Understanding of database concepts
-
-## 🎯 Learning Objectives
-
-By completing this lab, you will:
-- Understand DB2 Genius Hub architecture and capabilities
-- Master database monitoring and performance analysis
-- Learn to use AI-powered tools for database optimization
-- Gain hands-on experience with query tuning
-- Understand anomaly detection and alerting
-
-## 📖 Additional Resources
-
-- [IBM DB2 Documentation](https://www.ibm.com/docs/en/db2)
-- [DB2 Genius Hub Product Page](https://www.ibm.com/products/db2-genius-hub)
-- [IBM Technology Zone](https://techzone.ibm.com)
-
-## 📝 License
-
-IBM Internal Use Only
-
-## 🤝 Support
-
-For questions or issues with this lab:
-- Review the documentation carefully
-- Check the troubleshooting sections in each module
-- Contact your lab instructor or IBM support
+Welcome to the IBM Db2 Genius Hub hands-on lab. This lab provides training on IBM Db2 Genius Hub features and capabilities, with a focus on AI-powered database administration.
 
 ---
 
-**Note:** This lab is designed for hands-on learning. Take your time with each section and experiment with the features!
+## Lab Contents
+
+**[Introduction](00-introduction.md)**
+Overview of Db2 Genius Hub, lab objectives, and available datasets.
+
+**[The Setup](01-setup.md)**
+Environment access, SSH connection, and starting Genius Hub services.
+
+**The Basics**
+- [Login and Repository Setup](02-01-login-and-repo.md)
+- [Interface Tour](02-02-interface-tour.md)
+- [Database Connections](02-03-database-connections.md)
+- [Monitor Dashboard](02-04-monitor-dashboard.md)
+- [AI Configuration and Event Monitors](02-05-ai-configuration.md)
+
+**SQL Workbench**
+- [SQL Editor](03-01-sql-editor.md)
+- [Visual Explain](03-02-visual-explain.md)
+- [Query Tuning](03-03-query-tuning.md)
+
+**Monitoring Databases**
+- [Drill-Down Investigation](04-01-drill-down.md)
+- [Reports](04-02-reports.md)
+- [Agentic AI Assistant](04-03-agentic-ai-assistant.md)
+- [Alerts and Jobs](04-04-alerts-and-jobs.md)
+
+**[Agentic AI Simulator](05-agentic-ai-simulator.md)**
+Trigger performance scenarios and see how the AI service detects and resolves issues.
+
+---
+
+## Getting Started
+
+Start with the [Introduction](00-introduction.md) and follow each link in order — every page has a **← Previous | → Next** navigation footer to guide you through the lab.
+
+---
+
+## Prerequisites
+
+- Access to IBM Db2 Genius Hub environment (provided in lab)
+- Basic SQL knowledge
+- Web browser (Chrome, Firefox, or Safari recommended)
+
+---
+
+## Learning Objectives
+
+By completing this lab, you will:
+
+- Understand Db2 Genius Hub architecture and capabilities
+- Monitor database performance using graphs, drill-down, and alerts
+- Use the AI Query Tuner to generate and apply index recommendations
+- Investigate anomalies using the Agentic AI Assistant
+- Trigger and resolve simulated performance scenarios
+
+---
+
+## Additional Resources
+
+- [IBM Db2 Documentation](https://www.ibm.com/docs/en/db2)
+- [Db2 Genius Hub Product Page](https://www.ibm.com/products/db2-genius-hub)
+- [IBM Technology Zone](https://techzone.ibm.com)
+
+---
+
+*IBM Internal Use Only*
