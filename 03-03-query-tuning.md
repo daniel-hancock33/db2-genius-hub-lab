@@ -142,6 +142,6 @@ The Query Workload feature tunes several queries simultaneously and recommends i
 
 ---
 
-**[← 3.2: Visual Explain](03-02-visual-explain.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 4.1: Drill-Down Investigation](04-01-drill-down.md)**
+**[← Visual Explain](03-02-visual-explain.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Drill-Down Investigation](04-01-drill-down.md)**
 
 ---

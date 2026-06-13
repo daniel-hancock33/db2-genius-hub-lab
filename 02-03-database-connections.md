@@ -138,6 +138,6 @@ The **All databases** section now shows two databases: `demo_col` and `demo_row`
 
 ---
 
-**[← 2.2: Interface Tour](02-02-interface-tour.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 2.4: Monitor Dashboard](02-04-monitor-dashboard.md)**
+**[← Interface Tour](02-02-interface-tour.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Monitor Dashboard](02-04-monitor-dashboard.md)**
 
 ---

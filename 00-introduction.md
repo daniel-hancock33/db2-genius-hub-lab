@@ -72,7 +72,7 @@ This lab showcases the new features of Db2 Genius Hub and how they assist DBAs i
 
 > Work within a pre-configured environment providing access to IBM Db2, Db2 Genius Hub, and an Agentic AI application. Become familiar with the environment and perform initial configuration of Db2 Genius Hub.
 
-**[→ Go to Section 1: The Setup](01-setup.md)**
+**[→ The Setup](01-setup.md)**
 
 ---
 
@@ -80,7 +80,7 @@ This lab showcases the new features of Db2 Genius Hub and how they assist DBAs i
 
 > Learn the fundamentals of Db2 Genius Hub pages and configure event monitors to collect additional performance data.
 
-**[→ 2.1: Login and Repository Setup](02-01-login-and-repo.md)**
+**[→ Login and Repository Setup](02-01-login-and-repo.md)**
 
 ---
 
@@ -95,7 +95,7 @@ Topics include:
 - What-if Analysis
 - Impact Analysis Report
 
-**[→ 3.1: SQL Editor](03-01-sql-editor.md)**
+**[→ SQL Editor](03-01-sql-editor.md)**
 
 ---
 
@@ -109,7 +109,7 @@ Topics include:
 - Database Assistant
 - Alerts and Jobs
 
-**[→ 4.1: Drill-Down Investigation](04-01-drill-down.md)**
+**[→ Drill-Down Investigation](04-01-drill-down.md)**
 
 ---
 
@@ -128,7 +128,7 @@ Capabilities include:
 
 > **ℹ️ About the Simulator:** The **Db2 Agentic AI Simulator** is a separate, as-is application (not part of Db2 Genius Hub) provided for hands-on lab tasks. It allows you to trigger events that demonstrate how the Db2 agentic AI service solves problems.
 
-**[→ Go to Section 5: Agentic AI Simulator](05-agentic-ai-simulator.md)**
+**[→ Agentic AI Simulator](05-agentic-ai-simulator.md)**
 
 ---
 
@@ -168,6 +168,6 @@ Capabilities include:
 
 This completes the introduction to Db2 Genius Hub.
 
-**[→ Start the lab: Section 1 — The Setup](01-setup.md)**
+**[→ The Setup](01-setup.md)**
 
 ---

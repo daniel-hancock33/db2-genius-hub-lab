@@ -88,6 +88,6 @@ Now that you have identified the cause of the CPU spike, generate a report to do
 
 ---
 
-**[← 4.1: Drill-Down Investigation](04-01-drill-down.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 4.3: Agentic AI Assistant](04-03-agentic-ai-assistant.md)**
+**[← Drill-Down Investigation](04-01-drill-down.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Agentic AI Assistant](04-03-agentic-ai-assistant.md)**
 
 ---

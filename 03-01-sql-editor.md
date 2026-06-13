@@ -174,6 +174,6 @@ For this lab, we will use manual entry.
 
 ---
 
-**[← 2.5: AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 3.2: Visual Explain](03-02-visual-explain.md)**
+**[← AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Visual Explain](03-02-visual-explain.md)**
 
 ---

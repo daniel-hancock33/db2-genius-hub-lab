@@ -159,6 +159,6 @@ Click the **Close (a)** button in the top right corner of the Agentic AI Assista
 
 ---
 
-**[← 4.2: Reports](04-02-reports.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 4.4: Alerts and Jobs](04-04-alerts-and-jobs.md)**
+**[← Reports](04-02-reports.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Alerts and Jobs](04-04-alerts-and-jobs.md)**
 
 ---

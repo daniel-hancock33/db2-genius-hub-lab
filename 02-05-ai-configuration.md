@@ -287,6 +287,6 @@ Before starting the data load, add the **Utilities** and **Utilities event monit
 
 ---
 
-**[← 2.4: Monitor Dashboard](02-04-monitor-dashboard.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 3.1: SQL Editor](03-01-sql-editor.md)**
+**[← Monitor Dashboard](02-04-monitor-dashboard.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ SQL Editor](03-01-sql-editor.md)**
 
 ---

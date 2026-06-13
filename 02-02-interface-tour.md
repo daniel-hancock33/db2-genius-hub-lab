@@ -105,6 +105,6 @@ On the lower-left side of the home page, you'll find 4 icons:
 
 ---
 
-**[← 2.1: Login and Repo Setup](02-01-login-and-repo.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 2.3: Database Connections](02-03-database-connections.md)**
+**[← Login and Repository Setup](02-01-login-and-repo.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Database Connections](02-03-database-connections.md)**
 
 ---

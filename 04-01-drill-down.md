@@ -116,6 +116,6 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-**[← 3.3: Query Tuning](03-03-query-tuning.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 4.2: Reports](04-02-reports.md)**
+**[← Query Tuning](03-03-query-tuning.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Reports](04-02-reports.md)**
 
 ---

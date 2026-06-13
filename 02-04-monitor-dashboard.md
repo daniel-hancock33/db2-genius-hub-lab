@@ -86,6 +86,6 @@ The upper section shows 3 default charts: **Time spent**, **Resource utilization
 
 ---
 
-**[← 2.3: Database Connections](02-03-database-connections.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 2.5: AI Configuration](02-05-ai-configuration.md)**
+**[← Database Connections](02-03-database-connections.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ AI Configuration and Event Monitors](02-05-ai-configuration.md)**
 
 ---

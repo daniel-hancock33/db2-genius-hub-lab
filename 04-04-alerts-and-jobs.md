@@ -362,6 +362,6 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 ---
 
-**[← 4.3: Agentic AI Assistant](04-03-agentic-ai-assistant.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Section 5: Agentic AI Simulator](05-agentic-ai-simulator.md)**
+**[← Agentic AI Assistant](04-03-agentic-ai-assistant.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Agentic AI Simulator](05-agentic-ai-simulator.md)**
 
 ---

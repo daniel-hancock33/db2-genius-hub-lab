@@ -19,6 +19,6 @@
 
 ---
 
-**[← 3.1: SQL Editor](03-01-sql-editor.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 3.3: Query Tuning](03-03-query-tuning.md)**
+**[← SQL Editor](03-01-sql-editor.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Query Tuning](03-03-query-tuning.md)**
 
 ---

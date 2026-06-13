@@ -134,6 +134,6 @@ After clicking **Save**, you will be brought to the **Success!** page. Click **G
 
 ---
 
-**[← Section 1: Setup](01-setup.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 2.2: Interface Tour](02-02-interface-tour.md)**
+**[← The Setup](01-setup.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Interface Tour](02-02-interface-tour.md)**
 
 ---
