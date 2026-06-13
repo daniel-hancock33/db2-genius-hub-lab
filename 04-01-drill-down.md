@@ -1,10 +1,9 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">4.1 — Drill-Down Investigation</h1>
 
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 4 — Monitoring Databases</h1>
 
 Now that you have learned the basics, let's start monitoring databases.
 
-> **⚠️ Prerequisite:** Event monitors were configured in [Section 2 — Turning on Event Monitors](02-basics.md#turning-on-event-monitors). If you skipped that section, complete it before proceeding.
+> **⚠️ Prerequisite:** Event monitors were configured in [Section 2 — Turning on Event Monitors](02-05-ai-configuration.md). If you skipped that section, complete it before proceeding.
 
 > **ℹ️ Pre-created TPC-H schemas:** Three schemas are pre-created in the `demo_col` database with empty tables, ready for data loading:
 >

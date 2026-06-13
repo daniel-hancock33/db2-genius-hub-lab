@@ -292,6 +292,6 @@ By completing this section, you will:
 
 This completes the setup of Db2 Genius Hub.
 
-**[→ Proceed to Section 2: The Basics](02-basics.md)**
+**[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ 2.1: Login and Repository Setup](02-01-login-and-repo.md)**
 
 ---

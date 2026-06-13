@@ -80,7 +80,7 @@ This lab showcases the new features of Db2 Genius Hub and how they assist DBAs i
 
 > Learn the fundamentals of Db2 Genius Hub pages and configure event monitors to collect additional performance data.
 
-**[→ Go to Section 2: The Basics](02-basics.md)**
+**[→ 2.1: Login and Repository Setup](02-01-login-and-repo.md)**
 
 ---
 
@@ -95,7 +95,7 @@ Topics include:
 - What-if Analysis
 - Impact Analysis Report
 
-**[→ Go to Section 3: SQL Workbench](03-workbench.md)**
+**[→ 3.1: SQL Editor](03-01-sql-editor.md)**
 
 ---
 
@@ -109,7 +109,7 @@ Topics include:
 - Database Assistant
 - Alerts and Jobs
 
-**[→ Go to Section 4: Monitoring Databases](04-monitoring.md)**
+**[→ 4.1: Drill-Down Investigation](04-01-drill-down.md)**
 
 ---
 
@@ -171,4 +171,3 @@ This completes the introduction to Db2 Genius Hub.
 **[→ Start the lab: Section 1 — The Setup](01-setup.md)**
 
 ---
-
