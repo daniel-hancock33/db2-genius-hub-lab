@@ -344,4 +344,4 @@ The Query Workload feature tunes several queries simultaneously and recommends i
 
 ### 4.7 Next
 
-This completes the Workbench lab proceed to [Section 4. Monitoring](04-monitoring.md).
+This completes the Workbench lab proceed to [Section 4. Monitoring Databases](04-monitoring.md).
