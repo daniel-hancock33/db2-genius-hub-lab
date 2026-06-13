@@ -1,8 +1,8 @@
-## 1. The Setup
+## The Setup
 
 This lab uses a single virtual machine on an IBM Cloud environment that includes Db2, Db2 Genius Hub, and an Agentic Application to simulate workload scenarios.
 
-### 1.1 Environment Overview
+### Environment Overview
 
 The lab environment is fully provisioned — all required components are pre-installed so you can focus on exploration and hands-on tasks rather than installation.
 
@@ -33,7 +33,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
-### 1.2 Accessing the Lab Environment
+### Accessing the Lab Environment
 
 | Service | Endpoint |
 |---|---|
@@ -48,7 +48,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
-### 1.3 Default Credentials
+### Default Credentials
 
 #### Genius Hub UI
 
@@ -69,13 +69,13 @@ The following users are pre-configured. All share the same password.
 
 ---
 
-### 1.4 Setup and Configuration
+### Setup and Configuration
 
 Follow these steps to prepare the environment for the lab.
 
 ---
 
-#### 1.4.1 Student SSH Access
+#### Student SSH Access
 
 This guide will help you connect to your IBM TechZone lab environment using SSH (Secure Shell). Your instructor will provide you with:
 
@@ -186,7 +186,7 @@ f. Click **Open** and log in as `db2demo`
 
 ---
 
-#### 1.4.2 Start Genius Hub Services
+#### Start Genius Hub Services
 
 a. Switch to the `db2ghadm` user:
 ```bash
@@ -252,7 +252,7 @@ Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
 
 ---
 
-### 1.5 Architecture Summary
+### Architecture Summary
 
 This lab environment is built on:
 
@@ -264,7 +264,7 @@ This lab environment is built on:
 
 ---
 
-### 1.6 What You Will Achieve
+### What You Will Achieve
 
 By completing this section, you will:
 
@@ -278,7 +278,7 @@ By completing this section, you will:
 You will need this terminal window open for other tasks in this lab, keep it open.
 
 ---
-### 1.7 Next Steps
+### Next Steps
 
 This completes the setup of Db2 Genius Hub. Proceed to [Section 2. The Basics](02-basics.md).
 

@@ -1,4 +1,4 @@
-## 4. SQL Workbench
+## SQL Workbench
 
 You can use the Workbench to run SQL statements, generate Visual Explains, tune queries, generate what-if analysis, and run Impact Analysis reports.
 
@@ -14,7 +14,7 @@ You can use the Workbench to run SQL statements, generate Visual Explains, tune 
 
 ---
 
-### 4.1 SQL Editor
+### SQL Editor
 
 There are several ways to create a table in Db2 Genius Hub:
 
@@ -190,7 +190,7 @@ For this lab, we will use the second option.
 
 ---
 
-### 4.2 Visual Explain
+### Visual Explain
 
 1. Go back to the **second tab (a)**. Select the query with the **CODE = 2512** WHERE clause **(b)** and click **Explain the statement (c)**.
 
@@ -208,7 +208,7 @@ For this lab, we will use the second option.
 
 ---
 
-### 4.3 Query Tuning
+### Query Tuning
 
 1. From the Visual Explain results, click **Tune query (a)** at the lower-right side of the screen.
 
@@ -319,7 +319,7 @@ For this lab, we will use the second option.
 
 ---
 
-### 4.4 What-If Analysis (SKIP)
+### What-If Analysis (SKIP)
 
 > **Note:** This is a place holder for future lab tasks. 
 
@@ -328,7 +328,7 @@ The what-if analysis shows how a query will behave if the index is applied, with
 
 ---
 
-### 4.5 Impact Analysis (SKIP)
+### Impact Analysis (SKIP)
 
 The Impact Analysis report shows how the recommended index will affect the performance of your existing queries — which queries will gain performance and which may be impacted if the index is applied.
 
@@ -336,7 +336,7 @@ The Impact Analysis report shows how the recommended index will affect the perfo
 
 ---
 
-### 4.6 Query Workload (SKIP)
+### Query Workload (SKIP)
 
 The Query Workload feature tunes several queries simultaneously and recommends indexes based on the overall workload — not just a single query.
 ß

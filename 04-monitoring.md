@@ -1,4 +1,4 @@
-## 3. Monitoring Databases
+## Monitoring Databases
 
 Now that you have learned the basics, let's start monitoring databases.
 
@@ -88,7 +88,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-### 3.1 Using Drill-Down for Investigation
+### Using Drill-Down for Investigation
 
 1. Click the small dot **(a)** to drill down for more details.
 
@@ -98,7 +98,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
    <img src="images/GH-drill-down-result.png" width="800"/>
 
-#### 3.1.1 Checking the Utilities
+#### Checking the Utilities
 
 3. Click **View more charts (a)** to see less charts.
 
@@ -126,7 +126,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-### 3.2 Reports
+### Reports
 
 Now that you have identified the cause of the CPU spike, generate a report to document the findings. Reports can be shared with others, kept for historical reference, or scheduled to run automatically on a recurring basis.
 
@@ -218,7 +218,7 @@ Now that you have identified the cause of the CPU spike, generate a report to do
 
 ---
 
-### 3.3 Using Agentic AI Assistant
+### Using Agentic AI Assistant
 
 1. Another way to explore what happened around that time is to use the Agentic AI Assistant. Click the **Agentic AI Assistant (a)** menu item.
 
@@ -355,7 +355,7 @@ Now that you have identified the cause of the CPU spike, generate a report to do
 
 ---
 
-#### 3.3.1 Database Assistant Operation Modes
+#### Database Assistant Operation Modes
 
 Db2 Genius Hub provides 2 additional operation modes for the Database Assistant:
 
@@ -373,7 +373,7 @@ a. Enter the research or troubleshooting prompt. If the request is unclear, the 
 b. The assistant generates an artifact and streams progress updates, such as planning, researching, validating, and report generation.  
 c. When the process is complete, you can view both the answer and the detailed research activity with citations.
 
-##### 3.3.1.1 Agent Mode Sample Questions
+##### Agent Mode Sample Questions
 
 The Agent mode can help you with questions related to:
 
@@ -391,7 +391,7 @@ Make sure **Agent Mode (a)** is selected, then try these examples:
 - Generate a SQL to list all players along with their countries who have taken more than 30 wickets in World Cup cricket
 - Generate a SQL to find all players who have both batting and bowling records in World Cups, showing their total runs and total wickets
 
-##### 3.3.1.2 Deep Research Sample Questions
+##### Deep Research Sample Questions
 
 The Deep Research mode can help you with documentation summarization and topic analysis. Here are some examples:
 
@@ -408,7 +408,7 @@ The Deep Research mode can help you with documentation summarization and topic a
 - Show me the transaction log usage across all database members
 - Give me the unit of work IDs for all active transactions?
 
-##### 3.3.1.3 Close the Agentic AI Assitant and return to the Genius Hub Home page.
+##### Close the Agentic AI Assitant and return to the Genius Hub Home page.
 
 Click the **Close (a)** button in the top right corner of the Agentic AI Assistant window.
 
@@ -419,7 +419,7 @@ You are now back at the Genius Hub Home page.
 
 ---
 
-### 3.4 Alerts
+### Alerts
 
 Now that you know you have an anomaly in your system which happens from time to time, you want to get an alert if the anomaly happens again.
 
@@ -493,7 +493,7 @@ Now that you know you have an anomaly in your system which happens from time to 
 
 ---
 
-### 3.5 Query Monitoring
+### Query Monitoring
 
 1. SSH into the VM as `db2demo`. See [Section 1.4.1 Student SSH Access](01_setup.md#141-student-ssh-access) for instructions.
 
@@ -743,7 +743,7 @@ inc
 
     <img src="images/GH-workbench-query-tuning-report.png" width="800"/>
 
-### 3.6 Jobs
+### Jobs
 
 You can use Db2 Genius Hub to create and schedule jobs. We will run a heavy query using a job to simulate the alert configured in the previous section.
 

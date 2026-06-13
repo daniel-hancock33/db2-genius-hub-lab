@@ -1,4 +1,4 @@
-## 2. The Basics
+## The Basics
 
 In the previous section, you connected to your dedicated virtual machine and started the Db2 Genius Hub services. This section shifts focus to the Genius Hub UI itself — learning your way around the interface and understanding the key pages and features you'll use throughout the rest of the lab.
 
@@ -6,7 +6,7 @@ See [Section 1.3 Default Credentials](01_setup.md#13-default-credentials) for lo
 
 ---
 
-### 2.1 Genius Hub Login
+### Genius Hub Login
 
 Open a browser (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari) and type the Db2 Genius Hub URL provided by your instructor.
 
@@ -24,7 +24,7 @@ Enter the **Username (a)** and **Password (b)**, click **Accept all** (c), then 
 
 ---
 
-### 2.2 Configure Repository (First Login Setup)
+### Configure Repository (First Login Setup)
 
 At first login, you must configure the repository database to initialize the IBM Db2 Genius Hub environment.
 
@@ -137,9 +137,9 @@ After clicking **Save**, you will be brought to the **Success!** page confirming
 
 ---
 
-### 2.3 Getting to Know the Main Interfaces of Db2 Genius Hub
+### Getting to Know the Main Interfaces of Db2 Genius Hub
 
-#### 2.3.1 Db2 Genius Hub Home Page
+#### Db2 Genius Hub Home Page
 
 The Db2 Genius Hub home page has a summary of all databases being monitored, showing alerts, top 5 databases, and the list of database connections being monitored by Db2 Genius Hub.
 
@@ -147,7 +147,7 @@ The Db2 Genius Hub home page has a summary of all databases being monitored, sho
 
 ---
 
-#### 2.3.2 Key Insights Section
+#### Key Insights Section
 
 In the upper-middle section of the home page, Db2 Genius Hub shows key Insights performance metrics for five databases:
 
@@ -160,7 +160,7 @@ In the upper-middle section of the home page, Db2 Genius Hub shows key Insights 
 
 ---
 
-#### 2.3.3 Heading Icons
+#### Heading Icons
 
 In the upper-right corner of the home page you also have 4 buttons with icons. The **Notification Center (Alerts)** and **Database Assistant** will be explored in more detail later in the lab.
 
@@ -168,9 +168,9 @@ In the upper-right corner of the home page you also have 4 buttons with icons. T
 
 ---
 
-#### 2.3.4 Exploring the Menus
+#### Exploring the Menus
 
-##### 2.3.4.1 Side Menu
+##### Side Menu
 
 During the labs, we will be referencing the side menu on the upper-left side of the screen to access menu options. Click **hamburger menu (☰)** on the top left to expand the menu.
 
@@ -178,7 +178,7 @@ During the labs, we will be referencing the side menu on the upper-left side of 
 
 ---
 
-##### 2.3.4.2 Help Menu
+##### Help Menu
 
 On the lower-left side of the home page, you can find 4 icons.
 
@@ -198,7 +198,7 @@ On the lower-left side of the home page, you can find 4 icons.
 
 ---
 
-##### 2.3.4.3 APIs
+##### APIs
 
 1. From the help menu, click **APIs (b)**.
 
@@ -220,7 +220,7 @@ On the lower-left side of the home page, you can find 4 icons.
 
 ---
 
-##### 2.3.4.4 IBM Documentation
+##### IBM Documentation
 
 1. From the help menu, click **IBM Documentation (c)**.
 
@@ -232,7 +232,7 @@ On the lower-left side of the home page, you can find 4 icons.
 
 ---
 
-##### 2.3.4.5 Community
+##### Community
 
 1. From the help menu, click **Db2 Community page (d)**.
 
@@ -246,7 +246,7 @@ On the lower-left side of the home page, you can find 4 icons.
 
 ---
 
-### 2.4 Database Connections
+### Database Connections
 
 1. From the side menu, go to the Db2 Genius Hub home page **(a)**.
 
@@ -254,7 +254,7 @@ On the lower-left side of the home page, you can find 4 icons.
 
 ---
 
-#### 2.4.1 Database Tags
+#### Database Tags
 
 Db2 Genius Hub allows you to tag databases to separate views by group — for example, databases used by the HR department, databases belonging to a specific data center, or your most critical databases. By selecting a tag, Db2 Genius Hub filters the database connection list to show only databases assigned to that tag.
 
@@ -280,7 +280,7 @@ Db2 Genius Hub allows you to tag databases to separate views by group — for ex
 
 ---
 
-#### 2.4.2 Customize Columns
+#### Customize Columns
 
 The database list shows all monitored databases with a summary of their main metrics. You can add or remove metrics from this view.
 
@@ -298,7 +298,7 @@ The database list shows all monitored databases with a summary of their main met
 
 ---
 
-#### 2.4.3 Add a Database
+#### Add a Database
 
 Add the other pre-defined database for this lab.
 
@@ -357,7 +357,7 @@ Add the other pre-defined database for this lab.
 
 ---
 
-#### 2.4.4 Add a Tag to the New Database
+#### Add a Tag to the New Database
 
 1. Wait until the `demo_row` database shows a green checkmark, indicating it is available. Click **+ (a)** next to the "columnar" tab. The **Create tag** window opens.
 
@@ -383,7 +383,7 @@ Add the other pre-defined database for this lab.
 
 ---
 
-### 2.5 Monitor Dashboard
+### Monitor Dashboard
 
 1. From the side menu, click **Monitor (a)**.
 
@@ -395,7 +395,7 @@ The Monitor dashboard is where you see more detail for a specific database. Data
 
 ---
 
-#### 2.5.1 Filters
+#### Filters
 
 The filter bar shows **Real Time** data by default.
 
@@ -411,7 +411,7 @@ The filter bar shows **Real Time** data by default.
 
 ---
 
-#### 2.5.2 Details Tabs and Manage Tabs
+#### Details Tabs and Manage Tabs
 
 Each Details tab is populated with data from the time period selected in the filter.
 
@@ -427,7 +427,7 @@ Each Details tab is populated with data from the time period selected in the fil
 
 ---
 
-#### 2.5.3 Refresh and Pause
+#### Refresh and Pause
 
 The screen auto-refreshes every 2 minutes. Use the refresh and pause buttons to control the display:
 
@@ -442,7 +442,7 @@ The screen auto-refreshes every 2 minutes. Use the refresh and pause buttons to 
 
 ---
 
-#### 2.5.4 Charts
+#### Charts
 
 The upper section of the page shows 3 default charts:
 
@@ -474,7 +474,7 @@ The upper section of the page shows 3 default charts:
 
 ---
 
-### 2.6 Set Up Your AI Configuration and Select a Model
+### Set Up Your AI Configuration and Select a Model
 
 To enable the Db2 Agentic AI service in Genius Hub, you first need to create an organization and obtain an API key from [db2.ibm.com](https://db2.ibm.com), then configure Genius Hub to use it.
 
@@ -597,7 +597,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you first need to create an 
 
 ---
 
-### 2.7 Modify the monitoring profile collection interval from 5 minutes to 1 minute.
+### Modify the monitoring profile collection interval from 5 minutes to 1 minute.
 
 1. From the side menu on the left side, select **Administration** *(a)* and **Console** *(b)*.
 
@@ -622,7 +622,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you first need to create an 
    > **Note:** The minimum value is 1 minute and done here to capture data as quickly as possible.  This is not like a production environment where you would want to capture data less frequently to reduce overhead.
    
 
-### 2.8 Turning on Event Monitors
+### Turning on Event Monitors
 
 Some features in Db2 Genius Hub require event monitors to be able to capture performance data, for example:
 
@@ -786,7 +786,7 @@ Some features in Db2 Genius Hub require event monitors to be able to capture per
 
 ---
 
-### 2.9 Configure Tabs for Utilities Monitoring
+### Configure Tabs for Utilities Monitoring
 
 Before starting the data load in the next section, add the **Utilities** and **Utilities event monitor** tabs to the Monitor dashboard so you can observe load script activity in real time.
 
@@ -802,7 +802,11 @@ Before starting the data load in the next section, add the **Utilities** and **U
 
 ---
 
+<<<<<<< HEAD
 ### 2.10 Next
+=======
+### Next Steps
+>>>>>>> 81afbf5 (Remove section numbering from markdown headings)
 
 This completes the Basics of Db2 Genius Hub. Proceed to [Section 3. SQL Workbench](03-workbench.md).
 
