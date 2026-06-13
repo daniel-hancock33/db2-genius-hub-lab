@@ -78,7 +78,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Drill-Down Investigation</h2>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Investigating the Anomaly</h2>
 
 1. Click the small dot **(a)** to drill down for more details.
 

@@ -12,19 +12,19 @@ Overview of Db2 Genius Hub, lab objectives, and available datasets.
 **[The Setup](01-setup.md)**
 Environment access, SSH connection, and starting Genius Hub services.
 
-**The Basics**
+**[The Basics](02-basics.md)**
 - [Login and Repository Setup](02-01-login-and-repo.md)
 - [Interface Tour](02-02-interface-tour.md)
 - [Database Connections](02-03-database-connections.md)
 - [Monitor Dashboard](02-04-monitor-dashboard.md)
 - [AI Configuration and Event Monitors](02-05-ai-configuration.md)
 
-**SQL Workbench**
+**[SQL Workbench](03-workbench.md)**
 - [SQL Editor](03-01-sql-editor.md)
 - [Visual Explain](03-02-visual-explain.md)
 - [Query Tuning](03-03-query-tuning.md)
 
-**Monitoring Databases**
+**[Monitoring Databases](04-monitoring.md)**
 - [Drill-Down Investigation](04-01-drill-down.md)
 - [Reports](04-02-reports.md)
 - [Agentic AI Assistant](04-03-agentic-ai-assistant.md)

@@ -22,23 +22,23 @@
 
 **[1 — The Setup](01-setup.md)**
 
-**2 — The Basics**
-- [2.1 — Login and Repository Setup](02-01-login-and-repo.md)
-- [2.2 — Interface Tour](02-02-interface-tour.md)
-- [2.3 — Database Connections](02-03-database-connections.md)
-- [2.4 — Monitor Dashboard](02-04-monitor-dashboard.md)
-- [2.5 — AI Configuration and Event Monitors](02-05-ai-configuration.md)
+**[2 — The Basics](02-basics.md)**
+- [Login and Repository Setup](02-01-login-and-repo.md)
+- [Interface Tour](02-02-interface-tour.md)
+- [Database Connections](02-03-database-connections.md)
+- [Monitor Dashboard](02-04-monitor-dashboard.md)
+- [AI Configuration and Event Monitors](02-05-ai-configuration.md)
 
-**3 — SQL Workbench**
-- [3.1 — SQL Editor](03-01-sql-editor.md)
-- [3.2 — Visual Explain](03-02-visual-explain.md)
-- [3.3 — Query Tuning](03-03-query-tuning.md)
+**[3 — SQL Workbench](03-workbench.md)**
+- [SQL Editor](03-01-sql-editor.md)
+- [Visual Explain](03-02-visual-explain.md)
+- [Query Tuning](03-03-query-tuning.md)
 
-**4 — Monitoring Databases**
-- [4.1 — Drill-Down Investigation](04-01-drill-down.md)
-- [4.2 — Reports](04-02-reports.md)
-- [4.3 — Agentic AI Assistant](04-03-agentic-ai-assistant.md)
-- [4.4 — Alerts and Jobs](04-04-alerts-and-jobs.md)
+**[4 — Monitoring Databases](04-monitoring.md)**
+- [Drill-Down Investigation](04-01-drill-down.md)
+- [Reports](04-02-reports.md)
+- [Agentic AI Assistant](04-03-agentic-ai-assistant.md)
+- [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
 **[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)**
 
