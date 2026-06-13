@@ -1,4 +1,4 @@
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 1 — The Setup</h1>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">The Setup</h1>
 
 This lab uses a single virtual machine on an IBM Cloud environment that includes Db2, Db2 Genius Hub, and an Agentic Application to simulate workload scenarios.
 

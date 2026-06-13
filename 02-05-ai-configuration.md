@@ -1,9 +1,9 @@
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.5 — AI Configuration and Event Monitors</h1>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">AI Configuration and Event Monitors</h1>
 
 
 To enable the Db2 Agentic AI service in Genius Hub, you need to create an organization and API key from [db2.ibm.com](https://db2.ibm.com), then configure Genius Hub to use it.
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 1 — Create an Organization and Get Your API Key</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Create an Organization and Get Your API Key</h3>
 
 1. Open a new browser tab and navigate to [db2.ibm.com](https://db2.ibm.com). Log in with your IBMid.
 
@@ -25,7 +25,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 2 — Configure AI in Genius Hub</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Configure AI in Genius Hub</h3>
 
 6. Return to the **Genius Hub** browser tab. From the side menu select **Administration → Console**.
 
@@ -59,7 +59,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Part 3 — Verify the Agentic AI Service is Running</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Verify the Agentic AI Service is Running</h3>
 
 13. SSH into the VM as `db2ghadm`. See [Section 1 — Student SSH Access](01-setup.md#step-1--student-ssh-access).
 

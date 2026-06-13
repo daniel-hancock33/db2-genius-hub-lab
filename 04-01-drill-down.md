@@ -1,4 +1,4 @@
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">4.1 — Drill-Down Investigation</h1>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Drill-Down Investigation</h1>
 
 
 Now that you have learned the basics, let's start monitoring databases.
@@ -78,7 +78,7 @@ Now that you have learned the basics, let's start monitoring databases.
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Using Drill-Down for Investigation</h2>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Drill-Down Investigation</h2>
 
 1. Click the small dot **(a)** to drill down for more details.
 

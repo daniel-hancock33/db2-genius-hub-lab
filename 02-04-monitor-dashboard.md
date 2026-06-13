@@ -1,4 +1,4 @@
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">2.4 — Monitor Dashboard</h1>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Monitor Dashboard</h1>
 
 
 From the side menu, click **Monitor (a)**.

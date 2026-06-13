@@ -1,4 +1,4 @@
-<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Section 5 — Agentic AI Simulator</h1>
+<h1 style="padding-left:16px; border-left:8px solid #378ADD;">Agentic AI Simulator</h1>
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Overview</h2>
 
@@ -28,7 +28,7 @@ http://<public-ip>:3000
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Simulate Sort Memory Queuing</h2>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Sort Memory Queuing Simulation</h2>
 
 This simulation constrains sort memory resources at the database level to trigger queuing by the adaptive workload manager.
 
