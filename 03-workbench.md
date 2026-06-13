@@ -1,8 +1,20 @@
-## SQL Workbench
+<style>
+h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
+h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
+h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
+h4 { padding-left: 14px; border-left: 4px solid #888780; }
+</style>
 
-You can use the Workbench to run SQL statements, generate Visual Explains, tune queries, generate what-if analysis, and run Impact Analysis reports.
 
-> **Note:** The Activity Event monitor must be enabled for the Impact Analysis report. Make sure you have completed [Section 2.7 Turning on Event Monitors](02_basics.md#27-turning-on-event-monitors) before proceeding.
+# Section 3 — SQL Workbench
+
+You can use the Workbench to run SQL statements, generate Visual Explains, tune queries, run What-If Analysis, and run Impact Analysis reports.
+
+> **⚠️ Prerequisite:** The Activity Event Monitor must be enabled for the Impact Analysis report. Complete [Section 2 — Turning on Event Monitors](02-basics.md#turning-on-event-monitors) before proceeding.
+
+---
+
+## SQL Editor
 
 1. From the side menu, select **SQL Workbench (a)**.
 
@@ -12,26 +24,24 @@ You can use the Workbench to run SQL statements, generate Visual Explains, tune 
 
    <img src="images/WB-new-tab.png" width="800"/>
 
----
-
-### SQL Editor
-
 There are several ways to create a table in Db2 Genius Hub:
 
-- Using the smart SQL Editor to generate the create statement via the table list items option.
-      
-   <img src="images/WB-smart-table-editor.png" width="800"/>
+| Method | Description |
+|---|---|
+| **Smart SQL Editor** | Generate a CREATE statement via the table list items option |
+| **Manual Entry** | Type the command directly in the SQL editor |
 
-   (a) Database  
-   (b) Schema  
-   (c) List tables items (if tables exist click the three vertical dots and select List items)
-   (d) Create table  
-      
-- Create the table by typing the command manually
+For this lab, we will use manual entry.
 
-For this lab, we will use the second option.
+<img src="images/WB-smart-table-editor.png" width="800"/>
 
-1. Use the tab you opened and create a new table and insert the first 3 rows using the following SQL statements.
+> *(a) Database &nbsp;&nbsp; (b) Schema &nbsp;&nbsp; (c) List table items &nbsp;&nbsp; (d) Create table*
+
+---
+
+### Create a Table and Insert Data
+
+3. Use the new tab to create a table and insert the first rows using the following SQL:
 
    ```sql
    CREATE TABLE DB2DEMO.MYTABLE (
@@ -43,160 +53,147 @@ For this lab, we will use the second option.
 
    INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Shes', 10);
    INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Cintia', 10);
-
    ```
 
-2. Click **Run all (a)**.
+4. Click **Run all (a)**.
 
    <img src="images/WB-run-all.png" width="800"/>
 
-3. Check the execution results at the **lower part (b)** of the page.
+5. Check the execution results at the **lower part (b)** of the page.
 
    <img src="images/WB-execution-results.png" width="800"/>
 
-4. Now that your table is created, check the table details on the left side of the screen. Reload the object list.
+---
 
-   (a) Click `demo_col`  
-   (b) Click three vertical dots  
-   (c) Select **Reload items**  
+### Explore Table Details
+
+6. Reload the object list to see your new table:
+
+   **(a)** Click `demo_col` → **(b)** Click the three vertical dots → **(c)** Select **Reload items**
 
    <img src="images/WB-refresh-objects.png" width="800"/>
 
-5. `MYTABLE` should now be displayed.
+7. `MYTABLE` should now be displayed.
 
    <img src="images/WB-mytable-reloaded.png" width="800"/>
 
-6. This is the tables list view, showing the tables list for the `DB2DEMO` schema in the `demo_row` database.
-   Table shown:
+8. This is the tables list view for the `DB2DEMO` schema in the `demo_row` database. Selecting `MYTABLE` activates the action toolbar with the following options:
 
-   `MYTABLE` — a single table with:
-
-   Tablespace: `TS4MONITOR` (Block type)  
-   Row count: `0` (empty)  
-   Owner: `DB2DEMO`  
-   Created: `June 8, 2026 1:26 PM`   
-
-   `MYTABLE` table is selected (checkbox checked), which activates the action toolbar at the top showing: Add column, Generate DDL, Access control, Update statistics, and Drop.
-   
-   The three-dot context menu (⋮) is also open on the row, showing the same per-table actions:
-
-      - Add column
-      - Generate DDL
-      - Access control
-      - Update statistics
-      - Drop
-
-   This is a standard table management screen where you can perform administrative actions on a table either via the top toolbar (when selected) or the row-level context menu.
+   | Action | Description |
+   |---|---|
+   | Add column | Add a new column to the table |
+   | Generate DDL | Generate the CREATE TABLE statement |
+   | Access control | Manage table access |
+   | Update statistics | Run RUNSTATS on the table |
+   | Drop | Delete the table |
 
    <img src="images/WB-table-options.png" width="800"/>
 
+9. Select **`MYTABLE` (a)** to view the details panel.
 
-7. Select **`MYTABLE` (a)** to view the details.
+   <img src="images/WB-select-MYTABLE-details.png" width="800"/>
 
-    <img src="images/WB-select-MYTABLE-details.png" width="800"/>
+   The details panel includes the following tabs:
 
-    **Columns**  
+   | Tab | Description |
+   |---|---|
+   | **Columns** | Column definitions and data types |
+   | **Data preview** | Sample rows from the table |
+   | **Properties** | Tablespace, owner, and creation details |
+   | **Dependencies** | Objects that depend on this table |
+   | **Statistics** | Current table statistics |
 
-    <img src="images/WB-mytable-columns.png" width="800"/>
+   <img src="images/WB-mytable-columns.png" width="800"/>
+   <img src="images/WB-mytable-preview.png" width="800"/>
+   <img src="images/WB-mytable-properties.png" width="800"/>
+   <img src="images/WB-mytable-dependencies.png" width="800"/>
+   <img src="images/WB-mytable-stats.png" width="800"/>
 
-    **Data preview**  
-
-    <img src="images/WB-mytable-preview.png" width="800"/>
-
-    **Properties**  
-
-    <img src="images/WB-mytable-properties.png" width="800"/>
-
-    **Dependencies**  
-
-    <img src="images/WB-mytable-dependencies.png" width="800"/>
-
-    **Statistics**  
-
-    <img src="images/WB-mytable-stats.png" width="800"/>
-
-
-8. On the **demo_row - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked.  Notice the **Create table +** option, this is another option for creating tables.
+10. On the **demo_row - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked. Notice the **Create table +** option — another way to create tables.
 
     <img src="images/WB-mytable-create-table-option.png" width="800"/>
 
-9. On to the left side of the screen right click `MYTABLE` *(b)*.  Select Generate DML (c) and select (d) **Select**:
+---
+
+### Run Queries
+
+11. On the left side, right-click **`MYTABLE` (b)**. Select **Generate DML (c)** → **Select (d)**.
 
     <img src="images/WB-mytable-generate-dml.png" width="800"/>
 
+12. Copy and paste the SELECT statement a second time and add the following WHERE clauses:
 
+    ```sql
+    WHERE CODE = 2512;
 
-10. Copy and paste the select statement **(a)** a second time and add the following WHERE clauses:
+    WHERE GRADE = 10;
+    ```
 
-      ```sql
-         WHERE CODE = 2512;
+    Also add:
 
-         WHERE GRADE = 10;
-      ```
-
-      Also add the following statement:
-
-      ```sql
-      SELECT DISTINCT(SPEAKER) FROM DB2DEMO.MYTABLE ORDER BY SPEAKER;
-      ```
+    ```sql
+    SELECT DISTINCT(SPEAKER) FROM DB2DEMO.MYTABLE ORDER BY SPEAKER;
+    ```
 
     <img src="images/WB-queries.png" width="800"/>
 
-      These queries check: all rows in the table, entries for the 2512 session, sessions with grade 10, and all speakers in the conference.
+    These queries check: all rows in the table, entries for the 2512 session, sessions with grade 10, and all speakers in the conference.
 
-11. Click **Run all (a)**.
+13. Click **Run all (a)**.
 
     <img src="images/WB-run-all-queries.png" width="800"/>
 
-12. View the results at the bottom of the page **(a)**.
+14. View the results at the bottom of the page **(a)**.
 
     <img src="images/WB-query-results-1.png" width="800"/>
-
     <img src="images/WB-query-results-2.png" width="800"/>
-
     <img src="images/WB-query-results-3.png" width="800"/>
 
-13. Copy/paste insert statements **(b)** with different CODE values to generate 17,000 rows:
+---
+
+### Generate a Large Dataset
+
+15. Copy/paste the following insert statements **(b)** to generate 17,000 rows:
 
     ```sql
-      INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Shes', 10);
-      INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Cintia', 10);
+    INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Shes', 10);
+    INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Cintia', 10);
 
-      INSERT INTO DB2DEMO.MYTABLE2
-      WITH GENERATOR(N) AS (
-      SELECT 1 FROM SYSIBM.SYSDUMMY1
-      UNION ALL
-      SELECT N + 1 FROM GENERATOR WHERE N < 17000
-      )
-      SELECT
-      1000 + N,
-      'Db2 Genius Hub',
-      CASE WHEN MOD(N, 2) = 0 THEN 'Shes' ELSE 'Cintia' END,
-      N * 10
-      FROM GENERATOR;
+    INSERT INTO DB2DEMO.MYTABLE2
+    WITH GENERATOR(N) AS (
+    SELECT 1 FROM SYSIBM.SYSDUMMY1
+    UNION ALL
+    SELECT N + 1 FROM GENERATOR WHERE N < 17000
+    )
+    SELECT
+    1000 + N,
+    'Db2 Genius Hub',
+    CASE WHEN MOD(N, 2) = 0 THEN 'Shes' ELSE 'Cintia' END,
+    N * 10
+    FROM GENERATOR;
     ```
 
-    > **Note:** We need a table large enough so the Query Tuner can recommend an index. This INSERT will generate 17,000 records.
+    > **ℹ️ Note:** We need a large enough table so the Query Tuner can recommend an index. This INSERT will generate 17,000 records.
 
     <img src="images/WB-new-inserts.png" width="800"/>
-    
-14. Select the new insert statements **(c)**, click the drop down next to **Run all (d)**  and click **Run selected (e)**.
 
-     <img src="images/WB-inserts-run-selected.png" width="800"/>
+16. Select the new insert statements **(c)**, click the dropdown next to **Run all (d)**, and click **Run selected (e)**.
 
-15. Review the query results.
+    <img src="images/WB-inserts-run-selected.png" width="800"/>
+
+17. Review the query results.
 
     <img src="images/WB-inserts-review-results.png" width="800"/>
 
 ---
 
-### Visual Explain
+## Visual Explain
 
 1. Go back to the **second tab (a)**. Select the query with the **CODE = 2512** WHERE clause **(b)** and click **Explain the statement (c)**.
 
    <img src="images/WB-explain-query.png" width="800"/>
 
-2. The **Run Visual Explain** window opens. If you are familiar with Db2 Visual Explain, you can make changes here. Click **OK (a)**.
+2. The **Run Visual Explain** window opens. Click **OK (a)**.
 
    <img src="images/WB-run-explain-window.png" width="400"/>
 
@@ -204,11 +201,11 @@ For this lab, we will use the second option.
 
    <img src="images/WB-full-table-scan.png" width="800"/>
 
-   > **Note**: The **Visual Explain** window is a separate window. You can resize it and move it around the screen.  Notice the table scan which is how Db2 will retrieve the rows based on the query and the sturcture of the table.
+   > **ℹ️ Note:** The Visual Explain window is a separate floating window — you can resize and move it. Notice the table scan, which is how Db2 will retrieve the rows based on the query and the structure of the table.
 
 ---
 
-### Query Tuning
+## Query Tuning
 
 1. From the Visual Explain results, click **Tune query (a)** at the lower-right side of the screen.
 
@@ -234,17 +231,17 @@ For this lab, we will use the second option.
 
    <img src="images/WB-tuning-results.png" width="800"/>
 
-7. Go back to the **Advisor recommendation (a)** tab and select **Indexes (b)**.  Select index for `MYTABLE` (b).
+7. Go back to the **Advisor recommendation (a)** tab and select **Indexes (b)**. Select the index for `MYTABLE`.
 
    <img src="images/WB-table-apply-indexes.png" width="800"/>
 
-8. From the **Advisor scripts select **On-demand(a)** and click **Run (b)**.
+8. From **Advisor scripts**, select **On-demand (a)** and click **Run (b)**.
 
    <img src="images/WB-apply-indexes.png" width="800"/>
 
-9. The **Create on-demand tuning task** window opens. Change the tuning task name (a) to something you can identify and click **Next (b)**.
+9. The **Create on-demand tuning task** window opens. Change the tuning task name *(a)* to something identifiable and click **Next (b)**.
 
-    <img src="images/WB-tuning-task-name.png" width="800"/>
+   <img src="images/WB-tuning-task-name.png" width="800"/>
 
 10. Review the summary page and click **Finish (a)**.
 
@@ -254,7 +251,7 @@ For this lab, we will use the second option.
 
     <img src="images/WB-tuning-created.png" width="800"/>
 
-12. Click Tuning results to see the list of tasks.
+12. Click **Tuning results** to see the list of tasks.
 
     <img src="images/Return-tuning-tasks.png" width="800"/>
 
@@ -266,17 +263,17 @@ For this lab, we will use the second option.
 
     <img src="images/WB-index-results-and-close.png" width="400"/>
 
-    Now that the statistics are updated, retune the query to check for index recommendations.
+    Now that statistics are updated, retune the query to check for index recommendations.
 
 15. Select your single-query tuning task and click **Retune**.
 
     <img src="images/WB-retune.png" width="800"/>
 
-16. Enter a **Name (a)** you can easily identify and click **OK (b)**.
+16. Enter a **Name (a)** and click **OK (b)**.
 
     <img src="images/WB-retune-name.png" width="800"/>
 
-17. The information window opens. Click **Close (a)**.
+17. Click **Close (a)**.
 
     <img src="images/WB-retune-close.png" width="600"/>
 
@@ -284,7 +281,7 @@ For this lab, we will use the second option.
 
     <img src="images/WB-retune-result.png" width="800"/>
 
-19. This time no recommendations since the query is not optimized.
+19. This time there are no recommendations — the query is already optimized.
 
     <img src="images/WB-no-index-recommendation.png" width="800"/>
 
@@ -292,56 +289,67 @@ For this lab, we will use the second option.
 
     <img src="images/WB-retune-explain.png" width="800"/>
 
-21. Review the explain and notice the index is now being used.
+21. Review the explain — the index is now being used.
 
-    **With Index**  
+    **With Index:**
+
     <img src="images/WB-retune-explain-index.png" width="800"/>
 
-22. Review the new explain to the older explain before the index was applied.
+22. Compare to the original explain before the index was applied.
 
-    **Without Index**  
+    **Without Index:**
+
     <img src="images/WB-full-table-scan.png" width="800"/>
 
-### IBM Db2 Query Plan Comparison
+---
 
-#### Execution Plan Overview
+## Query Plan Comparison
 
-   | Aspect | Plan 1 (Image 1) | Plan 2 (Image 2) |
-   |---|---|---|
-   | **Operator chain** | Return → Ixscan → Table | Return → Tq → Tbscan → Table |
-   | **Scan type** | **Index scan (Ixscan)** | **Table scan (Tbscan)** |
-   | **Cumulative total cost** | −0.00 | 7.07 |
-   | **Cumulative CPU cost** | 48,530 | 271,833 |
-   | **Cumulative I/O cost** | 0.00 | 1.00 |
-   | **Estimated output cardinality** | 2.00 rows | 1.00 row |
-   | **Extra operator** | None | Tq (table queue — parallel) |
-   | **PLANID** | `ff1f9de6295fb22` | `13c96b740a9173f8` |
+The tables below compare the two execution plans — with and without the index applied.
+
+| Aspect | With Index (Plan 1) | Without Index (Plan 2) |
+|---|---|---|
+| **Operator chain** | Return → Ixscan → Table | Return → Tq → Tbscan → Table |
+| **Scan type** | **Index scan (Ixscan)** | **Table scan (Tbscan)** |
+| **Cumulative total cost** | −0.00 | 7.07 |
+| **Cumulative CPU cost** | 48,530 | 271,833 |
+| **Cumulative I/O cost** | 0.00 | 1.00 |
+| **Estimated output cardinality** | 2.00 rows | 1.00 row |
+| **Extra operator** | None | Tq (table queue — parallel) |
+| **PLANID** | `ff1f9de6295fb22` | `13c96b740a9173f8` |
+
+> The index reduced CPU cost from **271,833** to **48,530** — an **82% improvement**.
 
 ---
 
-### What-If Analysis (SKIP)
+## What-If Analysis *(Coming Soon)*
 
-> **Note:** This is a place holder for future lab tasks. 
+> **📌 Placeholder:** This section is reserved for future lab tasks.
 
-The what-if analysis shows how a query will behave if the index is applied, without actually creating the index. It can also show what would happen if an existing index is dropped.
-
+The what-if analysis shows how a query will behave if an index is applied — without actually creating the index. It can also show what would happen if an existing index is dropped.
 
 ---
 
-### Impact Analysis (SKIP)
+## Impact Analysis *(Coming Soon)*
+
+> **📌 Placeholder:** This section is reserved for future lab tasks.
 
 The Impact Analysis report shows how the recommended index will affect the performance of your existing queries — which queries will gain performance and which may be impacted if the index is applied.
 
-> **Note:** This is a place holder for future lab tasks. 
+---
+
+## Query Workload *(Coming Soon)*
+
+> **📌 Placeholder:** This section is reserved for future lab tasks.
+
+The Query Workload feature tunes several queries simultaneously and recommends indexes based on the overall workload — not just a single query.
 
 ---
 
-### Query Workload (SKIP)
+## Next Steps
 
-The Query Workload feature tunes several queries simultaneously and recommends indexes based on the overall workload — not just a single query.
-ß
-   > **Note:** This is a place holder for future lab tasks.
+This completes the SQL Workbench section.
 
-### 4.7 Next
+**[→ Proceed to Part 4: Monitoring Databases](04-monitoring.md)**
 
-This completes the Workbench lab proceed to [Section 4. Monitoring Databases](04-monitoring.md).
+---

@@ -1,19 +1,30 @@
-# Agentic AI Simulator
+<style>
+h1 { padding-left: 16px; border-left: 8px solid #378ADD; }
+h2 { padding-left: 14px; border-left: 6px solid #1D9E75; }
+h3 { padding-left: 14px; border-left: 5px solid #EF9F27; }
+h4 { padding-left: 14px; border-left: 4px solid #888780; }
+</style>
+
+
+# Section 5 — Agentic AI Simulator
 
 ## Overview
 
-The Db2 Agentic AI Simulator is a separate, as-is application provided for hands-on lab tasks. It allows you to trigger events that demonstrate how the Db2 agentic AI service solves problems.
+The Db2 Agentic AI Simulator is a separate, as-is application provided for hands-on lab tasks. It allows you to trigger events that demonstrate how the Db2 agentic AI service detects and solves problems.
 
-The application includes:
+**The application includes:**
 
-- **Text2SQL** — Natural Language to SQL: Load a dataset and ask questions in natural language
-- **Performance Simulators** — Simulate various database performance scenarios:
-  - WLM Queuing
-  - Query Spilling
-  - Locking
-  - Space Management
-  - Blocking
-  - Runstats
+| Feature | Description |
+|---|---|
+| **Text2SQL** | Natural Language to SQL — load a dataset and ask questions in plain English |
+| **WLM Queuing** | Constrain sort memory to trigger adaptive workload manager queuing |
+| **Query Spilling** | Trigger sort spill-to-disk events |
+| **Locking** | Create locking contention between sessions |
+| **Space Management** | Test tablespace space management issues |
+| **Blocking** | Demonstrate transaction blocking scenarios |
+| **Runstats** | Run statistics collection operations |
+
+---
 
 ## Accessing the Simulator
 
@@ -29,7 +40,9 @@ http://<public-ip>:3000
 
 This simulation constrains sort memory resources at the database level to trigger queuing by the adaptive workload manager.
 
-### Step 1: Establish Database Connection
+---
+
+### Step 1 — Establish Database Connection
 
 1. Click the top right icon **Connect DB** to connect to the `DEMO_COL` database.
 
@@ -43,7 +56,9 @@ This simulation constrains sort memory resources at the database level to trigge
 
    <img src="images/SIM-db-connected.png" width="800"/>
 
-### Step 2: Load TPCH Dataset
+---
+
+### Step 2 — Load TPCH Dataset
 
 4. In the TPCH Dataset section, click **Load Data**.
 
@@ -61,13 +76,15 @@ This simulation constrains sort memory resources at the database level to trigge
 
    <img src="images/SIM-tpch-loading-data.png" width="800"/>
 
-   > **Note:** This may take a few minutes depending on the size of the dataset.
+   > **⏳ Note:** This may take a few minutes depending on the size of the dataset.
 
 8. When the load completes, the button changes to **Reload Data**.
 
    <img src="images/SIM-tpch-data-loaded.png" width="800"/>
 
-### Step 3: Run WLM Sort Scenario
+---
+
+### Step 3 — Run the WLM Sort Scenario
 
 9. Click **WLM Queuing (a)** to open the WLM Sort Memory scenario.
 
@@ -77,65 +94,100 @@ This simulation constrains sort memory resources at the database level to trigge
 
     <img src="images/SIM-wlm-sort-run.png" width="800"/>
 
-### Step 4: Monitor the inflight queries in Genius Hub.  
+---
 
-1. In **Genius Hub** click Monitor (a) in the menu side bar.
+### Step 4 — Monitor Inflight Queries in Genius Hub
 
-    <img src="images/SIM-monitor-side-menu.png" width="200"/>
+1. In **Genius Hub**, click **Monitor (a)** in the side menu.
 
-2. Make sure the `DEMO_COL` is selected.
+   <img src="images/SIM-monitor-side-menu.png" width="200"/>
 
-    <img src="images/SIM-wlm-sort-db-select.png" width="800"/>
+2. Make sure `DEMO_COL` is selected.
 
-3. Scroll down and click **Inflight execution statement (a)** and notice queuing.
+   <img src="images/SIM-wlm-sort-db-select.png" width="800"/>
 
-    <img src="images/SIM-wlm-sort-inflight-queued.png" width="800"/>
+3. Scroll down and click **Inflight execution statement (a)**. Notice the queries are queuing.
 
-### Step 4: Use Agentic AI Agent to investigate the queuing issue.
+   <img src="images/SIM-wlm-sort-inflight-queued.png" width="800"/>
 
-1. Click **Agentic AI (a)** in the menu side bar. And expand the **Assistant** window (b).
+---
 
-    <img src="images/SIM-chatbot-expand.png" width="800"/>
+### Step 5 — Use the Agentic AI Agent to Investigate
 
-2. Close Disclaimer.
+1. Click **Agentic AI (a)** in the side menu and expand the **Assistant** window **(b)**.
 
-3. Select the database `DEMO_COL` in the AI chatbox (a).
+   <img src="images/SIM-chatbot-expand.png" width="800"/>
 
-    <img src="images/SIM-select-db-chatbot.png" width="400"/>
+2. Close the Disclaimer.
 
-4. Enter the following prompt in the AI chatbox (a): `Why are my queries queuing?`
+3. Select the database `DEMO_COL` in the AI chatbox **(a)**.
 
-5. Results will be displayed in the AI chatbox (a). Review the results by scolling down.
+   <img src="images/SIM-select-db-chatbot.png" width="400"/>
 
-    <img src="images/SIM-queuing-question-1-results.png" width="400"/>
+4. Enter the following prompt:
 
-6. Ask another question in the AI chatbox (a): `What has changed in my database configuration that is causing the queuing?`
+   ```
+   Why are my queries queuing?
+   ```
 
-    <img src="images/SIM-what-has-changed.png" width="400"/>
+5. Review the results in the AI chatbox — scroll down to read the full response.
 
+   <img src="images/SIM-queuing-question-1-results.png" width="400"/>
 
-7. Review the results by scolling down.
+6. Ask another question:
 
+   ```
+   What has changed in my database configuration that is causing the queuing?
+   ```
 
-8. Enter the following prompt in the AI chatbox (a): Use `SYSPROC.ADMIN_CMD` to generate the commands to revert my configuration.
+   <img src="images/SIM-what-has-changed.png" width="400"/>
 
-    <img src="images/SIM-generate-revert-commands.png" width="400"/>
+7. Review the results by scrolling down.
 
-9.  Copy the commands generated by the AI chatbox (a) and paste them into the SQL editor.
+8. Enter the following prompt to generate revert commands:
 
-    <img src="images/SIM-copy-commands.png" width="400"/>
+   ```
+   Use SYSPROC.ADMIN_CMD to generate the commands to revert my configuration.
+   ```
 
-10. Run the commands SQL Workbench and review results.
+   <img src="images/SIM-generate-revert-commands.png" width="400"/>
+
+9. Copy the commands generated by the AI chatbox.
+
+   <img src="images/SIM-copy-commands.png" width="400"/>
+
+10. Paste and run the commands in the **SQL Workbench**. Review the results.
 
     <img src="images/SIM-revert-commands-finished.png" width="400"/>
 
-12. Return to the Monitor and check the queuing.
-All queries should be processed immediately as the configuration has been reverted to the previous state.
+11. Return to the **Monitor** and check the queuing.
+
+    All queries should now be processed immediately — the configuration has been reverted to the previous state.
 
     <img src="images/SIM-revert-applied-executing.png" width="400"/>
 
+12. Close the Agentic AI Assistant.
 
-13. Close the Agentic AI Assistant.
+---
 
-This is the end of the lab.
+> ✅ **This is the end of the lab.**
+
+---
+
+## Summary
+
+In this lab, you:
+
+| Section | What You Did |
+|---|---|
+| **Setup** | Connected to the lab VM, started Genius Hub services, and configured the environment |
+| **Basics** | Explored the Genius Hub UI, configured event monitors, and set up AI configuration |
+| **SQL Workbench** | Created tables, ran queries, used Visual Explain, and applied AI Query Tuner recommendations |
+| **Monitoring** | Analyzed CPU anomalies, generated reports, used the Agentic AI Assistant, and configured alerts |
+| **Agentic AI Simulator** | Triggered a WLM queuing scenario, investigated it with the AI assistant, and reverted the configuration |
+
+---
+
+**[← Return to Introduction](00-introduction.md)**
+
 ---
