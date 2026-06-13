@@ -804,6 +804,6 @@ Before starting the data load in the next section, add the **Utilities** and **U
 
 ### 2.10 Next Steps
 
-This completes the Basics of Db2 Genius Hub. Proceed to [Section 3. Monitoring Databases](03-workbench.md).
+This completes the Basics of Db2 Genius Hub. Proceed to [Section 3. SQL Workbench](03-workbench.md).
 
 ---
