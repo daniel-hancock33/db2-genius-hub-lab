@@ -340,4 +340,8 @@ The Impact Analysis report shows how the recommended index will affect the perfo
 
 The Query Workload feature tunes several queries simultaneously and recommends indexes based on the overall workload — not just a single query.
 ß
-   > **Note:** This is a place holder for future lab tasks. 
+   > **Note:** This is a place holder for future lab tasks.
+
+### 4.7 Next
+
+This completes the Workbench lab proceed to [Section 4. Monitoring](04-monitoring.md).
