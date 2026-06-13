@@ -280,6 +280,6 @@ You will need this terminal window open for other tasks in this lab, keep it ope
 ---
 ### 1.7 Next Steps
 
-This completes the setup of Db2 Genius Hub. Proceed to [Section 2. The Basics](02_basics.md).
+This completes the setup of Db2 Genius Hub. Proceed to [Section 2. The Basics](02-basics.md).
 
 ---
