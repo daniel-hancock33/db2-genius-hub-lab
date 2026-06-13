@@ -2,11 +2,13 @@
 
 In this section you will use the SQL Workbench to create tables, run queries, and analyze query performance. You will generate a Visual Explain to see how Db2 executes a query, then use the AI Query Tuner to get index recommendations and measure the improvement.
 
+> **⚠️ Follow the topics in order** — the Query Tuning topic requires the table and data created in the SQL Editor topic, and the Visual Explain is required before Query Tuning.
+
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Topics</h2>
 
-- [SQL Editor](03-01-sql-editor.md) — Create tables, insert data, and run queries in the SQL editor
-- [Visual Explain](03-02-visual-explain.md) — Generate and interpret a visual execution plan
-- [Query Tuning](03-03-query-tuning.md) — Use the AI Query Tuner to recommend and apply indexes
+- [**SQL Editor**](03-01-sql-editor.md) — Create tables, insert data, and run queries in the SQL editor
+- [**Visual Explain**](03-02-visual-explain.md) — Generate and interpret a visual execution plan
+- [**Query Tuning**](03-03-query-tuning.md) — Use the AI Query Tuner to recommend and apply indexes
 
 ---
 
