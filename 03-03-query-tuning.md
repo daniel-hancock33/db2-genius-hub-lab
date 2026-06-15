@@ -116,14 +116,6 @@ The tables below compare the two execution plans — with and without the index 
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">What-If Analysis *(Coming Soon)*</h2>
-
-> **📌 Placeholder:** This section is reserved for future lab tasks.
-
-The what-if analysis shows how a query will behave if an index is applied — without actually creating the index. It can also show what would happen if an existing index is dropped.
-
----
-
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Impact Analysis *(Coming Soon)*</h2>
 
 > **📌 Placeholder:** This section is reserved for future lab tasks.
