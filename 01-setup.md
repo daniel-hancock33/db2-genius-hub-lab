@@ -267,7 +267,7 @@ Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
 |---|---|
 | Operating System | RHEL 9.x |
 | Database | Db2 AI Advanced Edition 12.1.4 |
-| Console | Db2 Genius Hub 1.1.2.0 with management aliases |
+| Console | Db2 Genius Hub 1.1.3.0 with management aliases |
 | Agentic UI | Next.js frontend with FastAPI backend |
 | Deployment | Automated using Ansible |
 
