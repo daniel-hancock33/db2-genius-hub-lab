@@ -16,8 +16,6 @@ Enter your credentials and click **Login**:
 
 Click **Accept all** *(c)*, then click **Login** *(d)*.
 
-> **⚠️ Caution:** Be careful when typing the password. After 3 incorrect attempts, the username will be locked and all users running this lab will be locked out.
-
 ---
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Configure Repository (First Login Setup)</h2>
