@@ -13,7 +13,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 | Component | Version |
 |---|---|
 | Db2 AI Advanced Edition (Single Partition) | 12.1.5 |
-| Db2 Genius Hub | 1.1.2.0 |
+| Db2 Genius Hub | 1.1.3.0 |
 | Agentic Demo UI | — |
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Pre-Configured Databases</h3>
