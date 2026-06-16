@@ -274,7 +274,7 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
    <img src="images/GH-create-job.png" width="800"/>
 
-3. In the **Define (a)** tab, enter a **Name (b)**, select **SQL script (c)**, and enter the following SQL in the **Job script text (d)** field:
+3. In the **Define** tab, enter a **Name (b)**, select **SQL script (c)**, and enter the following SQL in the **Job script text (d)** field:
 
    ```sql
    SELECT * FROM
