@@ -268,7 +268,7 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 1. From the side menu, select **Jobs (e)**.
 
-   <img src="images/GH-admin-sidemenu-jobs.png" width="200"/>
+   <img src="images/GH-admin-sidemenu-jobs.png" width="100"/>
 
 2. Click **Create job (a)**.
 
