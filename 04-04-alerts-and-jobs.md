@@ -308,7 +308,7 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 9. Wait until you see the alert **(a)** in the upper-right corner.
 
-    <img src="images/GH-job-alert.png" width="800"/>
+    <img src="images/GH-job-alert.png" width="400"/>
 
    > **ℹ️ Note:** The alert might take some time to show up as the query needs to be running for a few minutes to trigger the CPU alert.
 
@@ -316,11 +316,11 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
     <img src="images/GH-monitor-sidemenu.png" width="200"/>
 
-12. Select the **CPU time (a)** alert. The alert details **(b)** are displayed.
+12. Select the **Total activity time (a)** alert. The alert details are displayed.  Click **Work with Database Assistant (b)**. The Database Assistant opens on the right side. 
 
     <img src="images/GH-alert-cpu-time.png" width="800"/>
 
-13. Click **Work with Database Assistant (a)**. The Database Assistant opens on the right side. Review the recommendation.
+13. Review the recommendation.
 
     <img src="images/GH-alert-database-assistant.png" width="800"/>
 
@@ -328,13 +328,13 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 15. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
 
-    <img src="images/GH-notification-center-icon.png" width="400"/>
+    <img src="images/GH-job-alert.png" width="400"/>
 
 16. The **Notification Center** summary window opens. Click **View notification center (a)**.
 
     <img src="images/GH-notification-center-summary.png" width="800"/>
 
-17. The **Notification Center** window opens. Select the **CPU time (a)** alert and review the alert details **(b)** on the right side.
+17. The **Notification Center** window opens. Select the **Total activity time (a)** alert and review the alert details **(b)** on the right side.
 
     <img src="images/GH-notification-center-detail.png" width="800"/>
 
