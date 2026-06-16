@@ -266,19 +266,15 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
 You can use Db2 Genius Hub to create and schedule jobs.
 
-1. From the side menu, select **Administration (e)**.
+1. From the side menu, select **Jobs (e)**.
 
-   <img src="images/GH-admin-sidemenu.png" width="200"/>
+   <img src="images/GH-admin-sidemenu-jobs.png" width="200"/>
 
-2. Under **Jobs**, click **Jobs**.
-
-   <img src="images/GH-jobs-menu.png" width="800"/>
-
-3. Click **Create job (a)**.
+2. Click **Create job (a)**.
 
    <img src="images/GH-create-job.png" width="800"/>
 
-4. In the **Define (a)** tab, enter a **Name (b)**, select **SQL script (c)**, and enter the following SQL in the **Job script text (d)** field:
+3. In the **Define (a)** tab, enter a **Name (b)**, select **SQL script (c)**, and enter the following SQL in the **Job script text (d)** field:
 
    ```sql
    SELECT * FROM
@@ -292,65 +288,63 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
    <img src="images/GH-create-job-define.png" width="800"/>
 
-5. Scroll down and click **Next (a)**.
-
-   <img src="images/GH-create-job-next.png" width="800"/>
-
-6. In the **Select databases (a)** tab, select **Personal credential (b)** and select **`demo_col` (c)**. Click **Next (d)**.
+4. Scroll down and click **Next (e)**.
+  
+5. In the **Select databases (a)** tab, select **Personal credential (b)** and select **`demo_col` (c)**. Click **Next (d)**.
 
    <img src="images/GH-create-job-database.png" width="800"/>
 
-7. Review the summary and click **Finish (a)**.
+6. Review the summary and click **Finish (a)**.
 
    <img src="images/GH-create-job-summary.png" width="800"/>
 
-8. A message confirms the job was created successfully.
+7. A message confirms the job was created successfully.
 
    <img src="images/GH-job-created.png" width="800"/>
 
-9. From the **Jobs** page, click the **3 dots (a)** on the right side of the job and select **Run with existing credentials (b)**.
+8. From the **Jobs** page, click the **3 dots (a)** on the right side of the job and select **Run with existing credentials (b)**.
 
    <img src="images/GH-job-run.png" width="800"/>
 
-10. Wait until you see the alert **(a)** in the upper-right corner.
+9. Wait until you see the alert **(a)** in the upper-right corner.
 
     <img src="images/GH-job-alert.png" width="800"/>
 
-11. When the alert appears, stop the job to avoid excessive CPU consumption. Select your job **(a)** and click **Stop (b)**.
+10. When the alert appears, stop the job to avoid excessive CPU consumption. Select your job **(a)** and click **Stop (b)**.
 
     <img src="images/GH-job-stop.png" width="800"/>
 
-12. The **Stop job** window opens. Click **Stop (a)**.
+11. The **Stop job** window opens. Click **Stop (a)**.
 
     <img src="images/GH-job-stop-confirm.png" width="800"/>
 
-13. Delete the job. Select your job **(a)** and click **Delete (b)**.
+12. Delete the job. Select your job **(a)** and click **Delete (b)**.
 
     <img src="images/GH-job-delete.png" width="800"/>
 
-14. Return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
+13. Return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
 
     <img src="images/GH-monitor-sidemenu.png" width="200"/>
 
-15. Select the **CPU time (a)** alert. The alert details **(b)** are displayed.
+14. Select the **CPU time (a)** alert. The alert details **(b)** are displayed.
 
     <img src="images/GH-alert-cpu-time.png" width="800"/>
 
-16. Click **Work with Database Assistant (a)**. The Database Assistant opens on the right side. Review the recommendation.
+15. Click **Work with Database Assistant (a)**. The Database Assistant opens on the right side. Review the recommendation.
 
     <img src="images/GH-alert-database-assistant.png" width="800"/>
 
-17. **Write down the recommendation** from the Database Assistant.
+16. **Write down the recommendation** from the Database Assistant.
 
-18. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
+17. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
 
     <img src="images/GH-notification-center-icon.png" width="400"/>
 
-19. The **Notification Center** summary window opens. Click **View notification center (a)**.
+18. The **Notification Center** summary window opens. Click **View notification center (a)**.
 
     <img src="images/GH-notification-center-summary.png" width="800"/>
 
-20. The **Notification Center** window opens. Select the **CPU time (a)** alert and review the alert details **(b)** on the right side.
+19. The **Notification Center** window opens. Select the **CPU time (a)** alert and review the alert details **(b)** on the right side.
 
     <img src="images/GH-notification-center-detail.png" width="800"/>
 
