@@ -310,43 +310,35 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
     <img src="images/GH-job-alert.png" width="800"/>
 
-   > **ℹ️ Note:** The alert might take some time to show up as the query needs to be running for a few minutes to be trigger the CPU alert.
+   > **ℹ️ Note:** The alert might take some time to show up as the query needs to be running for a few minutes to trigger the CPU alert.
 
-10. When the alert appears, stop the job to avoid excessive CPU consumption. Select your job **(a)** and click **Stop (b)**.
+10. When the alert appears, stop the job to avoid excessive CPU consumption. Go to **History tab (a)**, select your job **(b)** and click **Stop (c)**.
 
     <img src="images/GH-job-stop.png" width="800"/>
 
-11. The **Stop job** window opens. Click **Stop (a)**.
-
-    <img src="images/GH-job-stop-confirm.png" width="800"/>
-
-12. Delete the job. Select your job **(a)** and click **Delete (b)**.
-
-    <img src="images/GH-job-delete.png" width="800"/>
-
-13. Return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
+11. Return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
 
     <img src="images/GH-monitor-sidemenu.png" width="200"/>
 
-14. Select the **CPU time (a)** alert. The alert details **(b)** are displayed.
+12. Select the **CPU time (a)** alert. The alert details **(b)** are displayed.
 
     <img src="images/GH-alert-cpu-time.png" width="800"/>
 
-15. Click **Work with Database Assistant (a)**. The Database Assistant opens on the right side. Review the recommendation.
+13. Click **Work with Database Assistant (a)**. The Database Assistant opens on the right side. Review the recommendation.
 
     <img src="images/GH-alert-database-assistant.png" width="800"/>
 
-16. **Write down the recommendation** from the Database Assistant.
+14. **Write down the recommendation** from the Database Assistant.
 
-17. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
+15. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
 
     <img src="images/GH-notification-center-icon.png" width="400"/>
 
-18. The **Notification Center** summary window opens. Click **View notification center (a)**.
+16. The **Notification Center** summary window opens. Click **View notification center (a)**.
 
     <img src="images/GH-notification-center-summary.png" width="800"/>
 
-19. The **Notification Center** window opens. Select the **CPU time (a)** alert and review the alert details **(b)** on the right side.
+17. The **Notification Center** window opens. Select the **CPU time (a)** alert and review the alert details **(b)** on the right side.
 
     <img src="images/GH-notification-center-detail.png" width="800"/>
 
