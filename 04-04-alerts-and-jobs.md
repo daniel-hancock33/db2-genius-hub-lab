@@ -320,31 +320,27 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
     <img src="images/GH-alert-cpu-time.png" width="800"/>
 
-13. Review the recommendation.
+13. **Write down the recommendation** from the Database Assistant.
 
-    <img src="images/GH-alert-database-assistant.png" width="800"/>
-
-14. **Write down the recommendation** from the Database Assistant.
-
-15. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
+14. You can also view the recommendation from the Notification Center. Click the **alert (a)** icon in the upper-right corner.
 
     <img src="images/GH-job-alert.png" width="400"/>
 
-16. The **Notification Center** summary window opens. Click **View notification center (a)**.
+15. The **Notification Center** summary window opens. Click **View notification center (a)**.
 
     <img src="images/GH-notification-center-summary-alert.png" width="800"/>
 
-17. The **Notification Center** window opens. Select the **Total activity time (a)** alert and review the alert details **(b)** on the right side.
+16. The **Notification Center** window opens. Select the **Total activity time (a)** alert and review the alert details **(b)** on the right side.
 
     <img src="images/GH-notification-center-detail.png" width="800"/>
 
     From the recommendation you can view the access plan or tune the statement — capabilities covered in the Visual Explain and Query Tuning sections.
 
-18. Stop the job to avoid excessive CPU consumption. From the side menu, select **Jobs (e)**.
+17. Stop the job to avoid excessive CPU consumption. From the side menu, select **Jobs (e)**.
 
    <img src="images/GH-admin-sidemenu-jobs.png" width="80"/>
    
-19. Go to **History tab (a)**, select your job **(b)** and click **Stop (c)**.
+18. Go to **History tab (a)**, select your job **(b)** and click **Stop (c)**.
 
     <img src="images/GH-job-stop.png" width="800"/>
 
