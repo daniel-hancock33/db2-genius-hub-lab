@@ -332,11 +332,11 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 16. The **Notification Center** summary window opens. Click **View notification center (a)**.
 
-    <img src="images/GH-notification-center-summary.png" width="800"/>
+    <img src="images/GH-notification-center-summary-alert.png" width="800"/>
 
 17. The **Notification Center** window opens. Select the **Total activity time (a)** alert and review the alert details **(b)** on the right side.
 
-    <img src="images/GH-notification-center-detail-alert.png" width="800"/>
+    <img src="images/GH-notification-center-detail.png" width="800"/>
 
     From the recommendation you can view the access plan or tune the statement — capabilities covered in the Visual Explain and Query Tuning sections.
 
