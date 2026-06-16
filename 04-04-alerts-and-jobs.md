@@ -268,7 +268,7 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
 1. From the side menu, select **Jobs (e)**.
 
-   <img src="images/GH-admin-sidemenu-jobs.png" width="100"/>
+   <img src="images/GH-admin-sidemenu-jobs.png" width="80"/>
 
 2. Click **Create job (a)**.
 
@@ -312,11 +312,7 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
    > **ℹ️ Note:** The alert might take some time to show up as the query needs to be running for a few minutes to trigger the CPU alert.
 
-10. When the alert appears, stop the job to avoid excessive CPU consumption. Go to **History tab (a)**, select your job **(b)** and click **Stop (c)**.
-
-    <img src="images/GH-job-stop.png" width="800"/>
-
-11. Return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
+10. When the alert appears, return to the Monitor dashboard by clicking **Monitor (c)** from the side menu.
 
     <img src="images/GH-monitor-sidemenu.png" width="200"/>
 
@@ -343,6 +339,14 @@ You can use Db2 Genius Hub to create and schedule jobs.
     <img src="images/GH-notification-center-detail.png" width="800"/>
 
     From the recommendation you can view the access plan or tune the statement — capabilities covered in the Visual Explain and Query Tuning sections.
+
+18. Stop the job to avoid excessive CPU consumption. From the side menu, select **Jobs (e)**.
+
+   <img src="images/GH-admin-sidemenu-jobs.png" width="80"/>
+   
+19. Go to **History tab (a)**, select your job **(b)** and click **Stop (c)**.
+
+    <img src="images/GH-job-stop.png" width="800"/>
 
 ---
 
