@@ -266,8 +266,6 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
 You can use Db2 Genius Hub to create and schedule jobs.
 
-> **📌 Informational Only:** This section is informational — there is a firewall port issue (SSH port 22) in the lab environment that prevents jobs from running. This will be addressed in a future release of Genius Hub.
-
 1. From the side menu, select **Administration (e)**.
 
    <img src="images/GH-admin-sidemenu.png" width="200"/>
