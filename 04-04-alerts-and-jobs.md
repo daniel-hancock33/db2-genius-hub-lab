@@ -310,6 +310,8 @@ You can use Db2 Genius Hub to create and schedule jobs.
 
     <img src="images/GH-job-alert.png" width="800"/>
 
+   > **ℹ️ Note:** The alert might take some time to show up as the query needs to be running for a few minutes to be trigger the CPU alert.
+
 10. When the alert appears, stop the job to avoid excessive CPU consumption. Select your job **(a)** and click **Stop (b)**.
 
     <img src="images/GH-job-stop.png" width="800"/>
