@@ -55,9 +55,9 @@ IBM Db2 Genius Hub is a web-based, AI-driven management console for Db2 LUW. It 
 | **Multi-Environment Support** | Monitor and manage all Db2 instances from a single interface: on-prem, cloud, or hybrid |
 | **AI Query Tuner** | Improve query performance with recommended indexes, what-if scenarios, and impact analysis |
 | **Intelligent Alerting** | Receive threshold-based alerts with fast diagnostics and resolution recommendations |
-| **Backup Management** | Manage database backups centrally |
-| **Q Replication Integration** | Create, start, stop, and monitor data replication between source and target systems |
-| **Custom Dashboards** | Compare behavior across databases using flexible, customizable dashboards |
+| **~~Backup Management~~** | [FUTURE] Manage database backups centrally |
+| **~~Q Replication Integration~~** | [FUTURE] Create, start, stop, and monitor data replication between source and target systems |
+| **~~Custom Dashboards~~** | [FUTURE] Compare behavior across databases using flexible, customizable dashboards |
 | **Job Management** | Comprehensive scheduling, execution, monitoring, and alerting for database jobs |
 
 ---
