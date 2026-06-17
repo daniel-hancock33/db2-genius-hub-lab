@@ -15,27 +15,19 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
    <img src="images/db2-organization-name.png" width="800"/>
 
-4. In the browser URL re-enter db2.ibm.com and click **Display API key**.
-
-   <img src="images/db2-display-api-key.png" width="800"/>
-
-5. The **API key successfully created** dialog opens. Click **Copy** to copy the key to your clipboard, then click **Close**.
-
-   <img src="images/db2-api-key-copy.png" width="600"/>
-
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Configure AI in Genius Hub</h3>
 
-6. Return to the **Genius Hub** browser tab. From the side menu select **Administration → Console**.
+4. Return to the **Genius Hub** browser tab. From the side menu select **Administration → Console**.
 
    <img src="images/GH-administration-menu-console-ai.png" width="200"/>
 
-7. In the **AI Assistant** section, click **AI configuration** *(e)*.
+5. In the **AI Assistant** section, click **AI configuration** *(e)*.
 
    <img src="images/GH-ai-configuration-menu.png" width="800"/>
 
-8. On the **AI configuration** page, enable **Agentic AI** by clicking the slider *(g)* from **Disabled** to **Enabled**.
+6. On the **AI configuration** page, enable **Agentic AI** by clicking the slider *(g)* from **Disabled** to **Enabled**.
 
    <img src="images/GH-ai-configuration-page.png" width="800"/>
 
@@ -49,7 +41,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
    > **ℹ️ Note:** The model is pre-selected — no changes are needed to the model type or cloud service settings.
 
-9. Click **Sign in with IBMid (k)**. You should already be logged in from Part 1.
+7. Click **Sign in with IBMid (k)**. You should already be logged in from Part 1.
 
 10. Paste the API key into the **API key field (l)** and click **Validate (m)**.
 
