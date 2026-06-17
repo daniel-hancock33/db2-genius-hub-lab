@@ -114,13 +114,31 @@ Click **Test connection (l)** → *Connect to demo_col successfully.*
 | **n** | Username | `db2demo` |
 | **o** | Password | `Db2ghPassw0rd#1` |
 
-Select **Save credentials to repository (q)**.
+Click **Test connection (p)**.
 
-Click **Test connection (p)** → *Connect to demo_col successfully.*
+Select **Save credentials to repository (q)** → ☑ Checked.
 
-Click **Save (r)** to save the connection.
+**Enable Remote OS Service:**
 
-> **ℹ️ Note:** The Agentic AI Service and Anomaly Detection Service will be `STOPPED` and will be enabled later in this lab.
+| Label | Field | Value |
+|---|---|---|
+| **r** | Enable remote OS Service | ☑ Checked |
+| — | Use SSL | ☐ Unchecked |
+| **s** | Port | `8080` |
+| **t** | Username | `db2demo` |
+| **u** | Password | `Db2ghPassw0rd#1` |
+
+Click **Test connection (v)** → *Connection successful - authentication verified.*
+
+**Additional options:**
+
+- Initialize HADR — ☐ Unchecked
+- Initialize pureScale — ☐ Unchecked
+- Description — *(empty)*
+- JDBC URL (view only): `jdbc:db2://localhost:25010/demo_col:retrieveMessagesFromServerOnGetMessage=true;`
+
+Click **Save (w)** to save the connection.
+
 
 After clicking **Save**, you will be brought to the **Success!** page. Click **Go to Databases** to proceed.
 
