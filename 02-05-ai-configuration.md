@@ -15,7 +15,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
    <img src="images/db2-organization-name.png" width="800"/>
 
-4. Click **Display API key**.
+4. In the browser URL re-enter db2.ibm.com and click **Display API key**.
 
    <img src="images/db2-display-api-key.png" width="800"/>
 
