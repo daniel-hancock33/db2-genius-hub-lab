@@ -58,7 +58,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
    - From the Organization drop-down list (c), select the organization you created in the previous step.
    - Click Save (d).
 
-   <img src="images/GH-config-org.png" width="400"/>
+   <img src="images/GH-config-org.png" width="800"/>
 
 ---
 
