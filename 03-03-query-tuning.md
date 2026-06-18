@@ -43,7 +43,7 @@
 
 11. A message confirms the task was created successfully. Click **Tuning results (a)**.
 
-    <img src="images/WB-tuning-created.png" width="400"/>
+    <img src="images/WB-tuning-created.png" width="800"/>
 
 12. Click **Tuning results** to see the list of tasks.
 
