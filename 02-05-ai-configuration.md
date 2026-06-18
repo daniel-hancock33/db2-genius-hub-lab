@@ -81,10 +81,10 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
     If the Agentic AI Service shows as `STOPPED`, start the Anomaly service:
 
     ```bash
-    cd /home/db2ghadm/ibm-db2GeniusHub/addons/anomaly-detection
+    cd /home/db2ghadm/ibm-db2GeniusHub/addons/agentic-ai/
     ./start.sh
     ```
-    cd /home/db2ghadm/ibm-db2GeniusHub/addons/agentic-ai/
+
 
 15. Confirm all services are running:
 
