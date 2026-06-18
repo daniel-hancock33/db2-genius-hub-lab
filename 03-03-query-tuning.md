@@ -75,7 +75,7 @@
 
     <img src="images/WB-retune-result.png" width="800"/>
 
-19. This time there are no recommendations — the query is already optimized.
+19. This time, there are no recommendations — the query is already optimized.
 
     <img src="images/WB-no-index-recommendation.png" width="800"/>
 
