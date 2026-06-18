@@ -39,11 +39,11 @@
 
 10. Review the summary page and click **Finish (a)**.
 
-    <img src="images/WB-tuning-finish.png" width="800"/>
+    <img src="images/WB-tuning-finish.png" width="400"/>
 
 11. A message confirms the task was created successfully. Click **Tuning results (a)**.
 
-    <img src="images/WB-tuning-created.png" width="800"/>
+    <img src="images/WB-tuning-created.png" width="400"/>
 
 12. Click **Tuning results** to see the list of tasks.
 
