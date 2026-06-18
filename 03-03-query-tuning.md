@@ -81,15 +81,19 @@
 
 20. Return to the tab with the tuned query (a). Select the query where `CODE = 2512` (b) and click **Explains the statement (c)***.
 
-    <img src="images/WB-retune-explain.png" width="800"/>
+    <img src="images/WB-rerun-explain.png" width="800"/>
 
-21. Review the explain — the index is now being used.
+21. Review the **Run Visual Explain Options** and click **OK (a)**.  
+
+    <img src="images/WB-rerun-explain-ok.png" width="800"/>
+
+22. Review the explain — the index is now being used.
 
     **With Index:**
 
     <img src="images/WB-retune-explain-index.png" width="800"/>
 
-22. Compare to the original explain before the index was applied.
+23. Compare to the original explain before the index was applied.
 
     **Without Index:**
 
