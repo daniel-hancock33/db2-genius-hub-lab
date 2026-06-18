@@ -79,7 +79,7 @@
 
     <img src="images/WB-no-index-recommendation.png" width="800"/>
 
-20. Return to the tab with the tuned query and rerun the explains.
+20. Return to the tab with the tuned query (a). Select the query where `CODE = 2512` (b) and click **Explains the statement (c)***.
 
     <img src="images/WB-retune-explain.png" width="800"/>
 
