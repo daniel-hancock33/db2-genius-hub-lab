@@ -31,11 +31,11 @@
 
 8. From **Advisor scripts**, select **On-demand (a)** and click **Run (b)**.
 
-   <img src="images/WB-apply-indexes.png" width="800"/>
+   <img src="images/WB-apply-indexes.png" width="400"/>
 
 9. The **Create on-demand tuning task** window opens. Change the tuning task name *(a)* to something identifiable and click **Next (b)**.
 
-   <img src="images/WB-tuning-task-name.png" width="800"/>
+   <img src="images/WB-tuning-task-name.png" width="400"/>
 
 10. Review the summary page and click **Finish (a)**.
 
