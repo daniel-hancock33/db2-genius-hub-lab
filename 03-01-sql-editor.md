@@ -62,7 +62,16 @@ For this lab, we will use manual entry.
 
    <img src="images/WB-mytable-reloaded.png" width="800"/>
 
-8. This is the tables list view for the `DB2DEMO` schema in the `demo_col` database. Selecting `MYTABLE` activates the action toolbar with the following options:
+8. List the objects for the schema `DB2DEMO`  
+   a. Select `DB2DEMO` schema   
+   b. Select the `Tables` object  
+   c. Click the Kebab menu  
+   d. Select **List items**    
+
+    <img src="images/WB-list-obj-db2demo.png" width="800"/>   
+
+   
+10. This is the tables list view for the `DB2DEMO` schema in the `demo_col` database with the following options:
 
    | Action | Description |
    |---|---|
@@ -74,7 +83,7 @@ For this lab, we will use manual entry.
 
    <img src="images/WB-table-options.png" width="800"/>
 
-9. Select **`MYTABLE` (a)** to view the details panel.
+11. Select **`MYTABLE` (a)** to view the details panel.
 
    <img src="images/WB-select-MYTABLE-details.png" width="800"/>
 
@@ -94,7 +103,7 @@ For this lab, we will use manual entry.
    <img src="images/WB-mytable-dependencies.png" width="800"/>
    <img src="images/WB-mytable-stats.png" width="800"/>
 
-10. On the **demo_col - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked. Notice the **Create table +** option — another way to create tables.
+11. On the **demo_col - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked. Notice the **Create table +** option — another way to create tables.
 
     <img src="images/WB-mytable-create-table-option.png" width="800"/>
 
