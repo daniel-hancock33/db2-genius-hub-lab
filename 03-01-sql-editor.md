@@ -62,7 +62,7 @@ For this lab, we will use manual entry.
 
    <img src="images/WB-mytable-reloaded.png" width="800"/>
 
-8. This is the tables list view for the `DB2DEMO` schema in the `demo_row` database. Selecting `MYTABLE` activates the action toolbar with the following options:
+8. This is the tables list view for the `DB2DEMO` schema in the `demo_col` database. Selecting `MYTABLE` activates the action toolbar with the following options:
 
    | Action | Description |
    |---|---|
@@ -94,7 +94,7 @@ For this lab, we will use manual entry.
    <img src="images/WB-mytable-dependencies.png" width="800"/>
    <img src="images/WB-mytable-stats.png" width="800"/>
 
-10. On the **demo_row - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked. Notice the **Create table +** option — another way to create tables.
+10. On the **demo_col - DB2DEMO - Table** tab, uncheck `MYTABLE` if checked. Notice the **Create table +** option — another way to create tables.
 
     <img src="images/WB-mytable-create-table-option.png" width="800"/>
 
