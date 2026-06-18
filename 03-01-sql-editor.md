@@ -71,7 +71,7 @@ For this lab, we will use manual entry.
     <img src="images/WB-list-obj-db2demo.png" width="800"/>   
 
    
-10. This is the tables list view for the `DB2DEMO` schema in the `demo_col` database with the following options:
+9. This is the tables list view for the `DB2DEMO` schema in the `demo_col` database with the following options:
 
    | Action | Description |
    |---|---|
@@ -83,7 +83,7 @@ For this lab, we will use manual entry.
 
    <img src="images/WB-table-options.png" width="800"/>
 
-11. Select **`MYTABLE` (a)** to view the details panel.
+10. Select **`MYTABLE` (a)** to view the details panel.
 
    <img src="images/WB-select-MYTABLE-details.png" width="800"/>
 
@@ -111,11 +111,11 @@ For this lab, we will use manual entry.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Run Queries</h3>
 
-11. On the left side, right-click **`MYTABLE` (b)**. Select **Generate DML (c)** → **Select (d)**.
+12. On the left side, right-click **`MYTABLE` (b)**. Select **Generate DML (c)** → **Select (d)**.
 
     <img src="images/WB-mytable-generate-dml.png" width="800"/>
 
-12. Copy and paste the SELECT statement a second time and add the following WHERE clauses:
+13. Copy and paste the SELECT statement a second time and add the following WHERE clauses:
 
     ```sql
     WHERE CODE = 2512;
@@ -133,11 +133,11 @@ For this lab, we will use manual entry.
 
     These queries check: all rows in the table, entries for the 2512 session, sessions with grade 10, and all speakers in the conference.
 
-13. Click **Run all (a)**.
+14. Click **Run all (a)**.
 
     <img src="images/WB-run-all-queries.png" width="800"/>
 
-14. View the results at the bottom of the page **(a)**.
+15. View the results at the bottom of the page **(a)**.
 
     <img src="images/WB-query-results-1.png" width="800"/>
     <img src="images/WB-query-results-2.png" width="800"/>
@@ -147,7 +147,7 @@ For this lab, we will use manual entry.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Generate a Large Dataset</h3>
 
-15. Copy/paste the following insert statements **(b)** to generate 17,000 rows:
+16. Copy/paste the following insert statements **(b)** to generate 17,000 rows:
 
     ```sql
     INSERT INTO DB2DEMO.MYTABLE VALUES (2512, 'Db2 Genius Hub', 'Shes', 10);
@@ -171,11 +171,11 @@ For this lab, we will use manual entry.
 
     <img src="images/WB-new-inserts.png" width="800"/>
 
-16. Select the new insert statements **(c)**, click the dropdown next to **Run all (d)**, and click **Run selected (e)**.
+17. Select the new insert statements **(c)**, click the dropdown next to **Run all (d)**, and click **Run selected (e)**.
 
     <img src="images/WB-inserts-run-selected.png" width="800"/>
 
-17. Review the query results.
+18. Review the query results.
 
     <img src="images/WB-inserts-review-results.png" width="800"/>
 
