@@ -50,12 +50,15 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 9. Click **Copy** to copy the API key.
 
    <img src="images/GH-copy-api-key.png" width="400"/>
+   
+11. Configure the organization, return to Db2 Genius Hub.
 
-11. Retrun to Genius Hub and paste the API key into the **API key field (l)** and click **Validate (m)**.
+   - Paste the API key into the API Key field (a).
+   - Click Validate (b).
+   - From the Organization drop-down list (c), select the organization you created in the previous step.
+   - Click Save (d).
 
-12. In the **Organization field (n)**, select the organization you just created.
-
-13. Click **Save (o)**.
+   <img src="images/GH-config-org.png" width="400"/>
 
 ---
 
