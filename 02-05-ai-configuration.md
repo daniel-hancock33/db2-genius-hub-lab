@@ -136,7 +136,7 @@ Change the collection interval from 5 minutes to 1 minute for faster data captur
 
    <img src="images/GH-monitoring-profiles-default-edit.png" width="800"/>
 
-5. Change the **Collection interval** *(f)* to **1 minute**.
+5. Change the **Collection interval** *(f)* to **1 minute** and click **Save**.
 
    <img src="images/GH-monitoring-profiles-default-edit-interval.png" width="800"/>
 
