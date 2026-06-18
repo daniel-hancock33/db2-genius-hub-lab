@@ -62,7 +62,7 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Verify the Agentic AI Service is Running</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Verify the Anomaly and Agentic AI Service are Running</h3>
 
 13. SSH into the VM as `db2ghadm`. See [Section 1 — Student SSH Access](01-setup.md#step-1--student-ssh-access).
 
@@ -72,12 +72,19 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
     ghstatus
     ```
 
+    If the Anomaly Service shows as `STOPPED`, start the Anomaly service:
+
+    ```bash
+    cd /home/db2ghadm/ibm-db2GeniusHub/addons/anomaly-detection
+    ./start.sh
+    ```
     If the Agentic AI Service shows as `STOPPED`, start the Anomaly service:
 
     ```bash
     cd /home/db2ghadm/ibm-db2GeniusHub/addons/anomaly-detection
     ./start.sh
     ```
+    cd /home/db2ghadm/ibm-db2GeniusHub/addons/agentic-ai/
 
 15. Confirm all services are running:
 
