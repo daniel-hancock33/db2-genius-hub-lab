@@ -255,7 +255,7 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
     <img src="images/GH-response-time-charts.png" width="800"/>
 
-    > **ℹ️ Note:** Charts won't show meaningful data yet — no workload is currently running. In the Agentic AI Simulator section, workload will run so you can explore the charts with real data.
+    > **ℹ️ Note:** The charts are currently empty because no workload is running. Later in this lab, you will generate activity using workload simulation scripts and an Agentic AI Simulator to populate the dashboards with realistic data.
 
 ---
 
