@@ -22,6 +22,25 @@
 
 **[1 — The Setup](01-setup.md)**
 
+- [Environment overview](#environment-overview)
+   - [Installed components](#installed-components)
+   - [Pre-configured databases](#pre-configured-databases)
+   - [Utility scripts](#utility-scripts)
+- [Accessing the lab environment](#accessing-the-lab-environment)
+- [Default credentials](#default-credentials)
+   - [Genius Hub UI](#genius-hub-ui)
+   - [Db2 users](#db2-users)
+- [Setup and configuration](#setup-and-configuration)
+   - [Step 1 — Student SSH access](#step-1--student-ssh-access)
+     - [Step 1a — Get your PEM file and IP address](#step-1a--get-your-pem-file-and-ip-address)
+     - [Step 1b — Set file permissions](#step-1b--set-file-permissions)
+     - [Step 1c — Connect via SSH](#step-1c--connect-via-ssh)
+   - [Step 2 — Start Genius Hub services](#step-2--start-genius-hub-services)
+   - [Step 3 — Start the Db2 Remote Services](#step-3--start-the-db2-remote-services)
+- [Architecture summary](#architecture-summary)
+- [What you will achieve](#what-you-will-achieve)
+- [Next steps](#next-steps)
+
 **[2 — The Basics](02-basics.md)**
 - [Login and Repository Setup](02-01-login-and-repo.md)
 - [Interface Tour](02-02-interface-tour.md)
