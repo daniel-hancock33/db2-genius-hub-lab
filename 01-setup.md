@@ -259,6 +259,53 @@ Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
 
 > **ℹ️ Note:** Some services may show as `STOPPED` until Genius Hub is fully configured and addon services are started. These will be enabled in later steps.
 
+Return to the `db2demo` user 
+
+`exit`
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Start the Db2 Remote Services</h3>
+
+Switch to the `db2inst1` user:
+
+```bash
+sudo su - db2inst1
+```
+
+Start the Genius Hub services:
+
+```bash
+cd /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts
+./start.sh
+```
+
+**Expected output**  
+
+```
+========================================
+  db2remotesvc Start Script
+========================================
+
+[INFO] 2026-06-24 21:13:36 - Starting db2remotesvc service...
+[WARN] 2026-06-24 21:13:36 - Stale PID file found, removing...
+[INFO] 2026-06-24 21:13:36 - Using binary: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/db2remotesvc
+[INFO] 2026-06-24 21:13:36 - Loading environment variables from .env file
+[INFO] 2026-06-24 21:13:36 - Starting service with arguments:  --enable-jwt=true
+[INFO] 2026-06-24 21:13:36 - Starting in daemon mode...
+[INFO] 2026-06-24 21:13:38 - Successfully started db2remotesvc (PID: 773887)
+[INFO] 2026-06-24 21:13:38 - Log file: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/logs/db2remotesvc.log
+[INFO] 2026-06-24 21:13:38 - PID file: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/db2remotesvc.pid
+
+========================================
+[INFO] 2026-06-24 21:13:38 - Service started successfully
+========================================
+
+[INFO] 2026-06-24 21:13:38 - To check status: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts/status.sh
+[INFO] 2026-06-24 21:13:38 - To stop service: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts/stop.sh
+[INFO] 2026-06-24 21:13:38 - To view logs: tail -f /home/db2inst1/db2-remote-svc-1.1.1.0-linux/logs/db2remotesvc.log
+```
+
 ---
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Architecture Summary</h2>
