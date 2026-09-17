@@ -23,7 +23,7 @@ The Db2 Agentic AI Simulator is a separate, as-is application provided for hands
 Open a browser and navigate to:
 
 ```
-http://<public-ip>:3000
+http://localhost:3000
 ```
 
 ---

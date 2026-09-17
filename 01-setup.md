@@ -12,8 +12,9 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 | Component | Version |
 |---|---|
-| Db2 AI Advanced Edition (Single Partition) | 12.1.5 |
-| Db2 Genius Hub | 1.1.3.0 |
+| Db2 Advanced Enterprise Server Edition (Single Partition) | 12.1.5 |
+| Db2 Genius Hub | 1.1.5.0 |
+| Db2 Remote Service | 1.1.5.0 |
 | Agentic Demo UI | — |
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Pre-Configured Databases</h3>
@@ -28,8 +29,8 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 | Script | Purpose |
 |---|---|
-| `ghinfo` | Display environment details |
-| `start-services.sh` | Start required services |
+| `ghinfo` or `info` | Display environment details |
+| `start-services.sh` | Start all required services |
 | `ghstatus` | Check status of Db2 Genius Hub services |
 | `ghstart` | Start Db2 Genius Hub services |
 | `ghstop` | Stop Db2 Genius Hub services |
@@ -39,16 +40,23 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing the Lab Environment</h2>
 
-| Service | Endpoint |
-|---|---|
-| **Genius Hub Web Console** | `https://<public-ip>:11101` |
-| **Agentic Demo UI** | `http://<public-ip>:3000` |
-| **Db2 Host (for Genius Hub)** | `localhost` |
-| **Db2 Host (for external tools)** | `YOUR-EXTERNAL-IP` |
-| **Db2 Port** | `25011` |
-| **SSH Access** | `ssh -i YOUR-FILE.pem YOUR-USER@YOUR-EXTERNAL-IP -p 2223` |
+All services in this lab are accessed through the **Guacamole remote desktop** provided by IBM TechZone. There are no publicly exposed application ports — Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all accessed from inside the desktop session using `localhost` URLs.
 
-> **⚠️ Replace** `YOUR-FILE.pem`, `YOUR-USER`, `YOUR-EXTERNAL-IP`, and `<public-ip>` with the values provided for your lab environment.
+> **⚠️ Important — Start Services First:** Genius Hub does **not** start automatically after deployment. Before accessing any services, you must run the startup script. See **Step 1** below.
+
+| Service | How to Access |
+|---|---|
+| **Guacamole Desktop** | TechZone reservation page → open the desktop link |
+| **Genius Hub Console** | Inside desktop → Firefox → `https://localhost:11101/console` |
+| **Agentic Demo UI** | Inside desktop → Firefox → `http://localhost:3000` |
+| **JupyterLab** | Inside desktop → Firefox → `http://localhost:8888` |
+| **DBeaver** | Inside desktop → Applications menu → DBeaver |
+| **Db2 Host (for Genius Hub)** | `localhost` |
+| **Db2 Port (db2inst1)** | `25010` |
+| **Db2 Port (db2inst2 / REPODB)** | `25011` |
+| **SSH Access** | `ssh -i ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223` |
+
+> **ℹ️ SSH key:** Download your SSH private key (`ssh_private_key.pem`) from the TechZone reservation page using the **"Deployment SSH private key"** download button.
 
 ---
 
@@ -58,6 +66,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 | Field | Value |
 |---|---|
+| URL | `https://localhost:11101/console` (inside Guacamole desktop) |
 | Username | `admin` |
 | Password | `Db2ghPassw0rd#1` |
 
@@ -65,11 +74,12 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 The following users are pre-configured. All share the same password.
 
-| Username | Password |
-|---|---|
-| `db2inst1` | `Db2ghPassw0rd#1` |
-| `db2demo` | `Db2ghPassw0rd#1` |
-| `db2ghadm` | `Db2ghPassw0rd#1` |
+| Username | Password | Notes |
+|---|---|---|
+| `db2inst1` | `Db2ghPassw0rd#1` | Db2 instance owner (port 25010) |
+| `db2inst2` | `Db2ghPassw0rd#1` | Repo instance owner (port 25011) |
+| `db2demo` | `Db2ghPassw0rd#1` | Demo user — primary lab user |
+| `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub admin |
 
 ---
 
@@ -79,231 +89,48 @@ Follow these steps to prepare the environment for the lab.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Student SSH Access</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start All Services</h3>
 
-This guide will help you connect to your IBM TechZone lab environment using SSH (Secure Shell). Your instructor will provide:
+Before doing anything else, open the **Guacamole desktop** from the TechZone reservation page, then open a **Terminal** and run:
 
-- Your VM's **public IP address**
-- Your personal **PEM key file** (e.g., `student_01.pem`, `student_02.pem`)
+```bash
+~/start-services.sh
+```
 
-All students connect as the `db2demo` user on their own dedicated VM.
+This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete before proceeding.
 
-<h4 style="padding-left:14px; border-left:4px solid #888780;">Prerequisites</h4>
-
-**Windows Users** — You'll need an SSH client:
-
-| Option | Notes |
-|---|---|
-| PowerShell / Command Prompt | Built into Windows 10/11 *(recommended)* |
-| PuTTY | Download from [https://www.putty.org/](https://www.putty.org/) |
-
-**Mac/Linux Users** — SSH is already installed. Use the Terminal application.
+> **ℹ️ Note:** You can run `ghinfo` or `info` at any time from a terminal to check the status and see all credentials and URLs.
 
 ---
 
-<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1a — Get Your PEM File and IP Address</h4>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Open the Guacamole Desktop</h3>
 
-Your instructor will provide:
-- Your `.pem` file (e.g., `student_01.pem`)
-- Your VM's public IP address (e.g., `52.118.191.168`)
+All lab work is done inside the Guacamole remote desktop:
 
-Write them down — you'll need them throughout the lab.
+1. Go to your TechZone reservation page
+2. Click the **Guacamole** desktop link to open the full GNOME desktop in your browser
+3. Inside the desktop, open **Firefox** for all web-based lab tasks
 
----
-
-<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1b — Set File Permissions</h4>
-
-> **🔒 Security requirement:** SSH requires that your private key file is not publicly readable.
-
-**Mac/Linux:**
-
-Navigate to where your `.pem` file is saved and run (replace `student_01` with your file name):
-
-```bash
-cd ~/Desktop
-chmod 600 student_01.pem
-```
-
-**Windows — GUI method:**
-
-1. Right-click `student_01.pem` → **Properties → Security**
-2. Click **Advanced → Disable inheritance**
-3. Choose **Remove all inherited permissions**
-4. Click **Add → Select a principal**
-5. Type your Windows username → **Check Names → OK**
-6. Check **Full control → OK → Apply → OK**
-
-**Windows — PowerShell method** (replace `student_01` with your file name):
-
-```powershell
-icacls student_01.pem /inheritance:r
-icacls student_01.pem /grant:r "%USERNAME%:F"
-```
+> **ℹ️ Tip:** You can copy/paste text into the Guacamole session using the Guacamole clipboard (the tab on the left edge of the screen).
 
 ---
 
-<h4 style="padding-left:14px; border-left:4px solid #888780;">Step 1c — Connect via SSH</h4>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Access (Optional)</h3>
 
-**Mac/Linux/Windows (PowerShell or Command Prompt):**
+SSH access is available if you need a terminal outside of the Guacamole desktop.
 
-Navigate to where your `.pem` file is saved:
-
-```bash
-cd ~/Desktop
-```
-
-Connect using the following command (replace `student_01` with your file name and `52.118.191.168` with your VM's IP address):
+Download your SSH private key from the TechZone reservation page by clicking the **"Deployment SSH private key"** download button. Then connect:
 
 ```bash
-ssh -i student_01.pem db2demo@52.118.191.168 -p 2223
+ssh -i ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223
 ```
 
-The first time you connect, you'll see a host authenticity prompt. Type `yes` and press Enter:
+> **ℹ️ Replace** `YOUR-USER` and `YOUR-PUBLIC-IP` with the values shown on your TechZone reservation page.
 
-```
-The authenticity of host '[52.118.191.168]:2223' can't be established.
-Are you sure you want to continue connecting (yes/no)?
-```
-
-You should now see a Linux prompt:
-
-```
-[db2demo@db2gh-demo ~]$
-```
-
----
-
-**Windows (PuTTY):**
-
-First, convert your `.pem` key to PuTTY's `.ppk` format:
-
-1. Open **PuTTYgen**, click **Load**, and select your `.pem` file *(change the file filter to "All Files")*
-2. Click **Save private key** and save as `student_01.ppk`
-
-Then connect using PuTTY:
-
-| Field | Value |
-|---|---|
-| Host Name | Your VM's IP address (e.g., `52.118.191.168`) |
-| Port | `2223` |
-| Connection type | SSH |
-
-3. In the left menu, navigate to **Connection → SSH → Auth**
-4. Under **Private key file**, browse and select your `.ppk` file
-5. Click **Open** and log in as `db2demo`
-
----
-
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Start Genius Hub Services</h3>
-
-Switch to the `db2ghadm` user:
+**Mac/Linux — set key permissions first:**
 
 ```bash
-sudo su - db2ghadm
-```
-
-Start the Genius Hub services:
-
-```bash
-ghstart
-```
-
-> **ℹ️ Note:** `ghstart` is a convenience alias created for this lab. It is not part of the Genius Hub product installation.
-
-Expected output:
-
-```
-Updating the application server bootstrap and environment properties ...
-Updating the applications ...
-Sat Jun 6 01:51:17 UTC 2026 Starting IBM Db2 Genius Hub.
-
-Starting server dsweb.
-Server dsweb started with process ID 26583.
-Sat Jun 6 01:51:44 UTC 2026 Successfully started IBM Db2 Genius Hub.
-
-Summary
-    * Web console HTTP URL
-        http://itzvsi-tfmdjcqj:11100/console
-
-    * Web console HTTPS URL
-        https://itzvsi-tfmdjcqj:11101/console
-```
-
-Check the Genius Hub services status:
-
-```bash
-ghstatus
-```
-
-Expected output:
-
-```
-==========================================
-IBM Db2 Genius Hub - Product Status Check
-==========================================
-
-Component Status Summary:
----------------------------------------------------------------------------------
-Component                 Status          Details
----------------------------------------------------------------------------------
-Liberty Server            RUNNING         PID: 26583   | Port(s): 11100(HTTP),11101(HTTPS)
-Agentic AI Service        STOPPED         -
-Anomaly Detection Service STOPPED         -
-DRS Agent Service         RUNNING         PID: 27023   | Port(s): 11096
-Job Scheduler Service     RUNNING         PID: 27090   | Port(s): 11107
-Redis Service             STOPPED         -
----------------------------------------------------------------------------------
-
-Overall Status: [WARNING] Liberty is running but 3 addon(s) are not running
-```
-
-> **ℹ️ Note:** Some services may show as `STOPPED` until Genius Hub is fully configured and addon services are started. These will be enabled in later steps.
-
-Return to the `db2demo` user 
-
-`exit`
-
----
-
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Start the Db2 Remote Services</h3>
-
-Switch to the `db2inst1` user:
-
-```bash
-sudo su - db2inst1
-```
-
-Start the Genius Hub services:
-
-```bash
-cd /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts
-./start.sh
-```
-
-**Expected output**  
-
-```
-========================================
-  db2remotesvc Start Script
-========================================
-
-[INFO] 2026-06-24 21:13:36 - Starting db2remotesvc service...
-[WARN] 2026-06-24 21:13:36 - Stale PID file found, removing...
-[INFO] 2026-06-24 21:13:36 - Using binary: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/db2remotesvc
-[INFO] 2026-06-24 21:13:36 - Loading environment variables from .env file
-[INFO] 2026-06-24 21:13:36 - Starting service with arguments:  --enable-jwt=true
-[INFO] 2026-06-24 21:13:36 - Starting in daemon mode...
-[INFO] 2026-06-24 21:13:38 - Successfully started db2remotesvc (PID: 773887)
-[INFO] 2026-06-24 21:13:38 - Log file: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/logs/db2remotesvc.log
-[INFO] 2026-06-24 21:13:38 - PID file: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/db2remotesvc.pid
-
-========================================
-[INFO] 2026-06-24 21:13:38 - Service started successfully
-========================================
-
-[INFO] 2026-06-24 21:13:38 - To check status: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts/status.sh
-[INFO] 2026-06-24 21:13:38 - To stop service: /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts/stop.sh
-[INFO] 2026-06-24 21:13:38 - To view logs: tail -f /home/db2inst1/db2-remote-svc-1.1.1.0-linux/logs/db2remotesvc.log
+chmod 600 ssh_private_key.pem
 ```
 
 ---
@@ -313,9 +140,11 @@ cd /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts
 | Layer | Technology |
 |---|---|
 | Operating System | RHEL 9.x |
-| Database | Db2 AI Advanced Edition 12.1.4 |
-| Console | Db2 Genius Hub 1.1.3.0 with management aliases |
+| Database | Db2 Advanced Enterprise Server Edition 12.1.5 |
+| Console | Db2 Genius Hub 1.1.5.0 |
+| Remote Service | Db2 Remote Service 1.1.5.0 (port 8080) |
 | Agentic UI | Next.js frontend with FastAPI backend |
+| Desktop Access | GNOME Desktop via Guacamole (port 443) |
 | Deployment | Automated using Ansible |
 
 ---
@@ -324,14 +153,11 @@ cd /home/db2inst1/db2-remote-svc-1.1.1.0-linux/scripts
 
 By completing this section, you will:
 
-- ✅ Gain access to a fully configured Db2 AI environment
-- ✅ Start and verify Db2 Genius Hub services
-- ✅ Access both the Genius Hub and Agentic AI interfaces
+- ✅ Start and verify all lab services
+- ✅ Access the Genius Hub and Agentic AI interfaces via Guacamole
 - ✅ Prepare the environment for the hands-on exercises that follow
 
-> **💡 Tip:** If you encounter issues, rerun `ghinfo` to validate the system status and confirm services are running.
-
-> **⚠️ Keep this terminal window open** — you will need it for other tasks in this lab.
+> **💡 Tip:** If you encounter issues, run `ghinfo` from any terminal to validate system status and confirm services are running.
 
 ---
 

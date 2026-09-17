@@ -1,9 +1,9 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">Login and Repository Setup</h1>
 
 
-Open a browser (Google Chrome, Mozilla Firefox, Microsoft Edge, or Safari) and navigate to the Db2 Genius Hub URL provided by your instructor.
+Inside the Guacamole desktop, open **Firefox** and navigate to the Genius Hub console:
 
-> **📋 Reference:** See [Section 1.2 Accessing the Lab Environment](01-setup.md#accessing-the-lab-environment) for the URL.
+> **📋 URL:** `https://localhost:11101/console`
 
 <img src="images/GH-login.png" width="600"/>
 
