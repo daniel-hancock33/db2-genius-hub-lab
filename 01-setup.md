@@ -54,9 +54,9 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 | **Db2 Host (for Genius Hub)** | `localhost` |
 | **Db2 Port (db2inst1)** | `25010` |
 | **Db2 Port (db2inst2 / REPODB)** | `25011` |
-| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` |
+| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` (IP and key are on your reservation details page, see below) |
 
-> **ℹ️ Where to find these:** Your **public IP address** and the **SSH private key** (`ssh_private_key.pem`) are on your TechZone reservation details page. Copy the IP from the details, and download the key using the **"Deployment SSH private key"** download button.
+> **ℹ️ Where to find your IP address and SSH key:** Open your **TechZone reservation details page**. The **public IP address** is listed in the details, and the **SSH private key** (`ssh_private_key.pem`) is downloaded with the **"Deployment SSH private key"** download button. The Guacamole desktop link is on the same page.
 
 ---
 
