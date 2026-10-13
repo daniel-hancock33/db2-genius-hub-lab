@@ -46,7 +46,7 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 
 | Service | How to Access |
 |---|---|
-| **Guacamole Desktop** | TechZone reservation page → open the desktop link |
+| **Guacamole Desktop** | TechZone reservation page → open the desktop link → log in as `itzuser` |
 | **Genius Hub Console** | Inside desktop → Firefox → `https://localhost:11101/console` |
 | **Agentic Demo UI** | Inside desktop → Firefox → `http://localhost:3000` |
 | **JupyterLab** | Inside desktop → Firefox → `http://localhost:8888` |
@@ -54,7 +54,7 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 | **Db2 Host (for Genius Hub)** | `localhost` |
 | **Db2 Port (db2inst1)** | `25010` |
 | **Db2 Port (db2inst2 / REPODB)** | `25011` |
-| **SSH Access** | `ssh -i ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223` |
+| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` |
 
 > **ℹ️ SSH key:** Download your SSH private key (`ssh_private_key.pem`) from the TechZone reservation page using the **"Deployment SSH private key"** download button.
 
@@ -80,7 +80,7 @@ The following users are pre-configured. All share the same password.
 | `db2inst2` | `Db2ghPassw0rd#1` | Repo instance owner (port 25011) |
 | `db2demo` | `Db2ghPassw0rd#1` | Demo user — primary lab user |
 | `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub admin |
-| `itzuser` | — | TechZone SSH user (SSH key only, port 2223) |
+| `itzuser` | — | TechZone user: Guacamole desktop login and SSH (SSH key only, port 2223) |
 
 ---
 
@@ -123,10 +123,10 @@ SSH access is available if you need a terminal outside of the Guacamole desktop.
 Download your SSH private key from the TechZone reservation page by clicking the **"Deployment SSH private key"** download button. Then connect:
 
 ```bash
-ssh -i ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223
+ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223
 ```
 
-> **ℹ️ Replace** `YOUR-USER` and `YOUR-PUBLIC-IP` with the values shown on your TechZone reservation page.
+> **ℹ️ Replace** `YOUR-PUBLIC-IP` with the public IP address shown on your TechZone reservation page. The SSH user is always `itzuser`, the same user you use to log in to the Guacamole desktop.
 
 **Mac/Linux — set key permissions first:**
 
@@ -148,7 +148,7 @@ Forwarded ports: `11100`/`11101` (Genius Hub), `3000` (Agentic Demo), `8000` (Ag
 
 ```bash
 chmod 600 ssh_private_key.pem
-ssh -i ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223 \
+ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 \
   -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 \
   -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 \
   -L 25011:localhost:25011 -N
@@ -169,7 +169,7 @@ Windows includes the OpenSSH client. Check with `ssh -V` (if missing: Settings �
 3. Run the tunnel as **one line**:
 
     ```powershell
-    ssh -i C:\Users\<you>\Downloads\ssh_private_key.pem YOUR-USER@YOUR-PUBLIC-IP -p 2223 -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 -L 25011:localhost:25011 -N
+    ssh -i C:\Users\<you>\Downloads\ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 -L 25011:localhost:25011 -N
     ```
 
 4. Leave the window open, then browse to `https://localhost:11101/console`.
@@ -178,7 +178,7 @@ Windows includes the OpenSSH client. Check with `ssh -V` (if missing: Settings �
 
 1. **PuTTYgen** → Load the `.pem` (file filter: All Files) → *Save private key* as `.ppk`.
 2. **PuTTY** → Session: Host Name = your public IP, Port = `2223`.
-3. Connection → Data: Auto-login username = your TechZone user.
+3. Connection → Data: Auto-login username = `itzuser`.
 4. Connection → SSH → Auth → Credentials: select the `.ppk`.
 5. Connection → SSH → Tunnels: for **each** port `11100, 11101, 3000, 8000, 8888, 25010, 25011`, enter *Source port* = the port and *Destination* = `localhost:<port>`, then click **Add**.
 6. (Optional) Connection → SSH: tick *Don't start a shell or command at all*.
