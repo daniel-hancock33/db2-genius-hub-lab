@@ -56,7 +56,7 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 | **Db2 Port (db2inst2 / REPODB)** | `25011` |
 | **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` |
 
-> **ℹ️ SSH key:** Download your SSH private key (`ssh_private_key.pem`) from the TechZone reservation page using the **"Deployment SSH private key"** download button.
+> **ℹ️ Where to find these:** Your **public IP address** and the **SSH private key** (`ssh_private_key.pem`) are on your TechZone reservation details page. Copy the IP from the details, and download the key using the **"Deployment SSH private key"** download button.
 
 ---
 
@@ -120,7 +120,7 @@ All lab work is done inside the Guacamole remote desktop:
 
 SSH access is available if you need a terminal outside of the Guacamole desktop.
 
-Download your SSH private key from the TechZone reservation page by clicking the **"Deployment SSH private key"** download button. Then connect:
+Your **public IP address** and **SSH private key** are on your TechZone reservation details page. Download the key by clicking the **"Deployment SSH private key"** download button, then connect:
 
 ```bash
 ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223
@@ -139,6 +139,8 @@ chmod 600 ssh_private_key.pem
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — SSH Tunnel (Optional)</h3>
 
 Use a tunnel if you would rather work in **your own laptop's browser** than in the Guacamole desktop. A tunnel forwards ports on your laptop to the VM, so `https://localhost:11101/console` on your laptop reaches Genius Hub on the VM.
+
+> **ℹ️ Before you start:** You need the **public IP address** and the **SSH private key** (`ssh_private_key.pem`) from your TechZone reservation details page, as described in Step 3. In the commands below, replace `YOUR-PUBLIC-IP` with that IP address.
 
 > **ℹ️ Note:** The command appears to hang. That is normal: `-N` means "forward ports, don't open a shell". **Keep the window open** while you work. Press `Ctrl+C` to close the tunnel.
 
