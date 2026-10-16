@@ -110,11 +110,12 @@ This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait f
 
 All lab work is done inside the Guacamole remote desktop:
 
-1. Go to your TechZone reservation page
-2. Click the **Guacamole** desktop link to open the full GNOME desktop in your browser
-3. Inside the desktop, open **Firefox** for all web-based lab tasks
+1. Go to your TechZone reservation details page
+2. Find **"Guacamole remote desktop access"** and click `https://vdi.cloud.techzone.ibm.com/guacamole`
+3. Log in as `itzuser` — Firefox opens automatically to the Lab Guide
+4. Use **Applications menu** (top-left) to find DBeaver, VS Code, and Terminal
 
-> **ℹ️ Tip:** You can copy/paste text into the Guacamole session using the Guacamole clipboard (the tab on the left edge of the screen).
+> **ℹ️ Tip:** See the **[Using the Guacamole Desktop](01a-guacamole.md)** page for copy/paste, screen size, finding applications, and troubleshooting tips.
 
 ---
 
