@@ -62,6 +62,14 @@ By completing this lab, you will:
 
 ---
 
+## Reference & Tips
+
+Quick links to reference pages you may need at any point in the lab.
+
+- [Using the Guacamole Desktop](01a-guacamole.md) — copy/paste, opening a terminal, finding applications, screen size, session timeout
+
+---
+
 ## Additional Resources
 
 - [IBM Db2 Documentation](https://www.ibm.com/docs/en/db2)
