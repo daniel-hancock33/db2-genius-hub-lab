@@ -11,6 +11,7 @@ Overview of Db2 Genius Hub, lab objectives, and available datasets.
 
 **[The Setup](01-setup.md)**
 Environment access, SSH connection, and starting Genius Hub services.
+- [Using the Guacamole Desktop](01a-guacamole.md)
 
 **[The Basics](02-basics.md)**
 - [Login and Repository Setup](02-01-login-and-repo.md)

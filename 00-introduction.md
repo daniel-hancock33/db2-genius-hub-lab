@@ -21,6 +21,7 @@
 **[Introduction](00-introduction.md)**
 
 **[1 — The Setup](01-setup.md)**
+- [Using the Guacamole Desktop](01a-guacamole.md)
 
 - [Environment overview](#environment-overview)
 - [Accessing the lab environment](#accessing-the-lab-environment)
