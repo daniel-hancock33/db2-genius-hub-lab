@@ -97,7 +97,7 @@ Follow these steps to prepare the environment for the lab.
 Before doing anything else, open the **Guacamole desktop** from the TechZone reservation page, then open a **Terminal** (or SSH in, see Step 3) and run:
 
 ```bash
-sudo ~/start-services.sh
+sudo /root/start-services.sh
 ```
 
 This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete before proceeding.
@@ -197,7 +197,7 @@ Once the tunnel is up, the `localhost` URLs in the table above work from your la
 
 | Symptom | Fix |
 |---|---|
-| Db2 or Agentic Demo not running | Run `sudo ~/start-services.sh` (Step 1) |
+| Db2 or Agentic Demo not running | Run `sudo /root/start-services.sh` (Step 1) |
 | Genius Hub page won't load | `su - db2ghadm`, then `ghstart`. Check with `ghstatus` |
 | Check Db2 status | `su - db2inst1` then `db2pd -` (use `db2inst2` for the repo instance) |
 | Tunnel: `administratively prohibited` | SSH in normally (no `-L`) and run: `sudo sed -i 's/^AllowTcpForwarding no/AllowTcpForwarding yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd`, then retry the tunnel |
