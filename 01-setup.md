@@ -244,6 +244,6 @@ By completing this section, you will:
 
 This completes the setup of Db2 Genius Hub.
 
-**[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Login and Repository Setup](02-01-login-and-repo.md)**
+**[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Using the Guacamole Desktop](01a-guacamole.md)**
 
 ---

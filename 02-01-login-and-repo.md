@@ -150,6 +150,6 @@ After clicking **Save**, you will be brought to the **Success!** page. Click **G
 
 ---
 
-**[← The Setup](01-setup.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Interface Tour](02-02-interface-tour.md)**
+**[← Using the Guacamole Desktop](01a-guacamole.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Interface Tour](02-02-interface-tour.md)**
 
 ---
