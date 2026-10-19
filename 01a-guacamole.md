@@ -8,14 +8,11 @@ Guacamole is a browser-based remote desktop. Everything you do inside it runs on
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Opening the Desktop</h2>
 
-1. Go to your **TechZone reservation details page**.
-2. Locate the **"Guacamole remote desktop access"** card:
-   - **URL:** Click the link `https://vdi.cloud.techzone.ibm.com/guacamole`
-   - **Username:** `itzuser`
-   - **Password:** Copy the password displayed in the Guacamole section on your reservation page.
-3. Once logged in, the Linux desktop opens directly in your browser. Firefox launches automatically and opens this Lab Guide.
+1. On your **Student Environment page** (provided by your instructor), click the **Guacamole remote desktop link**.
+2. The Linux desktop opens directly in your browser tab — no separate login or password is required.
+3. Firefox launches automatically and opens this Lab Guide.
 
-> **ℹ️ Tip:** Bookmark the Guacamole link. If your session disconnects or times out, just reopen it — your session resumes where you left off with all applications running.
+> **ℹ️ Tip:** Bookmark the Guacamole link or keep your Student Environment page tab open. If your session disconnects or times out, just click the link again — your session resumes where you left off with all applications running.
 
 ---
 

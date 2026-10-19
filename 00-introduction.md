@@ -16,13 +16,14 @@
 
 ---
 
-> ### 🛑 Before You Begin: Your TechZone Reservation Details
-> When your IBM TechZone reservation is **Ready**, open your **Reservation Details page** in TechZone. You will need information that is unique to your reservation:
-> - **Guacamole Remote Desktop Link & Password** (Recommended — run the entire lab in your browser with zero installs)
-> - **Public IP Address** (Unique to your VM — needed if connecting via SSH)
-> - **Deployment SSH Private Key** (`ssh_private_key.pem` — downloaded via the button on your reservation page)
+> ### 🛑 Before You Begin: Accessing Your Lab Environment
+> At the start of the session, your instructor will provide an **Event Access URL** (e.g., `https://ibm.biz/...`) and a **session password**.
 >
-> 💡 **Tip:** Keep your **TechZone Reservation Details page** open in one browser tab and this **Lab Guide** in another tab while you work!
+> Once logged in to the Attendee Portal, you will be assigned your personalized environment (**Student X**):
+> - **Guacamole Remote Desktop Link:** (Recommended) Click the desktop link on your student page to launch the full Linux lab desktop right in your browser (no password required).
+> - **SSH Access:** Download your SSH Private Key (`.pem`) to connect from your local terminal using `ssh -i <key>.pem itzuser@<IP> -p 2223` (port 2223).
+>
+> 💡 **Tip:** Keep your **Student Environment page** open in one browser tab and this **Lab Guide** in another tab while you work!
 
 ---
 
