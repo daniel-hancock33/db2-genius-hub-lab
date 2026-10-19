@@ -45,12 +45,25 @@ The lab environment is fully provisioned — all required components are pre-ins
 During your workshop session, you will access the lab through the **TechXchange Student Portal**:
 
 1. Open the **Access URL** provided by your instructor (e.g., `https://ibm.biz/...`).
-2. Enter the session passcode provided by your instructor.
-3. You will be assigned a personal environment card (e.g. **Student 1 - LAB-2216**).
+2. Enter the session passcode provided during the session.
+3. You will see the event dashboard with **Attendee and Environment Management**:
+
+![TechXchange Student Event Page](images/tx-lab2216-eventpage-for-student.png)
+
+4. Locate your assigned environment row (e.g., **Student 1 - LAB-2216**).
+5. Click the **open / launch link on the far right of your environment row** (or click the expand arrow on the left) to reveal your full **Environment Details**:
+
+![Student Environment Details](images/tx-lab2216-student-environment-details.png)
+
+> ### 📌 Key Environment Details & Callouts:
+> - **🖥️ Guacamole Remote Desktop (Recommended):** Click the link under **Guacamole remote desktop access**. The desktop opens in your browser immediately — **no password is required**.
+> - **🌐 Public IP Address:** Your virtual machine's unique public IP address is listed here. Use this if you connect via SSH.
+> - **🔑 SSH Private Key:** Click the **"Deployment SSH private key"** download button to get your `.pem` key file for terminal SSH access.
+> - **🔌 SSH Port 2223:** Remember that SSH runs on port **2223** (not standard 22).
 
 | Item on Student Page | What it is for | How you will use it |
 |---|---|---|
-| **Guacamole Remote Desktop link** | In-browser Linux desktop with all tools pre-installed | Click the link to open the desktop immediately (no password needed) |
+| **Guacamole Remote Desktop link** | In-browser Linux desktop with all tools pre-installed | Click the launch link to open the desktop immediately (no password needed) |
 | **Public IP Address** (e.g. `150.240.x.x`) | Unique IP address of your VM | Used only if you connect via direct SSH from your laptop |
 | **Deployment SSH private key (`.pem`)** | SSH key file | Download this key to SSH in via port `2223` as user `itzuser` |
 
@@ -108,9 +121,10 @@ Follow these quick steps to launch the lab:
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Open the Guacamole Desktop</h3>
 
-1. On your **Student Environment page**, click the **Guacamole remote desktop link**.
-2. The remote desktop session will open automatically in your browser tab — no separate password is required.
-3. Firefox will open automatically with this lab guide.
+1. On your **Student Environment page**, find your assigned **Student row**.
+2. Click the **launch icon / link to the right of your environment row** to open the **Guacamole remote desktop**.
+3. The remote desktop session will open automatically in your browser tab — no separate password is required.
+4. Firefox will open automatically with this lab guide.
 
 > **ℹ️ Tip:** Read **[Using the Guacamole Desktop](01a-guacamole.md)** for clipboard copy/paste instructions, window sizing, and troubleshooting.
 

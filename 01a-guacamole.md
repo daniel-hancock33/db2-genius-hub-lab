@@ -8,9 +8,13 @@ Guacamole is a browser-based remote desktop. Everything you do inside it runs on
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Opening the Desktop</h2>
 
-1. On your **Student Environment page** (provided by your instructor), click the **Guacamole remote desktop link**.
-2. The Linux desktop opens directly in your browser tab — no separate login or password is required.
-3. Firefox launches automatically and opens this Lab Guide.
+1. On your **TechXchange Student Event page**, locate your assigned row under **Attendee and Environment Management** (e.g. `Student 1 - LAB-2216`).
+2. Click the **link/icon on the far right of the row** to launch the **Guacamole remote desktop**.
+
+![TechXchange Student Event Page](images/tx-lab2216-eventpage-for-student.png)
+
+3. The Linux desktop opens directly in your browser tab — no separate login or password is required.
+4. Firefox launches automatically and opens this Lab Guide.
 
 > **ℹ️ Tip:** Bookmark the Guacamole link or keep your Student Environment page tab open. If your session disconnects or times out, just click the link again — your session resumes where you left off with all applications running.
 
