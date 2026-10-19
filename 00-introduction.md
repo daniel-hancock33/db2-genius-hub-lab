@@ -16,6 +16,16 @@
 
 ---
 
+> ### 🛑 Before You Begin: Your TechZone Reservation Details
+> When your IBM TechZone reservation is **Ready**, open your **Reservation Details page** in TechZone. You will need information that is unique to your reservation:
+> - **Guacamole Remote Desktop Link & Password** (Recommended — run the entire lab in your browser with zero installs)
+> - **Public IP Address** (Unique to your VM — needed if connecting via SSH)
+> - **Deployment SSH Private Key** (`ssh_private_key.pem` — downloaded via the button on your reservation page)
+>
+> 💡 **Tip:** Keep your **TechZone Reservation Details page** open in one browser tab and this **Lab Guide** in another tab while you work!
+
+---
+
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Table of Contents</h2>
 
 **[Introduction](00-introduction.md)**

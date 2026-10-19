@@ -40,15 +40,28 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Finding Your Reservation Details</h2>
+
+When your reservation in IBM TechZone is ready, your **TechZone Reservation Details page** contains all the connection parameters specific to your provisioned virtual machine:
+
+| Item on Reservation Page | What it is for | How you will use it |
+|---|---|---|
+| **Guacamole remote desktop link** | Web-based remote graphical desktop | Click the link or open `https://vdi.cloud.techzone.ibm.com/guacamole` in your browser |
+| **`itzuser` password** | Password for the Guacamole desktop | Enter this password on the Guacamole login screen |
+| **Public IP Address** (e.g. `150.240.x.x`) | Unique IP address of your VM | Used only if you connect via direct SSH from your laptop |
+| **Deployment SSH private key** | SSH key file (`ssh_private_key.pem`) | Click the download button on TechZone if using SSH on port 2223 |
+
+> 💡 **Keep your TechZone reservation tab open** so you can easily reference your Guacamole password and IP address.
+
+---
+
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing the Lab Environment</h2>
 
-All services in this lab are accessed through the **Guacamole remote desktop** provided by IBM TechZone (recommended). Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all accessed from inside the desktop session using `localhost` URLs. Optionally, you can use an **SSH tunnel** (Step 4) to reach them from your own browser.
-
-> **⚠️ Important — Start Services First:** Genius Hub does **not** start automatically after deployment. Before accessing any services, you must run the startup script. See **Step 1** below.
+All services in this lab are accessed through the **Guacamole remote desktop** provided by IBM TechZone (recommended). Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all pre-installed inside the desktop session using `localhost` URLs.
 
 | Service | How to Access |
 |---|---|
-| **Guacamole Desktop** | TechZone reservation page → open the desktop link → log in as `itzuser` |
+| **Guacamole Desktop** | TechZone reservation page → open desktop link → log in as `itzuser` |
 | **Genius Hub Console** | Inside desktop → Firefox → `https://localhost:11101/console` |
 | **Agentic Demo UI** | Inside desktop → Firefox → `http://localhost:3000` |
 | **JupyterLab** | Inside desktop → Firefox → `http://localhost:8888` |
@@ -56,9 +69,7 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 | **Db2 Host (for Genius Hub)** | `localhost` |
 | **Db2 Port (db2inst1)** | `25010` |
 | **Db2 Port (db2inst2 / REPODB)** | `25011` |
-| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` (IP and key are on your reservation details page, see below) |
-
-> **ℹ️ Where to find your IP address and SSH key:** Open your **TechZone reservation details page**. The **public IP address** is listed in the details, and the **SSH private key** (`ssh_private_key.pem`) is downloaded with the **"Deployment SSH private key"** download button. The Guacamole desktop link is on the same page.
+| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` (port 2223) |
 
 ---
 
@@ -74,48 +85,55 @@ All services in this lab are accessed through the **Guacamole remote desktop** p
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Db2 Users</h3>
 
-The following users are pre-configured. All share the same password.
+The following database and service users are pre-configured. All share the same default password:
 
-| Username | Password | Notes |
+| Username | Password | Role / Purpose |
 |---|---|---|
 | `db2inst1` | `Db2ghPassw0rd#1` | Db2 instance owner (port 25010) |
 | `db2inst2` | `Db2ghPassw0rd#1` | Repo instance owner (port 25011) |
 | `db2demo` | `Db2ghPassw0rd#1` | Demo user — primary lab user |
-| `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub admin |
-| `itzuser` | — | TechZone user: Guacamole desktop login and SSH (SSH key only, port 2223) |
+| `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub administrator |
+| `itzuser` | *(from TechZone page)* | TechZone desktop and SSH user (port 2223) |
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup and Configuration</h2>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup Steps</h2>
 
-Follow these steps to prepare the environment for the lab.
+Follow these quick steps to launch the lab:
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start All Services</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Open the Guacamole Desktop</h3>
 
-Before doing anything else, open the **Guacamole desktop** from the TechZone reservation page, then open a **Terminal** (or SSH in, see Step 3) and run:
+1. Go to your **TechZone reservation details page**.
+2. Click the **Guacamole remote desktop link** (`https://vdi.cloud.techzone.ibm.com/guacamole`).
+3. Log in with:
+   - **Username:** `itzuser`
+   - **Password:** Copy the password listed under Guacamole access on your reservation page.
+4. The remote desktop will open in your browser. Firefox will open automatically with this lab guide.
+
+> **ℹ️ Tip:** Read **[Using the Guacamole Desktop](01a-guacamole.md)** for clipboard copy/paste instructions, window sizing, and troubleshooting.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Start All Lab Services</h3>
+
+> **⚠️ Important:** Genius Hub and the demonstration services do **not** run automatically on boot. You must run the startup script once.
+
+Inside the Guacamole desktop:
+1. Open a **Terminal** (Right-click desktop → **Open Terminal**, or use Applications menu top-left).
+2. Run the startup script:
 
 ```bash
 sudo /root/start-services.sh
 ```
 
-This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete before proceeding.
+3. Wait 1–2 minutes for all services (Db2, Genius Hub, Remote Service, Agentic UI) to start.
+4. You can check status at any time by running:
 
-> **ℹ️ Note:** You can run `ghinfo` or `info` at any time from a terminal to check the status and see all credentials and URLs.
-
----
-
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Open the Guacamole Desktop</h3>
-
-All lab work is done inside the Guacamole remote desktop:
-
-1. Go to your TechZone reservation details page
-2. Find **"Guacamole remote desktop access"** and click `https://vdi.cloud.techzone.ibm.com/guacamole`
-3. Log in as `itzuser` — Firefox opens automatically to the Lab Guide
-4. Use **Applications menu** (top-left) to find DBeaver, VS Code, and Terminal
-
-> **ℹ️ Tip:** See the **[Using the Guacamole Desktop](01a-guacamole.md)** page for copy/paste, screen size, finding applications, and troubleshooting tips.
+```bash
+ghinfo
+```
 
 ---
 
