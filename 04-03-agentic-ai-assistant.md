@@ -102,7 +102,7 @@
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Space Management with AI</h2>
+<h2 id="space-management" style="padding-left:14px; border-left:6px solid #1D9E75;">Space Management with AI</h2>
 
 > **Persona:** DBA &nbsp;|&nbsp; **Skill level:** Beginner &nbsp;|&nbsp; **Estimated time:** 10 min
 
@@ -217,6 +217,8 @@ Check the space for SIMULATOR schema again
 ```
 
 Compare the before and after results — you should see the fragmented space recovered.
+
+> **➡️ TechXchange Quick Path — next exercise:** Continue with **[WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)**.
 
 ---
 

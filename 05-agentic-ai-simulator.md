@@ -28,7 +28,7 @@ http://localhost:3000
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Sort Memory Queuing Simulation</h2>
+<h2 id="wlm-queuing" style="padding-left:14px; border-left:6px solid #1D9E75;">Sort Memory Queuing Simulation</h2>
 
 This simulation constrains sort memory resources at the database level to trigger queuing by the adaptive workload manager.
 
@@ -51,6 +51,8 @@ This simulation constrains sort memory resources at the database level to trigge
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Load TPCH Dataset</h3>
+
+<!-- TODO: confirm whether attendees who already loaded TPCH in the Space Management exercise can skip this step. Then replace this comment with a visible note. -->
 
 4. In the TPCH Dataset section, click **Load Data**.
 
