@@ -71,7 +71,11 @@ Once your environment is assigned, scroll through the environment details and lo
 
 ![TechZone environment details showing Guacamole link](images/tx26-lab2216-guacamole-link.png)
 
-Click the link `https://vdi.cloud.techzone.ibm.com/guacamole` to open the Linux desktop in your browser. This is the primary interface used throughout the lab.
+Click the link `https://vdi.cloud.techzone.ibm.com/guacamole` to open the Linux desktop in your browser:
+
+![Guacamole Linux desktop in browser](images/tx26-guacamole-vncdesktop.png)
+
+This is the primary interface used throughout the lab.
 
 > **ℹ️ More details** on using the Guacamole desktop — copy/paste, opening a terminal, screen size, and session timeout — are covered in **[Using the Guacamole Desktop](01a-guacamole.md)**.
 
