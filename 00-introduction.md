@@ -71,7 +71,7 @@ Once your environment is assigned, scroll through the environment details and lo
 
 ![TechZone environment details showing Guacamole link](images/tx26-lab2216-guacamole-link.png)
 
-Click the link `https://vdi.cloud.techzone.ibm.com/guacamole` to open the Linux desktop in your browser:
+Click the link `https://vdi.cloud.techzone.ibm.com/guacamole` to open the Guacamole portal, then click the **VNC Desktop** link for your environment to open the Linux desktop in your browser:
 
 ![Guacamole Linux desktop in browser](images/tx26-guacamole-vncdesktop.png)
 
