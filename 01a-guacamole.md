@@ -109,6 +109,8 @@ To reconnect: open the Guacamole link again (`https://vdi.cloud.techzone.ibm.com
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Next Steps</h2>
 
+🎯 **TechXchange Quick Path — Step 2 of 7:** **[← The Setup](01-setup.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Login and Repository Setup](02-01-login-and-repo.md)**
+
 **[← The Setup](01-setup.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Login and Repository Setup](02-01-login-and-repo.md)**
 
 ---

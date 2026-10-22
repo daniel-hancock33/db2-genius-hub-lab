@@ -1,5 +1,7 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">Agentic AI Assistant</h1>
 
+> **🎯 TechXchange Quick Path:** Complete **steps 1–4** below to open the Assistant and select `demo_col`, then jump to **[Space Management with AI](#space-management)**. Steps 5 onward investigate a CPU anomaly that depends on the Drill-Down data load, so you can skip them.
+
 
 1. Click the **Agentic AI Assistant (a)** menu item.
 
@@ -218,7 +220,7 @@ Check the space for SIMULATOR schema again
 
 Compare the before and after results — you should see the fragmented space recovered.
 
-> **➡️ TechXchange Quick Path — next exercise:** Continue with **[WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)**.
+> **➡️ TechXchange Quick Path:** You have completed Space Management. Continue with **[WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)**.
 
 ---
 
@@ -278,6 +280,8 @@ Click the **Close (a)** button in the top right corner of the Agentic AI Assista
 ---
 
 ---
+
+🎯 **TechXchange Quick Path — Step 6 of 7:** **[← AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)**
 
 **[← Reports](04-02-reports.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Alerts and Jobs](04-04-alerts-and-jobs.md)**
 

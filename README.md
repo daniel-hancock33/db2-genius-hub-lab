@@ -42,11 +42,14 @@ Start with the [Introduction](00-introduction.md) and follow each link in order 
 
 > **🎯 TechXchange Quick Path** — Short on time? To complete the two featured exercises, follow these pages in order:
 > 1. [The Setup](01-setup.md)
-> 2. [Login and Repository Setup](02-01-login-and-repo.md)
-> 3. [Database Connections](02-03-database-connections.md)
-> 4. [AI Configuration and Event Monitors](02-05-ai-configuration.md)
-> 5. [Space Management with AI](04-03-agentic-ai-assistant.md#space-management) — first open the Assistant using steps 1–4 at the top of that page
-> 6. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
+> 2. [Using the Guacamole Desktop](01a-guacamole.md)
+> 3. [Login and Repository Setup](02-01-login-and-repo.md)
+> 4. [Database Connections](02-03-database-connections.md)
+> 5. [AI Configuration and Event Monitors](02-05-ai-configuration.md)
+> 6. [Space Management with AI](04-03-agentic-ai-assistant.md#space-management) — first open the Assistant using steps 1–4 at the top of that page
+> 7. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
+>
+> Each of these pages ends with a **🎯 Quick Path** footer that takes you to the next step.
 >
 > All other pages are optional background and can be done afterward.
 

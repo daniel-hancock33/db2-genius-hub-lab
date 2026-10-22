@@ -212,6 +212,8 @@ In this lab, you:
 
 ---
 
+🎯 **TechXchange Quick Path — Step 7 of 7:** **[← Space Management with AI](04-03-agentic-ai-assistant.md#space-management)** &nbsp;&nbsp;|&nbsp;&nbsp; ✅ End of the Quick Path
+
 **[← Return to Introduction](00-introduction.md)**
 
 ---
