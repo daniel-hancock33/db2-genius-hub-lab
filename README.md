@@ -6,19 +6,21 @@ Welcome to the IBM Db2 Genius Hub hands-on lab. This lab provides training on IB
 
 ## Lab Contents
 
+> 🎯 = **TechXchange Quick Path** (step number shown). Pages without 🎯 are optional.
+
 **[Introduction](00-introduction.md)**
 Overview of Db2 Genius Hub, lab objectives, and available datasets.
 
-**[The Setup](01-setup.md)**
+**[The Setup](01-setup.md)** 🎯 *Step 1*
 Environment access, SSH connection, and starting Genius Hub services.
-- [Using the Guacamole Desktop](01a-guacamole.md)
+- [Using the Guacamole Desktop](01a-guacamole.md) 🎯 *Step 2*
 
 **[The Basics](02-basics.md)**
-- [Login and Repository Setup](02-01-login-and-repo.md)
+- [Login and Repository Setup](02-01-login-and-repo.md) 🎯 *Step 3*
 - [Interface Tour](02-02-interface-tour.md)
-- [Database Connections](02-03-database-connections.md)
+- [Database Connections](02-03-database-connections.md) 🎯 *Step 4*
 - [Monitor Dashboard](02-04-monitor-dashboard.md)
-- [AI Configuration and Event Monitors](02-05-ai-configuration.md)
+- [AI Configuration and Event Monitors](02-05-ai-configuration.md) 🎯 *Step 5*
 
 **[SQL Workbench](03-workbench.md)**
 - [SQL Editor](03-01-sql-editor.md)
@@ -28,10 +30,10 @@ Environment access, SSH connection, and starting Genius Hub services.
 **[Monitoring Databases](04-monitoring.md)**
 - [Drill-Down Investigation](04-01-drill-down.md)
 - [Reports](04-02-reports.md)
-- [Agentic AI Assistant](04-03-agentic-ai-assistant.md)
+- [Agentic AI Assistant](04-03-agentic-ai-assistant.md) 🎯 *Step 6 — Space Management*
 - [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
-**[Agentic AI Simulator](05-agentic-ai-simulator.md)**
+**[Agentic AI Simulator](05-agentic-ai-simulator.md)** 🎯 *Step 7 — WLM Queuing*
 Trigger performance scenarios and see how the AI service detects and resolves issues.
 
 ---

@@ -34,10 +34,12 @@
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Table of Contents</h2>
 
+> 🎯 = **TechXchange Quick Path** (step number shown). Pages without 🎯 are optional.
+
 **[Introduction](00-introduction.md)**
 
-**[1 — The Setup](01-setup.md)**
-- [Using the Guacamole Desktop](01a-guacamole.md)
+**[1 — The Setup](01-setup.md)** 🎯 *Step 1*
+- [Using the Guacamole Desktop](01a-guacamole.md) 🎯 *Step 2*
 
 - [Environment overview](#environment-overview)
 - [Accessing the lab environment](#accessing-the-lab-environment)
@@ -48,11 +50,11 @@
 - [Next steps](#next-steps)
 
 **[2 — The Basics](02-basics.md)**
-- [Login and Repository Setup](02-01-login-and-repo.md)
+- [Login and Repository Setup](02-01-login-and-repo.md) 🎯 *Step 3*
 - [Interface Tour](02-02-interface-tour.md)
-- [Database Connections](02-03-database-connections.md)
+- [Database Connections](02-03-database-connections.md) 🎯 *Step 4*
 - [Monitor Dashboard](02-04-monitor-dashboard.md)
-- [AI Configuration and Event Monitors](02-05-ai-configuration.md)
+- [AI Configuration and Event Monitors](02-05-ai-configuration.md) 🎯 *Step 5*
 
 **[3 — SQL Workbench](03-workbench.md)**
 - [SQL Editor](03-01-sql-editor.md)
@@ -62,10 +64,10 @@
 **[4 — Monitoring Databases](04-monitoring.md)**
 - [Drill-Down Investigation](04-01-drill-down.md)
 - [Reports](04-02-reports.md)
-- [Agentic AI Assistant](04-03-agentic-ai-assistant.md)
+- [Agentic AI Assistant](04-03-agentic-ai-assistant.md) 🎯 *Step 6 — Space Management*
 - [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
-**[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)**
+**[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)** 🎯 *Step 7 — WLM Queuing*
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
 
