@@ -88,7 +88,7 @@ The following users are pre-configured. All share the same password.
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup and Configuration</h2>
 
-Follow these steps to prepare the environment for the lab.
+Follow the step below to prepare the environment for the lab.
 
 ---
 
@@ -100,7 +100,7 @@ To open a Terminal inside the Guacamole desktop, click **Activities** then **Ter
 
 ![Opening a terminal via Activities menu](images/tx26-lab2216-terminal.png)
 
-Alternatively, SSH in — see Step 2. Then run:
+Then run:
 
 ```bash
 sudo /root/start-services.sh
@@ -112,7 +112,11 @@ This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait f
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — SSH Access (Optional)</h3>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Optional Access Methods</h2>
+
+> **⚠️ TechXchange attendees: the options below are not needed during the conference.** All lab work is done inside the Guacamole desktop. These are provided for reference if you want to access the environment from your own machine after the event.
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">SSH Access</h3>
 
 SSH access is available if you need a terminal outside of the Guacamole desktop.
 
@@ -129,6 +133,59 @@ ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223
 ```bash
 chmod 600 ssh_private_key.pem
 ```
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">SSH Tunnel</h3>
+
+Use a tunnel if you want to work in **your own laptop's browser** instead of the Guacamole desktop. A tunnel forwards ports on your laptop to the VM, so `https://localhost:11101/console` on your laptop reaches Genius Hub on the VM.
+
+> **ℹ️ Before you start:** You need the **public IP address** and the **SSH private key** (`ssh_private_key.pem`) from your TechZone reservation details page. In the commands below, replace `YOUR-PUBLIC-IP` with that IP address.
+
+> **ℹ️ Note:** The command appears to hang — that is normal. `-N` means "forward ports, don't open a shell". **Keep the window open** while you work. Press `Ctrl+C` to close the tunnel.
+
+Forwarded ports: `11100`/`11101` (Genius Hub), `3000` (Agentic Demo), `8000` (Agentic backend), `8888` (JupyterLab), `25010`/`25011` (Db2).
+
+**Mac/Linux:**
+
+```bash
+chmod 600 ssh_private_key.pem
+ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 \
+  -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 \
+  -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 \
+  -L 25011:localhost:25011 -N
+```
+
+**Windows 10/11 (PowerShell):**
+
+Windows includes the OpenSSH client. Check with `ssh -V` (if missing: Settings → Apps → Optional features → add **OpenSSH Client**).
+
+1. Save the key, for example `C:\Users\<you>\Downloads\ssh_private_key.pem`.
+2. Restrict its permissions:
+
+    ```powershell
+    icacls C:\Users\<you>\Downloads\ssh_private_key.pem /inheritance:r
+    icacls C:\Users\<you>\Downloads\ssh_private_key.pem /grant:r "$($env:USERNAME):(R)"
+    ```
+
+3. Run the tunnel as **one line**:
+
+    ```powershell
+    ssh -i C:\Users\<you>\Downloads\ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 -L 25011:localhost:25011 -N
+    ```
+
+4. Leave the window open, then browse to `https://localhost:11101/console`.
+
+**Windows with PuTTY (alternative):**
+
+1. **PuTTYgen** → Load the `.pem` (All Files filter) → *Save private key* as `.ppk`.
+2. **PuTTY** → Session: Host Name = your public IP, Port = `2223`.
+3. Connection → Data: Auto-login username = `itzuser`.
+4. Connection → SSH → Auth → Credentials: select the `.ppk`.
+5. Connection → SSH → Tunnels: for **each** port `11100, 11101, 3000, 8000, 8888, 25010, 25011`, enter *Source port* = the port, *Destination* = `localhost:<port>`, click **Add**.
+6. Return to Session and click **Open**.
+
+Once the tunnel is up, `localhost` URLs in your laptop's browser reach the VM. Genius Hub uses a self-signed certificate — continue past the browser warning.
 
 ---
 
