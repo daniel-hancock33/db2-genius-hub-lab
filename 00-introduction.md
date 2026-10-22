@@ -16,17 +16,6 @@
 
 ---
 
-> ### 🛑 Before You Begin: Accessing Your Lab Environment
-> At the start of the session, your instructor will provide an **Event Access URL** (e.g., `https://ibm.biz/...`) and a **session password**.
->
-> Once logged in to the Attendee Portal, you will be assigned your personalized environment (**Student X**):
-> - **Guacamole Remote Desktop Link:** (Recommended) Click the desktop link on your student page to launch the full Linux lab desktop right in your browser (no password required).
-> - **SSH Access:** Download your SSH Private Key (`.pem`) to connect from your local terminal using `ssh -i <key>.pem itzuser@<IP> -p 2223` (port 2223).
->
-> 💡 **Tip:** Keep your **Student Environment page** open in one browser tab and this **Lab Guide** in another tab while you work!
-
----
-
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Table of Contents</h2>
 
 **[Introduction](00-introduction.md)**
@@ -61,6 +50,32 @@
 - [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
 **[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)**
+
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
+
+This lab is delivered through **IBM TechZone**. Your instructor will provide an access code at the start of the session.
+
+**Step 1 — Enter the access code**
+
+Navigate to the event page on IBM TechZone. Enter the access code provided by your instructor, then click **Access Lab**.
+
+![TechZone event page showing Access Lab button](images/tx26-lab2216-access-lab.png)
+
+Clicking **Access Lab** assigns you a dedicated environment for the lab exercises.
+
+---
+
+**Step 2 — Find your Guacamole link**
+
+Once your environment is assigned, scroll through the environment details and look for the **Guacamole remote desktop access** entry:
+
+![TechZone environment details showing Guacamole link](images/tx26-lab2216-guacamole-link.png)
+
+Click the link `https://vdi.cloud.techzone.ibm.com/guacamole` to open the Linux desktop in your browser. This is the primary interface used throughout the lab.
+
+> **ℹ️ More details** on using the Guacamole desktop — copy/paste, opening a terminal, screen size, and session timeout — are covered in **[Using the Guacamole Desktop](01a-guacamole.md)**.
+
+---
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Introduction</h2>
 
