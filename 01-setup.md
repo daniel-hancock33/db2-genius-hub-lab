@@ -40,44 +40,15 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Finding Your Environment Details</h2>
-
-During your workshop session, you will access the lab through the **TechXchange Student Portal**:
-
-1. Open the **Access URL** provided by your instructor (e.g., `https://ibm.biz/...`).
-2. Enter the session passcode provided during the session.
-3. You will see the event dashboard with **Attendee and Environment Management**:
-
-![TechXchange Student Event Page](images/tx-lab2216-eventpage-for-student.png)
-
-4. Locate your assigned environment row (e.g., **Student 1 - LAB-2216**).
-5. Click the **open / launch link on the far right of your environment row** (or click the expand arrow on the left) to reveal your full **Environment Details**:
-
-![Student Environment Details](images/tx-lab2216-student-environment-details.png)
-
-> ### 📌 Key Environment Details & Callouts:
-> - **🖥️ Guacamole Remote Desktop (Recommended):** Click the link under **Guacamole remote desktop access**. The desktop opens in your browser immediately — **no password is required**.
-> - **🌐 Public IP Address:** Your virtual machine's unique public IP address is listed here. Use this if you connect via SSH.
-> - **🔑 SSH Private Key:** Click the **"Deployment SSH private key"** download button to get your `.pem` key file for terminal SSH access.
-> - **🔌 SSH Port 2223:** Remember that SSH runs on port **2223** (not standard 22).
-
-| Item on Student Page | What it is for | How you will use it |
-|---|---|---|
-| **Guacamole Remote Desktop link** | In-browser Linux desktop with all tools pre-installed | Click the launch link to open the desktop immediately (no password needed) |
-| **Public IP Address** (e.g. `150.240.x.x`) | Unique IP address of your VM | Used only if you connect via direct SSH from your laptop |
-| **Deployment SSH private key (`.pem`)** | SSH key file | Download this key to SSH in via port `2223` as user `itzuser` |
-
-> 💡 **Keep your Student Environment page open in a tab** so you can reference links and download files if needed.
-
----
-
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing the Lab Environment</h2>
 
-All services in this lab are accessed through the **Guacamole remote desktop** in your browser (recommended). Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all pre-installed inside the desktop session using `localhost` URLs.
+All services in this lab are accessed through the **Guacamole remote desktop** provided by IBM TechZone (recommended). Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all accessed from inside the desktop session using `localhost` URLs. Optionally, you can use an **SSH tunnel** (Step 4) to reach them from your own browser.
+
+> **⚠️ Important — Start Services First:** Genius Hub does **not** start automatically after deployment. Before accessing any services, you must run the startup script. See **Step 1** below.
 
 | Service | How to Access |
 |---|---|
-| **Guacamole Desktop** | Student page → click Guacamole desktop link |
+| **Guacamole Desktop** | TechZone reservation page → open the desktop link → log in as `itzuser` |
 | **Genius Hub Console** | Inside desktop → Firefox → `https://localhost:11101/console` |
 | **Agentic Demo UI** | Inside desktop → Firefox → `http://localhost:3000` |
 | **JupyterLab** | Inside desktop → Firefox → `http://localhost:8888` |
@@ -85,7 +56,9 @@ All services in this lab are accessed through the **Guacamole remote desktop** i
 | **Db2 Host (for Genius Hub)** | `localhost` |
 | **Db2 Port (db2inst1)** | `25010` |
 | **Db2 Port (db2inst2 / REPODB)** | `25011` |
-| **SSH Access (Optional)** | `ssh -i <your-key>.pem itzuser@YOUR-PUBLIC-IP -p 2223` |
+| **SSH Access** | `ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223` (IP and key are on your reservation details page, see below) |
+
+> **ℹ️ Where to find your IP address and SSH key:** Open your **TechZone reservation details page**. The **public IP address** is listed in the details, and the **SSH private key** (`ssh_private_key.pem`) is downloaded with the **"Deployment SSH private key"** download button. The Guacamole desktop link is on the same page.
 
 ---
 
@@ -101,57 +74,41 @@ All services in this lab are accessed through the **Guacamole remote desktop** i
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Db2 Users</h3>
 
-The following database and service users are pre-configured. All share the same default password:
+The following users are pre-configured. All share the same password.
 
-| Username | Password | Role / Purpose |
+| Username | Password | Notes |
 |---|---|---|
 | `db2inst1` | `Db2ghPassw0rd#1` | Db2 instance owner (port 25010) |
 | `db2inst2` | `Db2ghPassw0rd#1` | Repo instance owner (port 25011) |
 | `db2demo` | `Db2ghPassw0rd#1` | Demo user — primary lab user |
-| `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub administrator |
-| `itzuser` | *(SSH key only)* | Lab desktop and SSH user (port 2223, no password needed) |
+| `db2ghadm` | `Db2ghPassw0rd#1` | Genius Hub admin |
+| `itzuser` | — | TechZone user: Guacamole desktop login and SSH (SSH key only, port 2223) |
 
 ---
 
-<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup Steps</h2>
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Setup and Configuration</h2>
 
-Follow these quick steps to launch the lab:
-
----
-
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Open the Guacamole Desktop</h3>
-
-1. On your **Student Environment page**, find your assigned **Student row**.
-2. Click the **launch icon / link to the right of your environment row** to open the **Guacamole remote desktop**.
-3. The remote desktop session will open automatically in your browser tab — no separate password is required.
-4. Firefox will open automatically with this lab guide.
-
-> **ℹ️ Tip:** Read **[Using the Guacamole Desktop](01a-guacamole.md)** for clipboard copy/paste instructions, window sizing, and troubleshooting.
+Follow these steps to prepare the environment for the lab.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Start All Lab Services</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start All Services</h3>
 
-> **⚠️ Important:** Genius Hub and the demonstration services do **not** run automatically on boot. You must run the startup script once.
+> **ℹ️ Not in your Guacamole desktop yet?** See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** for how to get there.
 
-Inside the Guacamole desktop:
-1. Open a **Terminal** (Right-click desktop → **Open Terminal**, or use Applications menu top-left).
-2. Run the startup script:
+Open a **Terminal** inside the Guacamole desktop (or SSH in, see Step 2) and run:
 
 ```bash
 sudo /root/start-services.sh
 ```
 
-3. Wait 1–2 minutes for all services (Db2, Genius Hub, Remote Service, Agentic UI) to start.
-4. You can check status at any time by running:
+This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete before proceeding.
 
-```bash
-ghinfo
-```
+> **ℹ️ Note:** You can run `ghinfo` or `info` at any time from a terminal to check the status and see all credentials and URLs.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Access (Optional)</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — SSH Access (Optional)</h3>
 
 SSH access is available if you need a terminal outside of the Guacamole desktop.
 
@@ -171,11 +128,11 @@ chmod 600 ssh_private_key.pem
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — SSH Tunnel (Optional)</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Tunnel (Optional)</h3>
 
 Use a tunnel if you would rather work in **your own laptop's browser** than in the Guacamole desktop. A tunnel forwards ports on your laptop to the VM, so `https://localhost:11101/console` on your laptop reaches Genius Hub on the VM.
 
-> **ℹ️ Before you start:** You need the **public IP address** and the **SSH private key** (`ssh_private_key.pem`) from your TechZone reservation details page, as described in Step 3. In the commands below, replace `YOUR-PUBLIC-IP` with that IP address.
+> **ℹ️ Before you start:** You need the **public IP address** and the **SSH private key** (`ssh_private_key.pem`) from your TechZone reservation details page, as described in Step 2. In the commands below, replace `YOUR-PUBLIC-IP` with that IP address.
 
 > **ℹ️ Note:** The command appears to hang. That is normal: `-N` means "forward ports, don't open a shell". **Keep the window open** while you work. Press `Ctrl+C` to close the tunnel.
 
@@ -230,6 +187,7 @@ Once the tunnel is up, the `localhost` URLs in the table above work from your la
 | Symptom | Fix |
 |---|---|
 | Db2 or Agentic Demo not running | Run `sudo /root/start-services.sh` (Step 1) |
+| Need to open Guacamole desktop | See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** |
 | Genius Hub page won't load | `su - db2ghadm`, then `ghstart`. Check with `ghstatus` |
 | Check Db2 status | `su - db2inst1` then `db2pd -` (use `db2inst2` for the repo instance) |
 | Tunnel: `administratively prohibited` | SSH in normally (no `-L`) and run: `sudo sed -i 's/^AllowTcpForwarding no/AllowTcpForwarding yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd`, then retry the tunnel |
