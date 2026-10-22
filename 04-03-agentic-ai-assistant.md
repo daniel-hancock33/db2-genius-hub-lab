@@ -102,6 +102,124 @@
 
 ---
 
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Space Management with AI</h2>
+
+> **Persona:** DBA &nbsp;|&nbsp; **Skill level:** Beginner &nbsp;|&nbsp; **Estimated time:** 10 min
+
+A tablespace is filling up. Instead of writing catalog queries and reading REORGCHK output by hand, ask the AI assistant in plain language. It shows where the space is going, tells you which objects need a REORG and why, and gives you the exact commands — then runs them with your approval at every step.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Set Up the Simulators</h3>
+
+Before asking questions, load a dataset and run the space-management scenarios so the database has something to analyze.
+
+1. In the Agentic Demo Simulator (`http://localhost:3000`), under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+
+2. Choose the **SF 1.0 (Huge)** dataset and wait for the load to complete.
+
+   > ⏳ This may take a few minutes.
+
+3. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
+
+4. Select all scenarios and click **Run selected**.
+
+5. Confirm no simulators show an error before proceeding.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Space by Schema</h3>
+
+In the Genius Hub AI Assistant (with `demo_col` selected), enter:
+
+```
+Break down disk space usage by schema
+```
+
+The assistant returns one row per schema so the biggest consumers stand out immediately. Notice the **proactive offer** — it will suggest running REORGCHK on the `SIMULATOR` schema as the natural next step.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Largest Table in SIMULATOR</h3>
+
+Focus on the `SIMULATOR` schema by asking:
+
+```
+What is the largest table in the SIMULATOR schema?
+```
+
+The answer lists tables with the largest first, in descending order.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Analyze the Schema for Space Reclamation</h3>
+
+Ask the assistant to analyze the whole schema:
+
+```
+Analyze schema SIMULATOR for space reclamation
+```
+
+The response is thorough: which tables need a REORG, which indexes need a REORG, and the exact command to run for each one.
+
+> **Tip:** When several tables need a REORG, the index section may be skipped to keep the answer short. You can ask for indexes at any time — for the whole schema or for one specific object.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Ask About Indexes Specifically</h3>
+
+```
+Which indexes in schema SIMULATOR need reorganization?
+```
+
+The assistant responds with a detailed table including:
+- REORGCHK indicator values (F4–F8) for each index
+- One ready-to-run REORG command per index
+- A reminder to enable the `RTMON_EVMON_UTILITY` event monitor in Genius Hub to track REORG history
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Step-by-Step Instructions for One Table</h3>
+
+Pick one table from the list and ask how to fix it:
+
+```
+Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
+```
+
+The assistant gives you the whole procedure:
+1. Run the REORG
+2. Run RUNSTATS to update table statistics
+3. Check that statistics were updated
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Let the Assistant Run It, With Your Approval</h3>
+
+For an online (INPLACE) REORG you do not need to copy and paste commands. Ask the assistant to execute:
+
+```
+Can you please run the reorg for me?
+```
+
+The assistant asks for your **explicit approval before each step**, runs what you approve, and confirms when the REORG was successful.
+
+> **ℹ️ Note:** Explicit human approval is required before any database change is applied — you remain in full control at all times.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 7 — Check Again</h3>
+
+After the REORG completes, ask the assistant to verify the space was reclaimed:
+
+```
+Check the space for SIMULATOR schema again
+```
+
+Compare the before and after results — you should see the fragmented space recovered.
+
+---
+
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Operation Modes</h3>
 
 Db2 Genius Hub provides 2 additional operation modes for the Database Assistant:

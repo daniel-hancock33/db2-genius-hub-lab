@@ -8,7 +8,7 @@ In this section you will load data into the lab databases and use Db2 Genius Hub
 
 - [**Drill-Down Investigation**](04-01-drill-down.md) — Load data, spot a CPU anomaly, and drill into the details
 - [**Reports**](04-02-reports.md) — Generate and share a performance report
-- [**Agentic AI Assistant**](04-03-agentic-ai-assistant.md) — Investigate anomalies using natural language queries
+- [**Agentic AI Assistant**](04-03-agentic-ai-assistant.md) — Investigate anomalies and reclaim database space using natural language queries
 - [**Alerts and Jobs**](04-04-alerts-and-jobs.md) — Configure anomaly alerts and create scheduled jobs
 
 ---
