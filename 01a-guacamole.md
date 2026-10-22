@@ -8,21 +8,19 @@ Guacamole is a browser-based remote desktop. Everything you do inside it runs on
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Opening the Desktop</h2>
 
-1. On your **TechXchange Student Event page**, locate your assigned row under **Attendee and Environment Management** (e.g. `Student 1 - LAB-2216`).
-2. Click the **link/icon on the far right of the row** to launch the **Guacamole remote desktop**.
+1. Go to your **TechZone reservation details page**.
+2. Find the **"Guacamole remote desktop access"** section and click the link:
+   `https://vdi.cloud.techzone.ibm.com/guacamole`
+3. Log in with username `itzuser` and the password from your reservation page.
+4. The GNOME desktop opens in your browser. Firefox launches automatically and opens the Lab Guide.
 
-![TechXchange Student Event Page](images/tx-lab2216-eventpage-for-student.png)
-
-3. The Linux desktop opens directly in your browser tab — no separate login or password is required.
-4. Firefox launches automatically and opens this Lab Guide.
-
-> **ℹ️ Tip:** Bookmark the Guacamole link or keep your Student Environment page tab open. If your session disconnects or times out, just click the link again — your session resumes where you left off with all applications running.
+> **ℹ️ Tip:** Bookmark the Guacamole link. If your session disconnects, just reopen it — your session resumes where you left off.
 
 ---
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Copy and Paste</h2>
 
-Copy/paste between your laptop and the Guacamole desktop does **not** use the normal `Ctrl+C` / `Ctrl+V` keyboard shortcut across the boundary. Use the **Guacamole clipboard** instead.
+Copy/paste between your laptop and the Guacamole desktop works using the **Guacamole clipboard** — there is a tab on the left edge of the screen to open the Guacamole menu.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Paste from your laptop into the VM</h3>
 
@@ -40,7 +38,7 @@ Copy/paste between your laptop and the Guacamole desktop does **not** use the no
 3. The selected text appears in the clipboard box.
 4. Copy it from the box to your laptop's clipboard (`Cmd+A` then `Cmd+C`).
 
-> **ℹ️ Keyboard shortcuts inside the VM** work normally once your cursor is inside the desktop session. `Ctrl+C` and `Ctrl+V` work in Firefox, DBeaver, VS Code, and terminals. The clipboard tab is only needed when crossing the boundary between your laptop and the VM.
+> **ℹ️ Keyboard shortcuts inside the VM** work normally once your cursor is inside the desktop session. `Ctrl+C` and `Ctrl+V` work in Firefox, DBeaver, VS Code, and terminals.
 
 > **⚠️ Known quirk:** Some browser shortcuts (`Ctrl+W` to close a tab, `Ctrl+T` for a new tab) may be intercepted by your browser before reaching the VM. Use the application's menu instead, or switch to fullscreen mode (see below).
 
@@ -100,7 +98,7 @@ To reconnect: open the Guacamole link again (`https://vdi.cloud.techzone.ibm.com
 | Task | How |
 |---|---|
 | Open Guacamole | `https://vdi.cloud.techzone.ibm.com/guacamole` → log in as `itzuser` |
-| Paste from laptop | Guacamole menu (left tab) → Clipboard → paste text → close menu → `Ctrl+V` in VM |
+| Paste from laptop | Click left-edge tab → Clipboard → paste text → close menu → `Ctrl+V` in VM |
 | Open terminal | Right-click desktop → Open Terminal |
 | Find DBeaver | Applications → Programming → DBeaver |
 | Find VS Code | Applications → Programming → Visual Studio Code |
