@@ -96,7 +96,11 @@ Follow these steps to prepare the environment for the lab.
 
 > **ℹ️ Not in your Guacamole desktop yet?** See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** for how to get there.
 
-Open a **Terminal** inside the Guacamole desktop (or SSH in, see Step 2) and run:
+To open a Terminal inside the Guacamole desktop, click **Activities** then **Terminal**:
+
+![Opening a terminal via Activities menu](images/tx26-lab2216-terminal.png)
+
+Alternatively, SSH in — see Step 2. Then run:
 
 ```bash
 sudo /root/start-services.sh
@@ -128,7 +132,10 @@ chmod 600 ssh_private_key.pem
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Tunnel (Optional)</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Tunnel (Optional — not required for TechXchange)</h3>
+
+> **⚠️ TechXchange attendees: skip this step.** All lab work is done inside the Guacamole desktop. The SSH tunnel is only needed if you want to use your own laptop's browser after the conference.
+
 
 Use a tunnel if you would rather work in **your own laptop's browser** than in the Guacamole desktop. A tunnel forwards ports on your laptop to the VM, so `https://localhost:11101/console` on your laptop reaches Genius Hub on the VM.
 
