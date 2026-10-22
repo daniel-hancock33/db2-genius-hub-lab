@@ -132,63 +132,6 @@ chmod 600 ssh_private_key.pem
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — SSH Tunnel (Optional — not required for TechXchange)</h3>
-
-> **⚠️ TechXchange attendees: skip this step.** All lab work is done inside the Guacamole desktop. The SSH tunnel is only needed if you want to use your own laptop's browser after the conference.
-
-
-Use a tunnel if you would rather work in **your own laptop's browser** than in the Guacamole desktop. A tunnel forwards ports on your laptop to the VM, so `https://localhost:11101/console` on your laptop reaches Genius Hub on the VM.
-
-> **ℹ️ Before you start:** You need the **public IP address** and the **SSH private key** (`ssh_private_key.pem`) from your TechZone reservation details page, as described in Step 2. In the commands below, replace `YOUR-PUBLIC-IP` with that IP address.
-
-> **ℹ️ Note:** The command appears to hang. That is normal: `-N` means "forward ports, don't open a shell". **Keep the window open** while you work. Press `Ctrl+C` to close the tunnel.
-
-Forwarded ports: `11100`/`11101` (Genius Hub), `3000` (Agentic Demo), `8000` (Agentic backend), `8888` (JupyterLab), `25010`/`25011` (Db2).
-
-**Mac/Linux:**
-
-```bash
-chmod 600 ssh_private_key.pem
-ssh -i ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 \
-  -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 \
-  -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 \
-  -L 25011:localhost:25011 -N
-```
-
-**Windows 10/11 (PowerShell):**
-
-Windows includes the OpenSSH client. Check with `ssh -V` (if missing: Settings → Apps → Optional features → add **OpenSSH Client**).
-
-1. Save the key, for example `C:\Users\<you>\Downloads\ssh_private_key.pem`.
-2. Restrict its permissions (SSH refuses keys that other users can read):
-
-    ```powershell
-    icacls C:\Users\<you>\Downloads\ssh_private_key.pem /inheritance:r
-    icacls C:\Users\<you>\Downloads\ssh_private_key.pem /grant:r "$($env:USERNAME):(R)"
-    ```
-
-3. Run the tunnel as **one line**:
-
-    ```powershell
-    ssh -i C:\Users\<you>\Downloads\ssh_private_key.pem itzuser@YOUR-PUBLIC-IP -p 2223 -L 11100:localhost:11100 -L 11101:localhost:11101 -L 3000:localhost:3000 -L 8000:localhost:8000 -L 8888:localhost:8888 -L 25010:localhost:25010 -L 25011:localhost:25011 -N
-    ```
-
-4. Leave the window open, then browse to `https://localhost:11101/console`.
-
-**Windows with PuTTY (alternative):**
-
-1. **PuTTYgen** → Load the `.pem` (file filter: All Files) → *Save private key* as `.ppk`.
-2. **PuTTY** → Session: Host Name = your public IP, Port = `2223`.
-3. Connection → Data: Auto-login username = `itzuser`.
-4. Connection → SSH → Auth → Credentials: select the `.ppk`.
-5. Connection → SSH → Tunnels: for **each** port `11100, 11101, 3000, 8000, 8888, 25010, 25011`, enter *Source port* = the port and *Destination* = `localhost:<port>`, then click **Add**.
-6. (Optional) Connection → SSH: tick *Don't start a shell or command at all*.
-7. Return to Session, optionally save it, and click **Open**.
-
-Once the tunnel is up, the `localhost` URLs in the table above work from your laptop's browser. Genius Hub uses a self-signed certificate, so continue past the browser warning.
-
----
-
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Troubleshooting</h2>
 
 | Symptom | Fix |
@@ -197,9 +140,6 @@ Once the tunnel is up, the `localhost` URLs in the table above work from your la
 | Need to open Guacamole desktop | See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** |
 | Genius Hub page won't load | `su - db2ghadm`, then `ghstart`. Check with `ghstatus` |
 | Check Db2 status | `su - db2inst1` then `db2pd -` (use `db2inst2` for the repo instance) |
-| Tunnel: `administratively prohibited` | SSH in normally (no `-L`) and run: `sudo sed -i 's/^AllowTcpForwarding no/AllowTcpForwarding yes/' /etc/ssh/sshd_config && sudo systemctl restart sshd`, then retry the tunnel |
-| Tunnel: `Address already in use` / `bind` error | Another program uses that local port. Close it, or change the first number of that `-L` (for example `-L 13000:localhost:3000`, then browse to port 13000) |
-| `UNPROTECTED PRIVATE KEY FILE` | Mac/Linux: `chmod 600 ssh_private_key.pem`. Windows: run the `icacls` commands in Step 4 |
 | `Permission denied (publickey)` | Wrong key or user. Use the key and user from **this** reservation |
 | `Connection timed out` | Check the public IP, and use port **2223** (not 22) |
 
