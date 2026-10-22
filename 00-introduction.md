@@ -25,9 +25,10 @@
 > 6. [Space Management with AI](04-03-agentic-ai-assistant.md#space-management) — first open the Assistant using steps 1–4 at the top of that page
 > 7. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
 >
-> Each of these pages ends with a **🎯 Quick Path** footer that takes you to the next step.
->
-> All other pages are optional background and can be done afterward.
+> **How to navigate**
+> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 7*). It takes you straight to the next required page and skips the rest.
+> - **Ignore the regular "← Previous | → Next" links** at the bottom of the page for now. They walk through the full lab in order, including pages you do not need for the two featured exercises.
+> - **Finished early?** After WLM Queuing, go back and complete the other pages (Interface Tour, Monitor Dashboard, Drill-Down, Alerts and Jobs, and so on) using the regular "→ Next" links. They are optional background and build on one another, so work through them in order.
 
 ---
 
