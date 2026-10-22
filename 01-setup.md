@@ -114,7 +114,7 @@ This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait f
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Optional Access Methods</h2>
 
-> **⚠️ TechXchange attendees: the options below are not needed during the conference.** All lab work is done inside the Guacamole desktop. These are provided for reference if you want to access the environment from your own machine after the event.
+> **⚠️ TechXchange attendees: the options below are not needed during the conference.** All lab work is done inside the Guacamole desktop. These are provided for reference for future labs where you bring your own device.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">SSH Access</h3>
 
