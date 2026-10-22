@@ -26,6 +26,211 @@ Open a browser and navigate to:
 http://localhost:3000
 ```
 
+This page contains the two TechXchange exercises:
+
+1. [Space Management with AI](#space-management) — find and reclaim wasted space with the AI assistant.
+2. [WLM Queuing](#wlm-queuing) — diagnose and fix a workload manager queuing problem.
+
+---
+
+<h2 id="space-management" style="padding-left:14px; border-left:6px solid #1D9E75;">Space Management with AI</h2>
+
+> **Persona:** DBA
+
+**The task.** A tablespace is filling up. Find which schema is using the space, find the tables and indexes in it that need a REORG, and fix them. You do all of it by asking questions in plain language.
+
+**The story.** Space is tight and you need to know where it went and what can be safely recovered. Instead of writing catalog queries and reading REORGCHK output by hand, you ask the assistant in plain language. It shows where the space is, tells you which objects are worth reorganizing and why, and gives you the exact commands in the right order. When a change is needed it asks for your approval before it runs anything, then re-checks the result so you can see what changed.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Set Up the Simulators</h3>
+
+Before you ask any questions, load a data set and run the space-management scenarios so the database has something to analyze.
+
+1. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+
+2. Choose the **SF 1.0 (Huge)** dataset.
+
+   <img src="images/SM-step0-1.png" width="800"/>
+
+   <img src="images/SM-step0-2.png" width="500"/>
+
+3. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
+
+4. Select all scenarios and click **Run selected**.
+
+   <img src="images/SM-step0-3.png" width="800"/>
+
+   <img src="images/SM-step0-4.png" width="400"/>
+
+5. Check that none of the simulators shows an error in the UI before you start asking questions.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start with a Broad Question: Disk Space by Schema</h3>
+
+You do not need to know any schema or table names up front. Start broad and let the assistant show you the landscape.
+
+First, open the Assistant in Genius Hub:
+
+1. Click the **Agentic AI Assistant** menu item.
+
+   <img src="images/GH-agentic-ai-assistant-menu.png" width="200"/>
+
+2. Expand the AI Assistant by clicking the expand button.
+
+   <img src="images/GH-agentic-ai-assistant-expanded.png" width="800"/>
+
+3. Read and close the **Legal Disclaimer**.
+
+   <img src="images/GH-agentic-ai-assistant-legal-close.png" width="800"/>
+
+4. In the **Choose Database** field, choose `demo_col`.
+
+   <img src="images/GH-agentic-ai-assistant-choose-db.png" width="800"/>
+
+Then ask:
+
+**You ask:**
+
+```
+Break down disk space usage by schema
+```
+
+<img src="images/SM-step1-1.png" width="600"/>
+
+<img src="images/SM-step1-2.png" width="600"/>
+
+- **Space by schema.** One row per schema in a clean table, so the biggest consumers stand out straight away.
+- **Tables in each schema.** General information about which tables exist, so you know what you are looking at before you drill down.
+- **A proactive offer.** The assistant offers to run REORGCHK on the `SIMULATOR` schema to confirm which of its tables need a REORG. You did not ask for this; it is the natural next step.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Focus on One Schema: the Largest Table in SIMULATOR</h3>
+
+For this example we focus on a schema called `SIMULATOR`. Explore it by asking for its largest table.
+
+**You ask:**
+
+```
+What is the largest table in the SIMULATOR schema?
+```
+
+<img src="images/SM-step2-1.png" width="600"/>
+
+- **Sorted by size.** The answer lists the tables with the largest first, followed by the rest in descending order.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Analyze the Schema for Space Reclamation</h3>
+
+Now ask the assistant to analyze the whole schema. The response is thorough: which tables need a REORG, which indexes need a REORG, and the command to run for each one.
+
+**You ask:**
+
+```
+Analyze schema SIMULATOR for space reclamation
+```
+
+<img src="images/SM-step3-1.png" width="600"/>
+
+<img src="images/SM-step3-2.png" width="600"/>
+
+<img src="images/SM-step3-3.png" width="600"/>
+
+- **Tables requiring REORG.** Each table with the REORGCHK indicator it violated.
+- **Indexes requiring REORG.** Listed separately from the tables.
+- **Commands.** The command to run for each table and index.
+
+> **Tip:** When several tables need a REORG, the index section may be skipped to keep the answer short. You can ask for indexes at any time, for the whole schema or for one specific table or index. Step 4 shows how.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Ask About Indexes Specifically</h3>
+
+Ask for the indexes that need reorganization. The assistant answers with a detailed table again.
+
+**You ask:**
+
+```
+Which indexes in schema SIMULATOR need reorganization?
+```
+
+<img src="images/SM-step4-1.png" width="600"/>
+
+<img src="images/SM-step4-2.png" width="600"/>
+
+- **Indicator values.** The REORGCHK indicators (F4 to F8) for each index, so you can see exactly why it was flagged.
+- **REORG commands.** One ready-to-run command per index.
+- **Event monitor reminder.** The assistant reminds you that the `RTMON_EVMON_UTILITY` event monitor is not enabled. Enable it in Db2 Genius Hub to track REORG history.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Get Step-by-Step Instructions for a Single Table</h3>
+
+Pick one table from the list and ask how to fix it. The assistant gives you the whole procedure.
+
+**You ask:**
+
+```
+Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
+```
+
+<img src="images/SM-step5-1.png" width="600"/>
+
+<img src="images/SM-step5-2.png" width="600"/>
+
+- **Run the REORG.** The command for this table.
+- **Run RUNSTATS.** Updates the table statistics after the REORG.
+- **Check the statistics.** A final check that the statistics were updated.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Let the Assistant Run It, with Your Approval</h3>
+
+For an online REORG such as an INPLACE REORG, you do not have to copy and paste commands. Ask the assistant to do it. It asks for your approval before each step, runs what you approve, and finishes by reporting that the REORG was successful.
+
+**You ask:**
+
+```
+Can you please run the reorg for me?
+```
+
+<img src="images/SM-step6-1.png" width="600"/>
+
+<img src="images/SM-step6-2.png" width="600"/>
+
+<img src="images/SM-step6-3.png" width="600"/>
+
+<img src="images/SM-step6-4.png" width="600"/>
+
+<img src="images/SM-step6-5.png" width="600"/>
+
+- **Approval card.** Shows the exact command with **Approve** and **Reject** buttons. Nothing runs until you approve it.
+- **Each step from the plan.** The assistant works through the steps it listed in Step 5, asking for approval each time.
+- **Final result.** The assistant reports that the REORG was successful.
+
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 7 — Check Again: the F1 Issue Is Gone</h3>
+
+Ask the assistant to check the table again. It confirms that the F1 indicator that flagged the table is no longer a problem.
+
+**You ask:**
+
+```
+Check again whether SIMULATOR.REORG_F1_TEST still needs a reorg
+```
+
+<img src="images/SM-step7-1.png" width="600"/>
+
+- **F1 is clear.** The overflow indicator no longer flags the table.
+
+---
+
+🎯 **TechXchange Quick Path — Step 6 of 7:** **[← AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ WLM Queuing](#wlm-queuing)**
+
 ---
 
 <h2 id="wlm-queuing" style="padding-left:14px; border-left:6px solid #1D9E75;">Sort Memory Queuing Simulation</h2>
@@ -207,12 +412,12 @@ In this lab, you:
 | **Setup** | Connected to the lab VM, started Genius Hub services, and configured the environment |
 | **Basics** | Explored the Genius Hub UI, configured event monitors, and set up AI configuration |
 | **SQL Workbench** | Created tables, ran queries, used Visual Explain, and applied AI Query Tuner recommendations |
-| **Monitoring** | Analyzed CPU anomalies, generated reports, used the Agentic AI Assistant to investigate anomalies and reclaim tablespace space, and configured alerts |
-| **Agentic AI Simulator** | Triggered a WLM sort memory queuing scenario, used the AI assistant to diagnose the root cause, approved a configuration revert, and verified all queries returned to EXECUTING state |
+| **Monitoring** | Analyzed CPU anomalies, generated reports, used the Agentic AI Assistant, and configured alerts |
+| **Agentic AI Simulator** | Used the AI assistant to find and reclaim wasted tablespace space with approval at each step, then triggered a WLM sort memory queuing scenario, used the AI assistant to diagnose the root cause, approved a configuration revert, and verified all queries returned to EXECUTING state |
 
 ---
 
-🎯 **TechXchange Quick Path — Step 7 of 7:** **[← Space Management with AI](04-03-agentic-ai-assistant.md#space-management)** &nbsp;&nbsp;|&nbsp;&nbsp; ✅ End of the Quick Path
+🎯 **TechXchange Quick Path — Step 7 of 7:** **[← Space Management with AI](#space-management)** &nbsp;&nbsp;|&nbsp;&nbsp; ✅ End of the Quick Path
 
 **[← Return to Introduction](00-introduction.md)**
 

@@ -22,7 +22,7 @@
 > 3. [Login and Repository Setup](02-01-login-and-repo.md)
 > 4. [Database Connections](02-03-database-connections.md)
 > 5. [AI Configuration and Event Monitors](02-05-ai-configuration.md)
-> 6. [Space Management with AI](04-03-agentic-ai-assistant.md#space-management) — first open the Assistant using steps 1–4 at the top of that page
+> 6. [Space Management with AI](05-agentic-ai-simulator.md#space-management) — on the Agentic AI Simulator page
 > 7. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
 >
 > **How to navigate**
@@ -64,10 +64,12 @@
 **[4 — Monitoring Databases](04-monitoring.md)**
 - [Drill-Down Investigation](04-01-drill-down.md)
 - [Reports](04-02-reports.md)
-- [Agentic AI Assistant](04-03-agentic-ai-assistant.md) 🎯 *Step 6 — Space Management*
+- [Agentic AI Assistant](04-03-agentic-ai-assistant.md)
 - [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
-**[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)** 🎯 *Step 7 — WLM Queuing*
+**[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)**
+- [Space Management with AI](05-agentic-ai-simulator.md#space-management) 🎯 *Step 6*
+- [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing) 🎯 *Step 7*
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
 
