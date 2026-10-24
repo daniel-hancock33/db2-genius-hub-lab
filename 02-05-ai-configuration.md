@@ -300,17 +300,20 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Configure Tabs for Utilities Monitoring</h2>
 
-Before starting the data load, add the **Utilities** and **Utilities event monitor** tabs to the Monitor dashboard so you can observe load activity in real time.
+Before starting the data load, add the **Utilities**, **Storage** and **Workload management** tabs to the Monitor dashboard so you can observe load activity, tablespace usage and WLM activity in real time.
 
 1. From the Monitor dashboard, click the **edit tabs** icon on the right side of the tab bar.
 
    <img src="images/GH-edit-tabs.png" width="800"/>
 
-2. The **Manage Tabs** window opens. Under **Applications**, select **Utilities** and **Utilities event monitor (a)**.
+2. The **Manage Tabs** window opens. Select the following:
+   - Under **Applications**, select **Utilities** and **Utilities event monitor (a)**.
+   - Under **Workload management**, select **Select All (b)**.
+   - Under **Storage**, select **Select All (c)**.
 
    <img src="images/GH-edit-tabs-utilites.png" width="800"/>
 
-3. Click **Save (b)**.
+3. Click **Save (d)**.
 
 ---
 
