@@ -5,6 +5,8 @@ Inside the Guacamole desktop, open **Firefox** and navigate to the Genius Hub co
 
 > **📋 URL:** `https://localhost:11101/console`
 
+> **⚠️ Browser security warning:** The first time you open the console, Firefox may show **Warning: Potential Security Risk Ahead** (other browsers show **Your connection is not private**). This is expected. Genius Hub uses a self-signed certificate. Click **Advanced**, then click **Accept the Risk and Continue** (in other browsers, **Proceed to localhost (unsafe)**).
+
 <img src="images/GH-login.png" width="600"/>
 
 Enter your credentials and click **Login**:
