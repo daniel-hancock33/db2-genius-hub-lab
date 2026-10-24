@@ -100,22 +100,46 @@ To open a Terminal inside the Guacamole desktop, click **Activities** then **Ter
 
 ![Opening a terminal via Activities menu](images/tx26-lab2216-terminal.png)
 
-The services have already been started for you. Switch to the `db2ghadm` user and check their status:
+The services have already been started for you. Check their status by running:
 
 ```bash
-sudo su - db2ghadm
-ghstatus
+sudo su - db2ghadm -c '/home/db2ghadm/ibm-db2GeniusHub/bin/status.sh'
 ```
 
-If all services are running, continue to the next section.
+You should see output like this:
 
-If any service is down, type `exit` to return to the `itzuser` prompt, then run the startup script:
+```
+==========================================
+IBM Db2 Genius Hub - Product Status Check
+==========================================
+
+Version: 1.1.5.0 (20260915-045524)
+
+Component Status Summary:
+---------------------------------------------------------------------------------
+Component                 Status          Details
+---------------------------------------------------------------------------------
+Liberty Server            RUNNING         PID: 2083    | Port(s): 11100(HTTP),11101(HTTPS)
+Agentic AI Service        RUNNING         PID: 727244  | Port(s): 11108
+Anomaly Detection Service STOPPED         -
+DRS Agent Service         RUNNING         PID: 7119    | Port(s): 11096
+Job Scheduler Service     RUNNING         PID: 7210    | Port(s): 11107
+Redis Service             RUNNING         PID: 727051  | Port(s): 6379
+Genius MCP Service        STOPPED         -
+---------------------------------------------------------------------------------
+
+Overall Status: [WARNING] Liberty is running but 2 addon(s) are not running
+```
+
+> **ℹ️ This is the expected output.** The PIDs will differ on your VM. The `[WARNING]` is normal: **Anomaly Detection** and **Genius MCP** are not used in this lab and are expected to show `STOPPED`.
+
+If **Liberty Server**, **Agentic AI Service**, **DRS Agent Service**, **Job Scheduler Service** or **Redis Service** shows `STOPPED`, start the services by running the startup script:
 
 ```bash
 sudo /root/start-services.sh
 ```
 
-This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete, then run `ghstatus` again to confirm.
+This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete, then run the status command again to confirm.
 
 > **ℹ️ Note:** You can run `ghinfo` or `info` at any time from a terminal to check the status and see all credentials and URLs.
 
