@@ -44,7 +44,7 @@ The lab environment is fully provisioned — all required components are pre-ins
 
 All services in this lab are accessed through the **Guacamole remote desktop** provided by IBM TechZone (recommended). Genius Hub, the Agentic Demo UI, JupyterLab, and DBeaver are all accessed from inside the desktop session using `localhost` URLs. Optionally, you can use an **SSH tunnel** (Step 4) to reach them from your own browser.
 
-> **⚠️ Important — Start Services First:** Genius Hub does **not** start automatically after deployment. Before accessing any services, you must run the startup script. See **Step 1** below.
+> **⚠️ Important — Check Services First:** The services have already been started for you. Before accessing them, check that they are running. If any are down, start them with the startup script. See **Step 1** below.
 
 | Service | How to Access |
 |---|---|
@@ -92,7 +92,7 @@ Follow the step below to prepare the environment for the lab.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start All Services</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Check That All Services Are Running</h3>
 
 > **ℹ️ Not in your Guacamole desktop yet?** See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** for how to get there.
 
@@ -100,13 +100,22 @@ To open a Terminal inside the Guacamole desktop, click **Activities** then **Ter
 
 ![Opening a terminal via Activities menu](images/tx26-lab2216-terminal.png)
 
-Then run:
+The services have already been started for you. Switch to the `db2ghadm` user and check their status:
+
+```bash
+sudo su - db2ghadm
+ghstatus
+```
+
+If all services are running, continue to the next section.
+
+If any service is down, type `exit` to return to the `itzuser` prompt, then run the startup script:
 
 ```bash
 sudo /root/start-services.sh
 ```
 
-This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete before proceeding.
+This starts Db2, Genius Hub, the Remote Service, and the Agentic Demo UI. Wait for it to complete, then run `ghstatus` again to confirm.
 
 > **ℹ️ Note:** You can run `ghinfo` or `info` at any time from a terminal to check the status and see all credentials and URLs.
 
