@@ -23,7 +23,13 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
    <img src="images/GH-anomaly-types.png" width="800"/>
 
-6. SSH into the VM as `db2demo` and rerun the data load script:
+6. In the Terminal on the Guacamole desktop, switch to the `db2demo` user (skip this if you are still logged in as `db2demo`):
+
+   ```bash
+   sudo su - db2demo
+   ```
+
+   Rerun the data load script:
 
    ```bash
    ./load-tpch-data.sh
@@ -62,7 +68,13 @@ Now that you have identified an anomaly, configure alerts so you are notified if
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Query Monitoring</h2>
 
-1. SSH into the VM as `db2demo` and run the workload exerciser script:
+1. In the Terminal on the Guacamole desktop, switch to the `db2demo` user (skip this if you are still logged in as `db2demo`):
+
+   ```bash
+   sudo su - db2demo
+   ```
+
+   Run the workload exerciser script:
 
    ```bash
    cd /home/db2demo/db2-tpch-cli-sim/scripts

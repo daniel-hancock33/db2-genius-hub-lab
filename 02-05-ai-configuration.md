@@ -181,7 +181,7 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
    <img src="images/GH-predefined-tablespace.png" width="400"/>
 
-   There are 3 ways to create the event monitor tablespace (informational — do not create one for this lab):
+e   There are 3 ways to create the event monitor tablespace (informational — for this lab, use the Web UI in the next step only if the tablespace is not already defined):
 
    | Method | Description |
    |---|---|
@@ -189,7 +189,17 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
    | **REST API** | [Defining a tablespace by using REST API](https://www.ibm.com/docs/en/db2-genius-hub/1.1.x?topic=apis-defining-table-space-by-using-rest-api) |
    | **Manual** | [Table space prerequisites for event monitoring](https://www.ibm.com/docs/en/db2-genius-hub/1.1.x?topic=profile-table-space-other-prerequisites-event-monitoring) |
 
-4. From the **Activity (f)** tab, enable. The options on the right side become available.
+4. If **Tablespace not defined** is displayed, click **Define a tablespace (a)**.
+
+   <img src="images/gh-create-mon-ts.png" width="600"/>
+
+   In the **Define tablespace** dialog, select **Create a new tablespace (a)**, enter the tablespace name **`TS4MONITOR` (b)**, and click **Save (c)**.
+
+   <img src="images/gh-define-mon-ts.png" width="500"/>
+
+   > **ℹ️ Note:** If the tablespace usage already shows `TS4MONITOR`, as in the screenshot above, skip this step.
+
+5. From the **Activity (f)** tab, enable. The options on the right side become available.
 
    <img src="images/GH-activity-tab.png" width="800"/>
 
@@ -205,11 +215,11 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
    > **📖 Reference:** [Administrative Task Scheduler (ATS) in event monitoring](https://www.ibm.com/docs/en/db2-genius-hub/1.1.x?topic=profile-administrative-task-scheduler-ats-in-event-monitoring)
 
-5. Select the **Locking (g)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
+6. Select the **Locking (g)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
 
    <img src="images/GH-locking-tab.png" width="800"/>
 
-6. Select the **Utility (h)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
+7. Select the **Utility (h)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
 
    <img src="images/GH-utility-tab.png" width="800"/>
 
@@ -217,11 +227,11 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
    <img src="images/GH-utility-types.png" width="800"/>
 
-7. Select the **Statistics (i)** tab → ensure Status is **Enabled** → set Collection interval to **1 minute**.
+8. Select the **Statistics (i)** tab → ensure Status is **Enabled** → set Collection interval to **1 minute**.
 
    <img src="images/GH-stats-tab.png" width="800"/>
 
-8. Select the **Config (j)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
+9. Select the **Config (j)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
 
    <img src="images/GH-config-tab.png" width="800"/>
 
@@ -232,19 +242,19 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
    - Stored procedure: `IBM_RTMON.RTMON_EVMON_CONFIG_WATCHDOG`
    - Db2 ATS task: **Rtmon Evmon Config Watchdog**
 
-9. Select the **Config types (k)** down caret to view which Db2 configuration parameters to track (leave all selected).
+10. Select the **Config types (k)** down caret to view which Db2 configuration parameters to track (leave all selected).
 
    <img src="images/GH-config-types.png" width="800"/>
 
-10. Select the **DDL (l)** tab → ensure Status is **Disabled**.
+11. Select the **DDL (l)** tab → ensure Status is **Disabled**.
 
     <img src="images/GH-ddl-tab.png" width="800"/>
 
-11. Select the **Regvar (m)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
+12. Select the **Regvar (m)** tab → change status to **Enabled** → set Collection interval to **1 minute**.
 
     <img src="images/GH-regvar-tab.png" width="800"/>
 
-12. Click **Save (n)** in the upper-right.
+13. Click **Save (n)** in the upper-right.
 
     <img src="images/GH-event-monitor-save.png" width="800"/>
 
@@ -252,15 +262,15 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
     <img src="images/GH-event-monitor-message.png" width="800"/>
 
-13. After a few minutes, the event monitors should appear in the screen. Refresh the page as needed.
+14. After a few minutes, the event monitors should appear in the screen. Refresh the page as needed.
 
     <img src="images/GH-event-monitors-created.png" width="800"/>
 
-14. From the side menu, select **Monitor (a)**.
+15. From the side menu, select **Monitor (a)**.
 
     <img src="images/GH-monitor-sidemenu.png" width="200"/>
 
-15. Click **View more charts (b)**. The **Contention**, **Response time**, and **Responsiveness** graphs are now visible.
+16. Click **View more charts (b)**. The **Contention**, **Response time**, and **Responsiveness** graphs are now visible.
 
     <img src="images/GH-response-time-charts.png" width="800"/>
 

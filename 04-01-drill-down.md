@@ -17,7 +17,11 @@ Now that you have learned the basics, let's start monitoring databases.
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Start the Data Load</h2>
 
-1. SSH into the VM as `db2demo`. See [Section 1 — Student SSH Access](01-setup.md#step-1--student-ssh-access) for instructions.
+1. In the Guacamole desktop, open a **Terminal** (Activities → Terminal) and switch to the `db2demo` user:
+
+   ```bash
+   sudo su - db2demo
+   ```
 
 2. Start the data load script:
 
