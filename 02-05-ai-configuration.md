@@ -90,33 +90,38 @@ To enable the Db2 Agentic AI service in Genius Hub, you need to create an organi
     ```
 
 
-15. Confirm all services are running:
+15. Confirm the services are running:
 
     ```bash
     ghstatus
     ```
 
-    Expected output:
+    Expected output (process IDs will differ):
 
     ```
     ==========================================
     IBM Db2 Genius Hub - Product Status Check
     ==========================================
 
+    Version: 1.1.5.0 (20260915-045524)
+
     Component Status Summary:
     ---------------------------------------------------------------------------------
     Component                 Status          Details
     ---------------------------------------------------------------------------------
-    Liberty Server            RUNNING         PID: 26583   | Port(s): 11100(HTTP),11101(HTTPS)
-    Agentic AI Service        RUNNING         PID: 37750   | Port(s): 11108
-    Anomaly Detection Service RUNNING         PID: 38002   | Port(s): 11109
-    DRS Agent Service         RUNNING         PID: 27023   | Port(s): 11096
-    Job Scheduler Service     RUNNING         PID: 27090   | Port(s): 11107
-    Redis Service             RUNNING         PID: 35508   | Port(s): 6379
+    Liberty Server            RUNNING         PID: 2083    | Port(s): 11100(HTTP),11101(HTTPS)
+    Agentic AI Service        RUNNING         PID: 727244  | Port(s): 11108
+    Anomaly Detection Service RUNNING         PID: 955601  | Port(s): 11109
+    DRS Agent Service         RUNNING         PID: 7119    | Port(s): 11096
+    Job Scheduler Service     RUNNING         PID: 7210    | Port(s): 11107
+    Redis Service             RUNNING         PID: 727051  | Port(s): 6379
+    Genius MCP Service        STOPPED         -
     ---------------------------------------------------------------------------------
 
-    Overall Status: [OK] All components are running
+    Overall Status: [WARNING] Liberty is running but 1 addon(s) are not running
     ```
+
+    > **Note:** `Genius MCP Service` showing `STOPPED` and the `[WARNING]` line are expected. Genius MCP is used in a future lab. Anomaly Detection, Agentic AI and Redis must show `RUNNING`.
 
 ---
 
