@@ -181,7 +181,7 @@ Some Db2 Genius Hub features require event monitors to capture performance data:
 
    <img src="images/GH-predefined-tablespace.png" width="400"/>
 
-e   There are 3 ways to create the event monitor tablespace (informational — for this lab, use the Web UI in the next step only if the tablespace is not already defined):
+   There are 3 ways to create the event monitor tablespace (informational — for this lab, use the Web UI in the next step only if the tablespace is not already defined):
 
    | Method | Description |
    |---|---|
