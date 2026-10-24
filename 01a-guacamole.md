@@ -61,6 +61,23 @@ The terminal opens as `itzuser`. To run commands as root, use `sudo`. To switch 
 
 ---
 
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Switching Between Firefox and the Terminal</h2>
+
+Firefox and the Terminal are separate windows inside the Guacamole desktop. Each window has **minimize**, **maximize** and **close** buttons in its top-right corner. To get to the desktop or another window, click the **minimize** button on the window that is in the way.
+
+You can also switch windows with the keyboard. Click inside the desktop first so it has focus, then use:
+
+| Your laptop | Shortcut |
+|---|---|
+| **Mac** | `Option+Tab` |
+| **Windows** | `Alt+Tab` |
+
+> **⚠️ Do not use `Cmd+Tab` on a Mac.** It switches between apps on your laptop, not inside the VM.
+
+You can also click **Activities** (top-left of the desktop) and click the window you want.
+
+---
+
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Finding Lab Applications</h2>
 
 All applications are pre-installed. Access them from the **Applications menu** (top-left corner of the desktop) or from the taskbar.
@@ -84,6 +101,16 @@ Guacamole automatically scales the desktop to fit your browser window.
 - **Make the desktop larger:** resize or maximise your browser window, then refresh the Guacamole tab. The VM display adjusts to fill the new size.
 - **Fullscreen mode:** press `F11` in your browser for more space. Press `F11` again to exit.
 - **Blurry or very small display:** resize the browser window and refresh the Guacamole tab.
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Changing the Screen Resolution</h3>
+
+If the display is still the wrong size, set the resolution inside the VM desktop:
+
+1. **Minimize** the Firefox window so you can see the desktop.
+2. **Right-click** an empty area of the desktop and select **Display Settings**.
+3. Select **1920 × 1200** as the resolution.
+4. Click **Apply**.
+5. If the resolution looks right, click **Keep Changes**. If not, wait for the countdown to finish, or click **Revert Settings**, and the previous resolution comes back.
 
 > **ℹ️ Tip:** Running Guacamole in a separate browser window (not a tab) makes it easier to switch between the Lab Guide and the desktop.
 
