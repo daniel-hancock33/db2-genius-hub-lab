@@ -96,11 +96,11 @@ Follow the step below to prepare the environment for the lab.
 
 > **ℹ️ Not in your Guacamole desktop yet?** See **[Introduction → Accessing Your Lab Environment](00-introduction.md#accessing-your-lab-environment)** for how to get there.
 
-To open a Terminal inside the Guacamole desktop, click **Activities** then **Terminal**:
+The commands in this step are run in a **Terminal** window inside the Guacamole desktop. To open one, click **Activities** then **Terminal**:
 
 ![Opening a terminal via Activities menu](images/tx26-lab2216-terminal.png)
 
-The services have already been started for you. Check their status by running:
+The services have already been started for you. In the Terminal window, type or paste the following command and press **Enter** to check their status:
 
 ```bash
 sudo su - db2ghadm -c '/home/db2ghadm/ibm-db2GeniusHub/bin/status.sh'
@@ -133,7 +133,7 @@ Overall Status: [WARNING] Liberty is running but 2 addon(s) are not running
 
 > **ℹ️ This is the expected output.** The PIDs will differ on your VM. The `[WARNING]` is normal: **Anomaly Detection** and **Genius MCP** are expected to show `STOPPED` at this point. You will start **Anomaly Detection** later, in the AI Configuration section. **Genius MCP** will be enabled in a future lab.
 
-If **Liberty Server**, **Agentic AI Service**, **DRS Agent Service**, **Job Scheduler Service** or **Redis Service** shows `STOPPED`, start the services by running the startup script:
+If **Liberty Server**, **Agentic AI Service**, **DRS Agent Service**, **Job Scheduler Service** or **Redis Service** shows `STOPPED`, start the services by running the startup script in the same Terminal window:
 
 ```bash
 sudo /root/start-services.sh
