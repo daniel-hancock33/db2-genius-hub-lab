@@ -131,7 +131,7 @@ Genius MCP Service        STOPPED         -
 Overall Status: [WARNING] Liberty is running but 2 addon(s) are not running
 ```
 
-> **ℹ️ This is the expected output.** The PIDs will differ on your VM. The `[WARNING]` is normal: **Anomaly Detection** and **Genius MCP** are not enabled for this lab and are expected to show `STOPPED`. They will be enabled in a future lab.
+> **ℹ️ This is the expected output.** The PIDs will differ on your VM. The `[WARNING]` is normal: **Anomaly Detection** and **Genius MCP** are expected to show `STOPPED` at this point. You will start **Anomaly Detection** later, in the AI Configuration section. **Genius MCP** will be enabled in a future lab.
 
 If **Liberty Server**, **Agentic AI Service**, **DRS Agent Service**, **Job Scheduler Service** or **Redis Service** shows `STOPPED`, start the services by running the startup script:
 
