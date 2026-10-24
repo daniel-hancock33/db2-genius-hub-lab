@@ -95,11 +95,11 @@ Before the exercises, you set up your environment and connect Db2 Genius Hub to 
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
 
-This lab is delivered through **IBM TechZone**. Your instructor will provide an access code at the start of the session.
+This lab is delivered through **IBM TechZone**. Your instructor will provide a URL and a lab access code at the start of the session.
 
-**Step 1 — Enter the access code**
+**Step 1 — Open the URL and enter the access code**
 
-Navigate to the event page on IBM TechZone. Enter the access code provided by your instructor, then click **Access Lab**.
+Navigate to the URL provided by your instructor. Enter the lab access code provided by your instructor, then click **Access Lab**.
 
 ![TechZone event page showing Access Lab button](images/tx26-lab2216-access-lab.png)
 
