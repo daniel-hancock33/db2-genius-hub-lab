@@ -46,25 +46,33 @@ This page contains the three TechXchange exercises:
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Set Up the Simulators</h3>
 
-Before you ask any questions, load a data set and run the space-management scenarios so the database has something to analyze.
+Before you ask any questions, open the simulator, load a data set and run the space-management scenarios so the database has something to analyze.
 
-1. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+1. Open the Agentic AI Simulator. It runs on the lab VM, so open it in **Firefox inside the Guacamole desktop**, not in a browser on your own laptop.
 
-2. Choose the **SF 1.0 (Huge)** dataset.
+   1. In the Guacamole desktop, switch to **Firefox**. If you cannot see it, click **Activities** (top-left corner) and click **Firefox** in the dash at the bottom of the screen.
+   2. Click the **+** button in the Firefox tab bar to open a new tab.
+   3. In the address bar, type `http://localhost:3000` and press **Enter**.
+
+   > **ℹ️ Tip:** Keep the Lab Guide in one tab and the simulator in another, and click the tabs to switch between them.
+
+2. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+
+3. Choose the **SF 1.0 (Huge)** dataset.
 
    <img src="images/SM-step0-1.png" width="800"/>
 
    <img src="images/SM-step0-2.png" width="500"/>
 
-3. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
+4. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
 
-4. Select all scenarios and click **Run selected**.
+5. Select all scenarios and click **Run selected**.
 
    <img src="images/SM-step0-3.png" width="800"/>
 
    <img src="images/SM-step0-4.png" width="400"/>
 
-5. Check that none of the simulators shows an error in the UI before you start asking questions.
+6. Check that none of the simulators shows an error in the UI before you start asking questions.
 
 ---
 
