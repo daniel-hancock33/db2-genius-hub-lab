@@ -54,7 +54,7 @@ You need a terminal to check services and run commands. There are two ways:
 
 | Method | Steps |
 |---|---|
-| **Right-click the desktop** | Right-click any empty area on the desktop → **Open Terminal** |
+| **Activities** | Click **Activities** (top-left) → **Terminal** |
 | **Applications menu** | Top-left → **Applications** → **System Tools** → **GNOME Terminal** |
 
 The terminal opens as `itzuser`. To run commands as root, use `sudo`. To switch to a Db2 user, use `su - db2inst1` (or `db2ghadm`, `db2demo`, etc.).
@@ -130,7 +130,7 @@ To reconnect: open the Guacamole link again (`https://vdi.cloud.techzone.ibm.com
 |---|---|
 | Open Guacamole | `https://vdi.cloud.techzone.ibm.com/guacamole` → log in as `itzuser` |
 | Paste from laptop | Click left-edge tab → Clipboard → paste text → close menu → `Ctrl+V` in VM (in a terminal: right-click → **Paste**) |
-| Open terminal | Right-click desktop → Open Terminal |
+| Open terminal | Activities → Terminal |
 | Find DBeaver | Applications → Programming → DBeaver |
 | Find VS Code | Applications → Programming → Visual Studio Code |
 | Fullscreen | `F11` in browser |
