@@ -37,6 +37,7 @@ Environment access, SSH connection, and starting Genius Hub services.
 Trigger performance scenarios and see how the AI service detects and resolves issues.
 - [Space Management with AI](05-agentic-ai-simulator.md#space-management) 🎯 *Step 6*
 - [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing) 🎯 *Step 7*
+- [Text2SQL](05-agentic-ai-simulator.md#text2sql) 🎯 *Step 8*
 
 ---
 
@@ -44,7 +45,7 @@ Trigger performance scenarios and see how the AI service detects and resolves is
 
 Start with the [Introduction](00-introduction.md) and follow each link in order — every page has a **← Previous | → Next** navigation footer to guide you through the lab.
 
-> **🎯 TechXchange Quick Path** — Short on time? To complete the two featured exercises, follow these pages in order:
+> **🎯 TechXchange Quick Path** — Short on time? To complete the three featured exercises, follow these pages in order:
 > 1. [The Setup](01-setup.md)
 > 2. [Using the Guacamole Desktop](01a-guacamole.md)
 > 3. [Login and Repository Setup](02-01-login-and-repo.md)
@@ -52,11 +53,12 @@ Start with the [Introduction](00-introduction.md) and follow each link in order 
 > 5. [AI Configuration and Event Monitors](02-05-ai-configuration.md)
 > 6. [Space Management with AI](05-agentic-ai-simulator.md#space-management) — on the Agentic AI Simulator page
 > 7. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
+> 8. [Text2SQL](05-agentic-ai-simulator.md#text2sql)
 >
 > **How to navigate**
-> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 7*). It takes you straight to the next required page and skips the rest.
-> - **Ignore the regular "← Previous | → Next" links** at the bottom of the page for now. They walk through the full lab in order, including pages you do not need for the two featured exercises.
-> - **Finished early?** After WLM Queuing, go back and complete the other pages (Interface Tour, Monitor Dashboard, Drill-Down, Alerts and Jobs, and so on) using the regular "→ Next" links. They are optional background and build on one another, so work through them in order.
+> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 8*). It takes you straight to the next required page and skips the rest.
+> - **Ignore the regular "← Previous | → Next" links** at the bottom of the page for now. They walk through the full lab in order, including pages you do not need for the three featured exercises.
+> - **Finished early?** After Text2SQL, go back and complete the other pages (Interface Tour, Monitor Dashboard, Drill-Down, Alerts and Jobs, and so on) using the regular "→ Next" links. They are optional background and build on one another, so work through them in order.
 
 ---
 

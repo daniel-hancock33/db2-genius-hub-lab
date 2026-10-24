@@ -138,7 +138,7 @@ The **All databases** section now shows two databases: `demo_col` and `demo_row`
 
 ---
 
-🎯 **TechXchange Quick Path — Step 4 of 7:** **[← Login and Repository Setup](02-01-login-and-repo.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ AI Configuration and Event Monitors](02-05-ai-configuration.md)**
+🎯 **TechXchange Quick Path — Step 4 of 8:** **[← Login and Repository Setup](02-01-login-and-repo.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ AI Configuration and Event Monitors](02-05-ai-configuration.md)**
 
 **[← Interface Tour](02-02-interface-tour.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Monitor Dashboard](02-04-monitor-dashboard.md)**
 

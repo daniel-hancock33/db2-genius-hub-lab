@@ -238,7 +238,7 @@ By completing this section, you will:
 
 This completes the setup of Db2 Genius Hub.
 
-🎯 **TechXchange Quick Path — Step 1 of 7:** **[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Using the Guacamole Desktop](01a-guacamole.md)**
+🎯 **TechXchange Quick Path — Step 1 of 8:** **[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Using the Guacamole Desktop](01a-guacamole.md)**
 
 **[← Introduction](00-introduction.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Using the Guacamole Desktop](01a-guacamole.md)**
 

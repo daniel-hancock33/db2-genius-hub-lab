@@ -150,7 +150,7 @@ After clicking **Save**, you will be brought to the **Success!** page. Click **G
 
 ---
 
-🎯 **TechXchange Quick Path — Step 3 of 7:** **[← Using the Guacamole Desktop](01a-guacamole.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Database Connections](02-03-database-connections.md)**
+🎯 **TechXchange Quick Path — Step 3 of 8:** **[← Using the Guacamole Desktop](01a-guacamole.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Database Connections](02-03-database-connections.md)**
 
 **[← Using the Guacamole Desktop](01a-guacamole.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Interface Tour](02-02-interface-tour.md)**
 
