@@ -54,8 +54,8 @@ You need a terminal to check services and run commands. There are two ways:
 
 | Method | Steps |
 |---|---|
-| **Activities** | Click **Activities** (top-left) → **Terminal** |
-| **Applications menu** | Top-left → **Applications** → **System Tools** → **GNOME Terminal** |
+| **Dash** | Click **Activities** (top-left). The dash appears at the bottom of the screen. Click the **Terminal** icon. |
+| **Search** | Click **Activities**, type `terminal` in the **Type to search** box, and press **Enter**. |
 
 The terminal opens as `itzuser`. To run commands as root, use `sudo`. To switch to a Db2 user, use `su - db2inst1` (or `db2ghadm`, `db2demo`, etc.).
 
@@ -74,21 +74,21 @@ You can also switch windows with the keyboard. Click inside the desktop first so
 
 > **⚠️ Do not use `Cmd+Tab` on a Mac.** It switches between apps on your laptop, not inside the VM.
 
-You can also click **Activities** (top-left of the desktop) and click the window you want.
+You can also click **Activities** (top-left of the desktop). All open windows are shown, and you can click the one you want.
 
 ---
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Finding Lab Applications</h2>
 
-All applications are pre-installed. Access them from the **Applications menu** (top-left corner of the desktop) or from the taskbar.
+All applications are pre-installed. Click **Activities** (top-left corner of the desktop) to show the **dash** at the bottom of the screen. The dash holds Firefox, Files, Software, Help and Terminal. To find any other application, click the **grid icon** (all applications) at the right end of the dash, or click **Activities** and type the application name in the **Type to search** box.
 
 | Application | Where to find it |
 |---|---|
-| **Firefox** | Taskbar (bottom) or Applications → Internet → Firefox |
-| **DBeaver** | Applications → Programming → DBeaver |
-| **VS Code** | Applications → Programming → Visual Studio Code |
-| **Terminal** | Applications → System Tools → GNOME Terminal |
-| **Files** | Taskbar or Applications → Accessories → Files |
+| **Firefox** | Activities → dash (bottom) |
+| **Terminal** | Activities → dash (bottom) |
+| **Files** | Activities → dash (bottom) |
+| **DBeaver** | Activities → grid icon, or type `DBeaver` in the search box |
+| **VS Code** | Activities → grid icon, or type `Code` in the search box |
 
 > **ℹ️ Firefox opens automatically** when you log in to Guacamole, with the Lab Guide as the homepage. Use Firefox for all web-based lab tasks (Genius Hub, Agentic Demo, JupyterLab).
 
@@ -131,8 +131,8 @@ To reconnect: open the Guacamole link again (`https://vdi.cloud.techzone.ibm.com
 | Open Guacamole | `https://vdi.cloud.techzone.ibm.com/guacamole` → log in as `itzuser` |
 | Paste from laptop | Click left-edge tab → Clipboard → paste text → close menu → `Ctrl+V` in VM (in a terminal: right-click → **Paste**) |
 | Open terminal | Activities → Terminal |
-| Find DBeaver | Applications → Programming → DBeaver |
-| Find VS Code | Applications → Programming → Visual Studio Code |
+| Find DBeaver | Activities → grid icon, or search for `DBeaver` |
+| Find VS Code | Activities → grid icon, or search for `Code` |
 | Fullscreen | `F11` in browser |
 | Reconnect after timeout | Reopen Guacamole link and log in again |
 
