@@ -16,6 +16,26 @@
 
 ---
 
+<h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Welcome to the Lab</h2>
+
+**AI-Powered Database Performance with Db2 Genius Hub**
+
+Welcome. In this hands-on lab you work with **IBM Db2 Genius Hub**, a web-based console for managing Db2 databases, and its **Agentic AI Assistant**. Instead of writing catalog queries and reading monitor output by hand, you ask the assistant questions in plain English. It investigates, explains what it finds, and recommends a fix. When a change is needed, it asks for your approval before it runs anything.
+
+You work in your own pre-configured environment, which already has Db2, Db2 Genius Hub, and the Agentic AI Simulator installed. You do not need to install anything. You only need a web browser.
+
+**What you will do**
+
+| Exercise | What you will do |
+|---|---|
+| **Space Management with AI** | Find out which schema is using the space in a tablespace, find the tables and indexes that need a REORG, and have the assistant run the fix after you approve it |
+| **WLM Queuing** | Trigger a workload manager queuing problem, then ask the assistant why queries are stuck, apply the fix, and check that the queue clears |
+| **Text2SQL** | Turn a complex plain-English question about cricket statistics into Db2 SQL, then run it in the SQL Workbench |
+
+Before the exercises, you set up your environment and connect Db2 Genius Hub to your databases. The **Quick Path** below takes you through exactly those steps, in order. Everything else in this guide is optional background that you can read if you finish early.
+
+---
+
 > **🎯 TechXchange Quick Path** — Short on time? To complete the three featured exercises, follow these pages in order:
 > 1. [The Setup](01-setup.md)
 > 2. [Using the Guacamole Desktop](01a-guacamole.md)
