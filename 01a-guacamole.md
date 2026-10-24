@@ -31,7 +31,9 @@ Copy/paste between your laptop and the Guacamole desktop works using the **Guaca
 3. Click **Clipboard**.
 4. Paste your text into the clipboard box (`Cmd+V` / `Ctrl+V`).
 5. Close the menu (click the tab again or anywhere outside).
-6. Click inside the VM where you want to paste, then press `Ctrl+V` (or right-click → Paste in a terminal).
+6. Click inside the VM where you want to paste:
+   - **In a terminal:** right-click and choose **Paste**. If you use `Ctrl+V` and see stray characters such as `^[[200~` before your text, delete them and paste again with right-click → **Paste**.
+   - **In Firefox, DBeaver or other applications:** press `Ctrl+V`.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Copy from the VM to your laptop</h3>
 
@@ -40,7 +42,7 @@ Copy/paste between your laptop and the Guacamole desktop works using the **Guaca
 3. The selected text appears in the clipboard box.
 4. Copy it from the box to your laptop's clipboard (`Cmd+A` then `Cmd+C`).
 
-> **ℹ️ Keyboard shortcuts inside the VM** work normally once your cursor is inside the desktop session. `Ctrl+C` and `Ctrl+V` work in Firefox, DBeaver, VS Code, and terminals.
+> **ℹ️ Keyboard shortcuts inside the VM** work normally once your cursor is inside the desktop session. `Ctrl+C` and `Ctrl+V` work in Firefox, DBeaver and VS Code. In a terminal, right-click → **Paste** is the most reliable way to paste.
 
 > **⚠️ Known quirk:** Some browser shortcuts (`Ctrl+W` to close a tab, `Ctrl+T` for a new tab) may be intercepted by your browser before reaching the VM. Use the application's menu instead, or switch to fullscreen mode (see below).
 
@@ -100,7 +102,7 @@ To reconnect: open the Guacamole link again (`https://vdi.cloud.techzone.ibm.com
 | Task | How |
 |---|---|
 | Open Guacamole | `https://vdi.cloud.techzone.ibm.com/guacamole` → log in as `itzuser` |
-| Paste from laptop | Click left-edge tab → Clipboard → paste text → close menu → `Ctrl+V` in VM |
+| Paste from laptop | Click left-edge tab → Clipboard → paste text → close menu → `Ctrl+V` in VM (in a terminal: right-click → **Paste**) |
 | Open terminal | Right-click desktop → Open Terminal |
 | Find DBeaver | Applications → Programming → DBeaver |
 | Find VS Code | Applications → Programming → Visual Studio Code |
