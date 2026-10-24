@@ -8,6 +8,8 @@ Guacamole is a browser-based remote desktop. Everything you do inside it runs on
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Opening the Desktop</h2>
 
+> **ℹ️ Already in the Guacamole desktop?** If you opened it by following the Introduction and Setup pages, you can skip this section and continue to **Copy and Paste**. The steps below are for reference if you need to reopen the desktop, for example after a disconnect.
+
 1. Go to your **TechZone reservation details page**.
 2. Find the **"Guacamole remote desktop access"** section and click the link:
    `https://vdi.cloud.techzone.ibm.com/guacamole`
@@ -46,7 +48,7 @@ Copy/paste between your laptop and the Guacamole desktop works using the **Guaca
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Opening a Terminal</h2>
 
-You need a terminal to start services and run commands. There are two ways:
+You need a terminal to check services and run commands. There are two ways:
 
 | Method | Steps |
 |---|---|
