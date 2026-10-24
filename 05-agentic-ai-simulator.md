@@ -56,23 +56,43 @@ Before you ask any questions, open the simulator, load a data set and run the sp
 
    > **ℹ️ Tip:** Keep the Lab Guide in one tab and the simulator in another, and click the tabs to switch between them.
 
-2. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+2. Connect the simulator to the `demo_col` database. Click **Connect DB** in the top-right corner.
 
-3. Choose the **SF 1.0 (Huge)** dataset.
+   <img src="images/SIM-connect-DB.png" width="800"/>
+
+3. In the **Connect Database** window, enter these details:
+
+   | Field | Value |
+   |---|---|
+   | Host | `localhost` |
+   | Database | `demo_col` |
+   | User | `db2demo` |
+   | Password | `Db2ghPassw0rd#1` |
+   | Port | `25010` |
+
+   Leave **Enable SSL Connection** unchecked.
+
+4. Click **Test Connection**. When the connection works, a green **Connected** badge appears at the top right. Do not continue until it is green.
+
+   <img src="images/SIM-db-creds.png" width="500"/>
+
+5. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+
+6. Choose the **SF 1.0 (Huge)** dataset.
 
    <img src="images/SM-step0-1.png" width="800"/>
 
    <img src="images/SM-step0-2.png" width="500"/>
 
-4. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
+7. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
 
-5. Select all scenarios and click **Run selected**.
+8. Select all scenarios and click **Run selected**.
 
    <img src="images/SM-step0-3.png" width="800"/>
 
    <img src="images/SM-step0-4.png" width="400"/>
 
-6. Check that none of the simulators shows an error in the UI before you start asking questions.
+9. Check that none of the simulators shows an error in the UI before you start asking questions.
 
 ---
 
