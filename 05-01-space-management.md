@@ -204,13 +204,27 @@ Ask for the indexes that need reorganization. The assistant answers with a detai
 Which indexes in schema SIMULATOR need reorganization?
 ```
 
-<img src="images/SM-step4-1.png" width="600"/>
+The assistant runs two queries to answer. Select **approve** each time it asks:
 
-<img src="images/SM-step4-2.png" width="600"/>
+1. `CALL SYSPROC.REORGCHK_IX_STATS('S', 'SIMULATOR')` gets the F4 to F8 indicators for the indexes on all tables in the `SIMULATOR` schema.
+2. A `SELECT` from `SYSCAT.INDEXES` gets the index statistics for the schema (cluster ratio, leaf pages, levels, density and statistics time).
 
-- **Indicator values.** The REORGCHK indicators (F4 to F8) for each index, so you can see exactly why it was flagged.
-- **REORG commands.** One ready-to-run command per index.
-- **Event monitor reminder.** The assistant reminds you that the `RTMON_EVMON_UTILITY` event monitor is not enabled. Enable it in Db2 Genius Hub to track REORG history.
+<img src="images/gh-index-reorganization-results.png" width="800"/>
+
+> **Note:** Scroll to the right on the table of the 3 indexes to see the recommended commands.
+
+**Indexes requiring REORG:**
+
+| Index | Table | Issue | F-Indicator | Recommended Action |
+|---|---|---|---|---|
+| **IDX_F5_SHIPDATE** | REORG_F5_TEST | Leaf pages underutilized (34% utilization) | `-*---` (F5=34) | `CALL SYSPROC.ADMIN_CMD('REORG INDEXES ALL FOR TABLE SIMULATOR.REORG_F5_TEST');` |
+| **IDX_F7_PARTKEY** | REORG_F7_TEST | 43% pseudo-deleted keys | `---*-` (F7=43) | `CALL SYSPROC.ADMIN_CMD('REORG INDEX SIMULATOR.IDX_F7_PARTKEY CLEANUP');` |
+| **IDX_F4_SHIPDATE** | REORG_F4_TEST | Poor cluster ratio (6%) | `*----` (F4=6) | `CALL SYSPROC.ADMIN_CMD('REORG INDEXES ALL FOR TABLE SIMULATOR.REORG_F4_TEST');` |
+
+- **Indexes requiring REORG.** The 3 indexes that were flagged, each with the REORGCHK indicator value that shows why.
+- **Healthy indexes.** `IDX_F6_ORDERKEY` and `IDX_F8_PADKEY` need no action; all their indicators are healthy.
+- **Key metrics.** From `SYSCAT.INDEXES`: the density is 37 for `IDX_F5_SHIPDATE` (low, poor space utilization), 46 for `IDX_F7_PARTKEY` (moderate, pseudo-deleted keys present) and 69 for `IDX_F4_SHIPDATE` (a cluster ratio issue, not density).
+- **Cluster ratio note.** All indexes show `CLUSTERRATIO` = -1, because clustering statistics need table-level RUNSTATS with the DETAILED option. The F4 issue was identified through the REORGCHK analysis in the previous step.
 
 ---
 
