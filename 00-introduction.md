@@ -42,9 +42,9 @@ Before the exercises, you set up your environment and connect Db2 Genius Hub to 
 > 3. [Login and Repository Setup](02-01-login-and-repo.md)
 > 4. [Database Connections](02-03-database-connections.md)
 > 5. [AI Configuration and Event Monitors](02-05-ai-configuration.md)
-> 6. [Space Management with AI](05-agentic-ai-simulator.md#space-management) — on the Agentic AI Simulator page
-> 7. [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing)
-> 8. [Text2SQL](05-agentic-ai-simulator.md#text2sql)
+> 6. [Space Management with AI](05-01-space-management.md)
+> 7. [WLM Queuing](05-02-wlm-queuing.md)
+> 8. [Text2SQL](05-03-text2sql.md)
 >
 > **How to navigate**
 > - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 8*). It takes you straight to the next required page and skips the rest.
@@ -89,9 +89,9 @@ Before the exercises, you set up your environment and connect Db2 Genius Hub to 
 - [Alerts and Jobs](04-04-alerts-and-jobs.md)
 
 **[5 — Agentic AI Simulator](05-agentic-ai-simulator.md)**
-- [Space Management with AI](05-agentic-ai-simulator.md#space-management) 🎯 *Step 6*
-- [WLM Queuing](05-agentic-ai-simulator.md#wlm-queuing) 🎯 *Step 7*
-- [Text2SQL](05-agentic-ai-simulator.md#text2sql) 🎯 *Step 8*
+- [Space Management with AI](05-01-space-management.md) 🎯 *Step 6*
+- [WLM Queuing](05-02-wlm-queuing.md) 🎯 *Step 7*
+- [Text2SQL](05-03-text2sql.md) 🎯 *Step 8*
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
 

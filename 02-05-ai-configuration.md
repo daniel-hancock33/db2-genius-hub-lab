@@ -319,7 +319,7 @@ Before starting the data load, add the **Utilities**, **Storage** and **Workload
 
 ---
 
-🎯 **TechXchange Quick Path — Step 5 of 8:** **[← Database Connections](02-03-database-connections.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Space Management with AI](05-agentic-ai-simulator.md#space-management)**
+🎯 **TechXchange Quick Path — Step 5 of 8:** **[← Database Connections](02-03-database-connections.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Space Management with AI](05-01-space-management.md)**
 
 **[← Monitor Dashboard](02-04-monitor-dashboard.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ SQL Editor](03-01-sql-editor.md)**
 
