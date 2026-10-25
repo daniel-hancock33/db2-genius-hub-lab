@@ -262,15 +262,9 @@ For an online REORG such as an INPLACE REORG, you do not have to copy and paste 
 Can you please run the reorg for me?
 ```
 
-<img src="images/SM-step6-1.png" width="600"/>
+<img src="images/gh-run-the-reorg-for-me-1.png" width="600"/>
 
-<img src="images/SM-step6-2.png" width="600"/>
-
-<img src="images/SM-step6-3.png" width="600"/>
-
-<img src="images/SM-step6-4.png" width="600"/>
-
-<img src="images/SM-step6-5.png" width="600"/>
+<img src="images/gh-run-the-reorg-for-me-2.png" width="600"/>
 
 - **Approval card.** Shows the exact command with **Approve** and **Reject** buttons. Nothing runs until you approve it.
 - **Each step from the plan.** The assistant works through the steps it listed in Step 5, asking for approval each time.
