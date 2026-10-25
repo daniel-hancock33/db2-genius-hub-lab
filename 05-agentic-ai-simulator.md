@@ -128,6 +128,10 @@ Then ask:
 Break down disk space usage by schema
 ```
 
+> **Note:** If you are prompted for **Personal credentials**, enter the `demo_row` connection details from Step 0 (user `db2demo`, password `Db2ghPassw0rd#1`), click **Test connection**, make sure **Save credentials to repository** is selected, then click **OK**.
+
+<img src="images/gh-psersonal-creds-required.png" width="800"/>
+
 <img src="images/SM-step1-1.png" width="600"/>
 
 <img src="images/SM-step1-2.png" width="600"/>
