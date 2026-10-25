@@ -244,7 +244,9 @@ The assistant runs three read-only queries first. Select **approve** each time i
 Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
 ```
 
-<img src="images/gh-step-by-step-table-reorg.png" width="800"/>
+<img src="images/gh-step-by-step-table-reorg-1.png" width="600"/>
+
+<img src="images/gh-step-by-step-table-reorg-2.png" width="600"/>
 
 > **Note:** The commands have not been run yet. [Step 6](#step-6) shows how to have the assistant run them for you, with your approval.
 
