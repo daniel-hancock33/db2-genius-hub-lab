@@ -76,23 +76,17 @@ Before you ask any questions, open the simulator, load a data set and run the sp
 
    <img src="images/SIM-db-creds.png" width="500"/>
 
-5. Under **Performance Simulators**, click **Load data** next to the **TPCH** dataset.
+5. You do not need to load data. The `TPCH1`, `TPCH2` and `TPCH3` schemas are already loaded in `demo_row`, so skip **Load data** under **Performance Simulators**.
 
-6. Choose the **SF 1.0 (Huge)** dataset.
+6. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
 
-   <img src="images/SM-step0-1.png" width="800"/>
-
-   <img src="images/SM-step0-2.png" width="500"/>
-
-7. Under **Space Management**, click **Run scenarios** next to **Rowstore REORGCHK scenarios**.
-
-8. Select all scenarios and click **Run selected**.
+7. Select all scenarios and click **Run selected**.
 
    <img src="images/SM-step0-3.png" width="800"/>
 
    <img src="images/SM-step0-4.png" width="400"/>
 
-9. Check that none of the simulators shows an error in the UI before you start asking questions.
+8. Check that none of the simulators shows an error in the UI before you start asking questions.
 
 ---
 
