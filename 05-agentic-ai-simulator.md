@@ -56,7 +56,7 @@ Before you ask any questions, open the simulator, load a data set and run the sp
 
    > **ℹ️ Tip:** Keep the Lab Guide in one tab and the simulator in another, and click the tabs to switch between them.
 
-2. Connect the simulator to the `demo_col` database. Click **Connect DB** in the top-right corner.
+2. Connect the simulator to the `demo_row` database. The space-management tasks use the row-organized database, because REORG applies to row-organized tables. Click **Connect DB** in the top-right corner.
 
    <img src="images/SIM-connect-DB.png" width="800"/>
 
@@ -65,7 +65,7 @@ Before you ask any questions, open the simulator, load a data set and run the sp
    | Field | Value |
    |---|---|
    | Host | `localhost` |
-   | Database | `demo_col` |
+   | Database | `demo_row` |
    | User | `db2demo` |
    | Password | `Db2ghPassw0rd#1` |
    | Port | `25010` |
@@ -114,7 +114,7 @@ First, open the Assistant in Genius Hub:
 
    <img src="images/GH-agentic-ai-assistant-legal-close.png" width="800"/>
 
-4. In the **Choose Database** field, choose `demo_col`.
+4. In the **Choose Database** field, choose `demo_row`.
 
    <img src="images/GH-agentic-ai-assistant-choose-db.png" width="800"/>
 
