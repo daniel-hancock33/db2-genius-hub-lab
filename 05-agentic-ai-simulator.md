@@ -86,7 +86,11 @@ Before you ask any questions, open the simulator, load a data set and run the sp
 
    <img src="images/SM-step0-4.png" width="400"/>
 
-8. Check that none of the simulators shows an error in the UI before you start asking questions.
+8. In the **Run REORGCHK Scenarios** dialog, enter `TPCH1` as the **Schema Name** and click **Run Scenarios**.
+
+   <img src="images/gh-reorgchk-schema-name.png" width="500"/>
+
+9. Check that none of the simulators shows an error in the UI before you start asking questions.
 
 ---
 
