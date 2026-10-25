@@ -192,6 +192,8 @@ Analyze schema SIMULATOR for space reclamation
 
 - **Tablespace context.** `USERSPACE1` is 9,728 MB and 99% utilized, with auto-resize enabled (unlimited). After the REORGs complete, `REDUCE MAX` can return ~14.72 MB to the storage pool.
 
+> **Note:** Nothing has been run yet. The assistant has only analyzed the schema and listed the commands. [Step 6](#step-6) shows how to have the assistant run a REORG for you, with your approval.
+
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Ask About Indexes Specifically</h3>
@@ -226,11 +228,19 @@ The assistant runs two queries to answer. Select **approve** each time it asks:
 - **Key metrics.** From `SYSCAT.INDEXES`: the density is 37 for `IDX_F5_SHIPDATE` (low, poor space utilization), 46 for `IDX_F7_PARTKEY` (moderate, pseudo-deleted keys present) and 69 for `IDX_F4_SHIPDATE` (a cluster ratio issue, not density).
 - **Cluster ratio note.** All indexes show `CLUSTERRATIO` = -1, because clustering statistics need table-level RUNSTATS with the DETAILED option. The F4 issue was identified through the REORGCHK analysis in the previous step.
 
+> **Note:** The commands in the table have not been run. [Step 6](#step-6) shows how to have the assistant run a REORG for you, with your approval.
+
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Get Step-by-Step Instructions for a Single Table</h3>
 
 Pick one table from the list and ask how to fix it. The assistant gives you the whole procedure.
+
+The assistant runs three read-only queries first. Select **approve** each time it asks:
+
+1. Table details for `SIMULATOR.REORG_F1_TEST`: size, row count, `NPAGES`, `FPAGES`, overflow and statistics time.
+2. The indexes defined on the table, so it knows whether any must be rebuilt after the REORG.
+3. The tablespace the table lives in (`USERSPACE1`), to check space availability.
 
 **You ask:**
 
@@ -242,13 +252,18 @@ Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
 
 <img src="images/SM-step5-2.png" width="600"/>
 
-- **Run the REORG.** The command for this table.
-- **Run RUNSTATS.** Updates the table statistics after the REORG.
-- **Check the statistics.** A final check that the statistics were updated.
+- **Table profile.** 14.88 MB, 100,000 rows, 7,082 overflow records (7% of rows), `FPAGES` 471 vs `NPAGES` 434. It is in `USERSPACE1`, and the statistics are current, so no RUNSTATS is needed before the REORG.
+- **Choose the approach.** An offline REORG is recommended for this small table (less than 1 minute, but the table is locked). An online `INPLACE ALLOW WRITE ACCESS` REORG keeps the table available and takes about 2 minutes.
+- **Run the REORG.** `CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F1_TEST');`
+- **Run RUNSTATS.** `CALL SYSPROC.ADMIN_CMD('RUNSTATS ON TABLE SIMULATOR.REORG_F1_TEST WITH DISTRIBUTION AND DETAILED INDEXES ALL');` updates the statistics after the REORG.
+- **Verify the results.** A `SELECT` from `SYSCAT.TABLES`. Success means `OVERFLOW` = 0 and `NPAGES` close to `FPAGES`.
+- **Optional.** `ALTER TABLESPACE USERSPACE1 REDUCE MAX;` returns freed pages to the storage pool. It is optional because auto-resize is enabled.
+
+> **Note:** The commands have not been run yet. [Step 6](#step-6) shows how to have the assistant run them for you, with your approval.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Let the Assistant Run It, with Your Approval</h3>
+<h3 id="step-6" style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Let the Assistant Run It, with Your Approval</h3>
 
 For an online REORG such as an INPLACE REORG, you do not have to copy and paste commands. Ask the assistant to do it. It asks for your approval before each step, runs what you approve, and finishes by reporting that the REORG was successful.
 
