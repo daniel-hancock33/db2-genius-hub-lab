@@ -100,8 +100,6 @@ Break down disk space usage by schema
 
 <img src="images/gh-storage-break-down-schema.png" width="600"/>
 
-<img src="images/SM-step1-1.png" width="600"/>
-
 - **Space by schema.** One row per schema with its table count and size in MB, largest first, so the biggest consumers stand out straight away.
 - **A summary line.** The assistant totals the tables and storage across the user schemas and tells you which schema accounts for the largest share.
 
