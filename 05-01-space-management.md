@@ -144,7 +144,7 @@ Select **approve** for each query the assistant proposes.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 3 — Analyze the Schema for Space Reclamation</h3>
 
-Now ask the assistant to analyze the whole schema. The response is thorough: which tables need a REORG, which indexes need a REORG, and the command to run for each one.
+Now ask the assistant to analyze the whole schema. The response is thorough: how much space can be reclaimed, which tables and indexes need a REORG and why, and the commands to run in a recommended order.
 
 **You ask:**
 
@@ -152,17 +152,45 @@ Now ask the assistant to analyze the whole schema. The response is thorough: whi
 Analyze schema SIMULATOR for space reclamation
 ```
 
-<img src="images/SM-step3-1.png" width="600"/>
+<img src="images/gh-space-reclamation.png" width="800"/>
 
-<img src="images/SM-step3-2.png" width="600"/>
+- **Summary.** 10 tables consuming 129.88 MB in total, with an estimated ~14.72 MB reclaimable across 7 tables that need a REORG.
+- **Tables requiring REORG.** Listed highest priority first. For each table you see its size, the REORGCHK result, the issue found, the estimated space it would reclaim, and the REORG command to run. For example, `REORG_F1F2F3_TEST` is flagged for overflow (5,508 records), wastage and fragmentation, and `REORG_F2F3_TEST` for space wastage and empty pages.
+- **Indexes requiring REORG.** Listed separately, with the F-indicator value, the issue and the command: `IDX_F5_SHIPDATE` (leaf pages underutilized), `IDX_F7_PARTKEY` (43% pseudo-deleted keys) and `IDX_F4_SHIPDATE` (poor cluster ratio, 6%).
+- **Healthy tables.** Tables with no action required, here `REORG_F4_TEST`, where all REORGCHK indicators are healthy.
+- **Recommended execution sequence.** The assistant orders the work:
+  1. High-priority table REORGs (reclaim 13.56 MB):
 
-<img src="images/SM-step3-3.png" width="600"/>
+     ```
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F2F3_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F1F2F3_TEST');
+     ```
 
-- **Tables requiring REORG.** Each table with the REORGCHK indicator it violated.
-- **Indexes requiring REORG.** Listed separately from the tables.
-- **Commands.** The command to run for each table and index.
+  2. Medium-priority table REORGs (improve space efficiency):
 
-> **Tip:** When several tables need a REORG, the index section may be skipped to keep the answer short. You can ask for indexes at any time, for the whole schema or for one specific table or index. Step 4 shows how.
+     ```
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F2_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F5_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F7_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F6_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F8_TEST');
+     ```
+
+  3. Index REORGs, after the table REORGs complete:
+
+     ```
+     CALL SYSPROC.ADMIN_CMD('REORG INDEXES ALL FOR TABLE SIMULATOR.REORG_F5_TEST');
+     CALL SYSPROC.ADMIN_CMD('REORG INDEX SIMULATOR.IDX_F7_PARTKEY CLEANUP');
+     CALL SYSPROC.ADMIN_CMD('REORG INDEXES ALL FOR TABLE SIMULATOR.REORG_F4_TEST');
+     ```
+
+  4. Optional, return the freed space to the operating system:
+
+     ```
+     ALTER TABLESPACE USERSPACE1 REDUCE MAX;
+     ```
+
+- **Tablespace context.** `USERSPACE1` is 9,728 MB and 99% utilized, with auto-resize enabled (unlimited). After the REORGs complete, `REDUCE MAX` can return ~14.72 MB to the storage pool.
 
 ---
 
