@@ -130,8 +130,15 @@ Include Overflow, NPAGES, FPAGES for the tables in SIMULATOR
 
 Select **approve** for each query the assistant proposes.
 
+<img src="images/gh-storage-schema-results.png" width="800"/>
+
 - **Page statistics added.** The same table now also shows `NPAGES`, `FPAGES` and `OVERFLOW` for each table.
-- **Key findings.** The assistant points out the tables with overflow records and with `FPAGES` greater than `NPAGES`, which indicates fragmentation. Here these are `REORG_F1F2F3_TEST` and `REORG_F1_TEST`, so they are candidates for a REORG.
+
+**Key findings:**
+
+- `REORG_F1F2F3_TEST`: 5,508 overflow records (11% of rows) and `FPAGES` (554) significantly exceeds `NPAGES` (329), which indicates fragmentation.
+- `REORG_F1_TEST`: 7,082 overflow records (7% of rows) with `FPAGES` > `NPAGES` (471 vs 434), so it is also fragmented.
+- Both tables with overflow records are candidates for reorganization to reclaim space and improve performance.
 
 ---
 
