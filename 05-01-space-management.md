@@ -254,7 +254,7 @@ Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
 
 <h3 id="step-6" style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Let the Assistant Run It, with Your Approval</h3>
 
-For an online REORG such as an INPLACE REORG, you do not have to copy and paste commands. Ask the assistant to do it. It asks for your approval before each step, runs what you approve, and finishes by reporting that the REORG was successful.
+You do not have to copy and paste the commands from Step 5. Ask the assistant to run the REORG for you. It asks for your approval before each step, runs what you approve, and finishes by reporting the results.
 
 **You ask:**
 
@@ -266,9 +266,19 @@ Can you please run the reorg for me?
 
 <img src="images/gh-run-the-reorg-for-me-2.png" width="600"/>
 
-- **Approval card.** Shows the exact command with **Approve** and **Reject** buttons. Nothing runs until you approve it.
-- **Each step from the plan.** The assistant works through the steps it listed in Step 5, asking for approval each time.
-- **Final result.** The assistant reports that the REORG was successful.
+- **REORG.** The assistant runs an online REORG: `CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F1_TEST INPLACE CLEANUP OVERFLOWS')`. The approval card shows the exact command with **Approve** and **Reject** buttons. Nothing runs until you approve it. An online REORG leaves the table available while it runs.
+- **RUNSTATS.** After you approve the REORG, the assistant asks to run `RUNSTATS ON TABLE SIMULATOR.REORG_F1_TEST WITH DISTRIBUTION AND DETAILED INDEXES ALL` to update the statistics.
+- **Verify.** After you approve RUNSTATS, the assistant asks to run a `SELECT` that checks `NPAGES`, `FPAGES`, `OVERFLOW` and the statistics time.
+- **Final result.** The assistant reports that the REORG completed successfully, with a before and after table:
+
+| Metric | Before | After |
+|---|---|---|
+| `OVERFLOW` | 7,082 | 0 |
+| `NPAGES` | 434 | 471 |
+| `FPAGES` | 471 | 471 |
+| Rows | 100,000 | 100,000 |
+
+All overflow records are gone, `NPAGES` now equals `FPAGES`, and no rows were lost.
 
 ---
 
