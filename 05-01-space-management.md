@@ -236,11 +236,7 @@ The assistant runs two queries to answer. Select **approve** each time it asks:
 
 Pick one table from the list and ask how to fix it. The assistant gives you the whole procedure.
 
-The assistant runs three read-only queries first. Select **approve** each time it asks:
-
-1. Table details for `SIMULATOR.REORG_F1_TEST`: size, row count, `NPAGES`, `FPAGES`, overflow and statistics time.
-2. The indexes defined on the table, so it knows whether any must be rebuilt after the REORG.
-3. The tablespace the table lives in (`USERSPACE1`), to check space availability.
+The assistant runs three read-only queries first. Select **approve** each time it asks.
 
 **You ask:**
 
@@ -248,16 +244,7 @@ The assistant runs three read-only queries first. Select **approve** each time i
 Give me step-by-step instructions to reorganize SIMULATOR.REORG_F1_TEST
 ```
 
-<img src="images/SM-step5-1.png" width="600"/>
-
-<img src="images/SM-step5-2.png" width="600"/>
-
-- **Table profile.** 14.88 MB, 100,000 rows, 7,082 overflow records (7% of rows), `FPAGES` 471 vs `NPAGES` 434. It is in `USERSPACE1`, and the statistics are current, so no RUNSTATS is needed before the REORG.
-- **Choose the approach.** An offline REORG is recommended for this small table (less than 1 minute, but the table is locked). An online `INPLACE ALLOW WRITE ACCESS` REORG keeps the table available and takes about 2 minutes.
-- **Run the REORG.** `CALL SYSPROC.ADMIN_CMD('REORG TABLE SIMULATOR.REORG_F1_TEST');`
-- **Run RUNSTATS.** `CALL SYSPROC.ADMIN_CMD('RUNSTATS ON TABLE SIMULATOR.REORG_F1_TEST WITH DISTRIBUTION AND DETAILED INDEXES ALL');` updates the statistics after the REORG.
-- **Verify the results.** A `SELECT` from `SYSCAT.TABLES`. Success means `OVERFLOW` = 0 and `NPAGES` close to `FPAGES`.
-- **Optional.** `ALTER TABLESPACE USERSPACE1 REDUCE MAX;` returns freed pages to the storage pool. It is optional because auto-resize is enabled.
+<img src="images/gh-step-by-step-table-reorg.png" width="800"/>
 
 > **Note:** The commands have not been run yet. [Step 6](#step-6) shows how to have the assistant run them for you, with your approval.
 
