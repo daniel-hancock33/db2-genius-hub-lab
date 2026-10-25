@@ -136,14 +136,10 @@ Break down disk space usage by schema
 
 <img src="images/gh-storage-break-down-schema.png" width="600"/>
 
-
 <img src="images/SM-step1-1.png" width="600"/>
 
-<img src="images/SM-step1-2.png" width="600"/>
-
-- **Space by schema.** One row per schema in a clean table, so the biggest consumers stand out straight away.
-- **Tables in each schema.** General information about which tables exist, so you know what you are looking at before you drill down.
-- **A proactive offer.** The assistant offers to run REORGCHK on the `SIMULATOR` schema to confirm which of its tables need a REORG. You did not ask for this; it is the natural next step.
+- **Space by schema.** One row per schema with its table count and size in MB, largest first, so the biggest consumers stand out straight away.
+- **A summary line.** The assistant totals the tables and storage across the user schemas and tells you which schema accounts for the largest share.
 
 ---
 
