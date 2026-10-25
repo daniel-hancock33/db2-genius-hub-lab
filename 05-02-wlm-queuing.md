@@ -8,39 +8,35 @@ With the IBM Db2 Genius Hub AI assistant, you can troubleshoot the bottleneck si
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Simulate the Issue</h3>
 
-1. In the demo UI, click **Connect DB (1)** and enter your database connection details. Once connected, navigate to the **Simulator** tab **(2)**.
+1. In the demo UI, click **Connect DB (1)** and connect to the `demo_col` database. The WLM scenario uses the column-organized database. Once connected, navigate to the **Simulator** tab **(2)**.
+
+   | Field | Value |
+   |---|---|
+   | Host | `localhost` |
+   | Database | `demo_col` |
+   | User | `db2demo` |
+   | Password | `Db2ghPassw0rd#1` |
+   | Port | `25010` |
+
+   Leave **Enable SSL Connection** unchecked. Click **Test Connection** and wait for the green **Connected** badge.
 
    <img src="images/WLM-step0-1.png" width="800"/>
 
-2. If TPCH data is not yet loaded in your database, load it first. (If you already loaded TPCH in the Space Management exercise, skip to step 6.)
+2. You do not need to load data. The `TPCH1`, `TPCH2` and `TPCH3` schemas are already loaded in `demo_col`, so skip **Load Data**. `TPCH1` holds the 1 GB dataset.
 
-   Click **Load Data**.
-
-   <img src="images/WLM-step0-2.png" width="800"/>
-
-3. Select the **1 GB** dataset **(1)** and click **Continue (2)**.
-
-   <img src="images/WLM-step0-3.png" width="800"/>
-
-4. Enter the schema name where the TPCH data should be loaded, then wait for the load to complete.
-
-   > **⏳ Note:** This may take a while.
-
-   <img src="images/WLM-step0-4.png" width="800"/>
-
-5. Once TPCH is loaded, click the **WLM Queuing** dropdown. If you are running on a non-warehouse Db2 instance, review the prerequisite setup steps shown before creating the database you plan to use for the simulation.
+3. Click the **WLM Queuing** dropdown. If you are running on a non-warehouse Db2 instance, review the prerequisite setup steps shown before creating the database you plan to use for the simulation.
 
    <img src="images/WLM-step0-5.png" width="800"/>
 
-6. Scroll down to find the **Sort Memory** simulator section and click **Run Scenario**.
+4. Scroll down to find the **Sort Memory** simulator section and click **Run Scenario**.
 
    <img src="images/WLM-step0-6.png" width="800"/>
 
-7. Enter the schema name where the TPCH data was loaded and click **Run Simulation**.
+5. Enter `TPCH1` as the schema name and click **Run Simulation**.
 
    <img src="images/WLM-step0-7.png" width="800"/>
 
-8. Monitor the logs below the simulator. Once the logs show that queuing has started, you can proceed to Genius Hub.
+6. Monitor the logs below the simulator. Once the logs show that queuing has started, you can proceed to Genius Hub.
 
    <img src="images/WLM-step0-8.png" width="800"/>
 
@@ -56,7 +52,7 @@ In the Genius Hub left-hand navigation menu, locate and click **Monitor**.
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Select the Database and Observe Queued Queries</h3>
 
-1. On the Monitor page, click the **Database** dropdown at the top left and select the database you want to investigate (for example `DEMO_COL`).
+1. On the Monitor page, click the **Database** dropdown at the top left and select the database you want to investigate (`demo_col`).
 
    <img src="images/WLM-step2-1.png" width="800"/>
 
@@ -80,7 +76,7 @@ Click the **Agentic AI Assistant** icon in the top-right corner of the Genius Hu
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Select the Database in the AI Assistant</h3>
 
-Click the **Choose Database** dropdown at the bottom of the chat window and select the database you want to investigate (for example `DEMO_COL`). This scopes all AI analysis and actions to that database.
+Click the **Choose Database** dropdown at the bottom of the chat window and select the database you want to investigate (`demo_col`). This scopes all AI analysis and actions to that database.
 
 <img src="images/WLM-step4-1.png" width="600"/>
 
