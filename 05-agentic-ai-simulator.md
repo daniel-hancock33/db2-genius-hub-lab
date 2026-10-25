@@ -143,19 +143,33 @@ Break down disk space usage by schema
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Focus on One Schema: the Largest Table in SIMULATOR</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 2 — Focus on One Schema: Storage and Page Statistics for SIMULATOR</h3>
 
-For this example we focus on a schema called `SIMULATOR`. Explore it by asking for its largest table.
+For this example we focus on a schema called `SIMULATOR`. First look at how its storage is split across tables, then add the page statistics that point to fragmentation.
 
 **You ask:**
 
 ```
-What is the largest table in the SIMULATOR schema?
+Break down the storage usage for the tables in the SIMULATOR schema.
 ```
 
-<img src="images/SM-step2-1.png" width="600"/>
+The assistant may need to run more than one query to answer (for example, to check the available columns and the table organization). Select **approve** each time it asks.
 
-- **Sorted by size.** The answer lists the tables with the largest first, followed by the rest in descending order.
+- **Storage per table.** Total size, data size, index size and row count for each table, largest first.
+- **A summary line.** The number of tables, the total size in MB, and whether the tables are row-organized.
+
+Now ask for the page statistics:
+
+**You ask:**
+
+```
+Include Overflow, NPAGES, FPAGES for the tables in SIMULATOR
+```
+
+Select **approve** for each query the assistant proposes.
+
+- **Page statistics added.** The same table now also shows `NPAGES`, `FPAGES` and `OVERFLOW` for each table.
+- **Key findings.** The assistant points out the tables with overflow records and with `FPAGES` greater than `NPAGES`, which indicates fragmentation. Here these are `REORG_F1F2F3_TEST` and `REORG_F1_TEST`, so they are candidates for a REORG.
 
 ---
 
