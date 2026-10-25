@@ -132,6 +132,11 @@ Break down disk space usage by schema
 
 <img src="images/gh-psersonal-creds-required.png" width="800"/>
 
+> **Note:** The assistant then shows the SQL it wants to run (an explanation such as "Calculate total physical size … by schema using ADMIN_GET_TAB_INFO monitoring function", followed by the query) and asks you to respond with `approve` to execute it or `reject` to cancel. Select **approve**.
+
+<img src="images/gh-storage-break-down-schema.png" width="600"/>
+
+
 <img src="images/SM-step1-1.png" width="600"/>
 
 <img src="images/SM-step1-2.png" width="600"/>
