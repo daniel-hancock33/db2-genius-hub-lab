@@ -94,6 +94,8 @@ Before you ask any questions, open the simulator, load a data set and run the sp
 
 10. Wait for the scenario log in the simulator UI to show `F1F2F3: Scenario complete - ... rows remaining`. This is the last scenario and takes about 5 minutes. Do not start asking questions until it appears.
 
+   <img src="images/gh-reorgchk-log-final.png" width="800"/>
+
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Start with a Broad Question: Disk Space by Schema</h3>
