@@ -142,6 +142,8 @@ The code block shows a short preview. Click **Show more (a)** to see the whole q
 
 With the block expanded, you can read all 74 lines. The first section selects from `DB2DEMO.ODI_BATTING`, the second from `DB2DEMO.TEST_BATTING`, and the third from `DB2DEMO.T20_BATTING`.
 
+> **ℹ️ Note:** If the schema name is not `DB2DEMO`, the query will fail. Schema names in Db2 are case-sensitive — make sure the schema is entered as `DB2DEMO` in upper case.
+
 <img src="images/T2S-step7-1.png" width="800"/>
 
 ---
