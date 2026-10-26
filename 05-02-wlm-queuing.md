@@ -146,7 +146,7 @@ The assistant autonomously runs its investigation. Observe the **Todo List** as 
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 9 — Check In-Flight Executions Again</h3>
 
-1. Return to the **Monitor** tab and click the **In-flight executions** tab again.
+1. Close the AI Assistant by clicking the **X** in the top right of the assistant panel, then return to the **Monitor** tab and click the **In-flight executions** tab again.
 
 2. Check the **Activity state** column. All queries should now be in an **EXECUTING** state.
 
