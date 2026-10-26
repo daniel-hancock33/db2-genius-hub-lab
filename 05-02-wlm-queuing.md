@@ -156,7 +156,7 @@ The assistant autonomously runs its investigation. Observe the **Todo List** as 
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 10 — Stop the Scenario</h3>
 
-Return to the Agentic AI Simulator at `http://localhost:3000`, scroll to the **Sort Memory** simulator section, and click **Clean Up** to stop the scenario. When prompted for a schema name, enter `TPCH1` in upper case.
+Return to the Agentic AI Simulator at `http://localhost:3000`, scroll to the **Sort Memory** simulator section, and click **Clean Up** to stop the scenario. When prompted for a schema name, enter `TPCH1` in upper case, then click **Run Cleanup**.
 
 <img src="images/WLM-step10-1.png" width="800"/>
 
