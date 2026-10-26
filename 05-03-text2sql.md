@@ -52,7 +52,7 @@ Before you ask any questions, connect the simulator to the database and load the
    | **Supply Chain Data (d)** | Products, inventory, orders, and shipments. |
    | **TPC-H Benchmark (e)** | Suppliers, customers, orders, and parts, for complex analytical queries. |
 
-3. Click **Load Data (f)** next to **Cricket Statistics**.
+3. Click **Load Data (f)** next to **Cricket Statistics**. When prompted for a schema name, enter `DB2DEMO` in upper case.
 
    <img src="images/T2S-step0-1.png" width="800"/>
 
