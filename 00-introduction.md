@@ -31,12 +31,13 @@ You work in your own pre-configured environment, which already has Db2, Db2 Geni
 | **Space Management with AI** | Find out which schema is using the space in a tablespace, find the tables and indexes that need a REORG, and have the assistant run the fix after you approve it |
 | **WLM Queuing** | Trigger a workload manager queuing problem, then ask the assistant why queries are stuck, apply the fix, and check that the queue clears |
 | **Text2SQL** | Turn a complex plain-English question about cricket statistics into Db2 SQL, then run it in the SQL Workbench |
+| **Query Tuning** | Run a slow TPC-H query, ask the assistant to tune it, apply the recommended index, and confirm the speedup |
 
 Before the exercises, you set up your environment and connect Db2 Genius Hub to your databases. The **Quick Path** below takes you through exactly those steps, in order. Everything else in this guide is optional background that you can read if you finish early.
 
 ---
 
-> **🎯 TechXchange Quick Path** — Short on time? To complete the three featured exercises, follow these pages in order:
+> **🎯 TechXchange Quick Path** — Short on time? To complete the four featured exercises, follow these pages in order:
 > 1. [The Setup](01-setup.md)
 > 2. [Using the Guacamole Desktop](01a-guacamole.md)
 > 3. [Login and Repository Setup](02-01-login-and-repo.md)
@@ -45,9 +46,10 @@ Before the exercises, you set up your environment and connect Db2 Genius Hub to 
 > 6. [Space Management with AI](05-01-space-management.md)
 > 7. [WLM Queuing](05-02-wlm-queuing.md)
 > 8. [Text2SQL](05-03-text2sql.md)
+> 9. [Query Tuning](05-04-query-tuner.md)
 >
 > **How to navigate**
-> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 8*). It takes you straight to the next required page and skips the rest.
+> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 9*). It takes you straight to the next required page and skips the rest.
 > - **Ignore the regular "← Previous | → Next" links** at the bottom of the page for now. They walk through the full lab in order, including pages you do not need for the three featured exercises.
 > - **Finished early?** After Text2SQL, go back and complete the other pages (Interface Tour, Monitor Dashboard, Drill-Down, Alerts and Jobs, and so on) using the regular "→ Next" links. They are optional background and build on one another, so work through them in order.
 

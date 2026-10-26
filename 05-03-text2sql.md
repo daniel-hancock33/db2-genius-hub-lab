@@ -297,6 +297,6 @@ In this lab, you:
 
 ---
 
-🎯 **TechXchange Quick Path — Step 8 of 8:** **[← Text2SQL](05-02-wlm-queuing.md)** &nbsp;&nbsp;|&nbsp;&nbsp; ✅ End of the Quick Path
+🎯 **TechXchange Quick Path — Step 8 of 9:** **[← WLM Queuing](05-02-wlm-queuing.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Query Tuning](05-04-query-tuner.md)**
 
 **[← Return to Introduction](00-introduction.md)**
