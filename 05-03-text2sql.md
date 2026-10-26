@@ -56,6 +56,8 @@ Before you ask any questions, connect the simulator to the database and load the
 
    <img src="images/T2S-step0-1.png" width="800"/>
 
+   <img src="images/T2S-cricket-schema.png" width="800"/>
+
 4. Wait until the button changes to a green **Loaded** badge **(a)** with a **Reload Data** button next to it. Use **Reload Data** at any time to refresh the tables.
 
 5. Expand the dataset card to see **Sample Queries to Test This Dataset**. The **Copy query** icon **(b)** on each row copies that question to your clipboard so you can paste it into the chat.
