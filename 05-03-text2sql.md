@@ -68,11 +68,29 @@ Before you ask any questions, connect the simulator to the database and load the
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 1 — Open the AI Assistant and Select the Generate SQL Tool</h3>
 
-Open the Agentic AI Assistant in Genius Hub, the same way as in the Space Management exercise. Before you ask a question, tell the assistant which tool to use.
+Open the Agentic AI Assistant in Genius Hub. Before you ask a question, tell the assistant which tool to use.
 
-1. In the toolbar at the bottom of the assistant, click the **Tools** button **(a)**. It sits next to the database selector.
+1. Click the **Agentic AI Assistant** menu item.
 
-2. In the tool picker, choose **Generate SQL (b)**. The option is labelled *"Agent does not execute code"*.
+   <img src="images/GH-agentic-ai-assistant-menu.png" width="200"/>
+
+2. Expand the AI Assistant by clicking the expand button.
+
+   <img src="images/GH-agentic-ai-assistant-expanded.png" width="800"/>
+
+3. Read and close the **Legal Disclaimer**.
+
+   <img src="images/GH-agentic-ai-assistant-legal-close.png" width="800"/>
+
+4. In the **Choose Database** field, choose `demo_col`.
+
+   <img src="images/GH-agentic-ai-assistant-choose-db.png" width="800"/>
+
+   > **Note:** If you are prompted for **Personal credentials**, enter the `demo_col` connection details from Step 0 (user `db2demo`, password `Db2ghPassw0rd#1`), click **Test connection**, make sure **Save credentials to repository** is selected, then click **OK**.
+
+5. In the toolbar at the bottom of the assistant, click the **Tools** button **(a)**. It sits next to the database selector.
+
+6. In the tool picker, choose **Generate SQL (b)**. The option is labelled *"Agent does not execute code"*.
 
    <img src="images/T2S-step1-1.png" width="800"/>
 
