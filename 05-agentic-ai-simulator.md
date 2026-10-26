@@ -26,11 +26,12 @@ Open a browser and navigate to:
 http://localhost:3000
 ```
 
-The three TechXchange exercises are on their own pages:
+The four TechXchange exercises are on their own pages:
 
-1. [Space Management with AI](05-01-space-management.md) — find and reclaim wasted space with the AI assistant.
-2. [WLM Queuing](05-02-wlm-queuing.md) — diagnose and fix a workload manager queuing problem.
-3. [Text2SQL](05-03-text2sql.md) — turn a plain-English question into Db2 SQL with the AI assistant.
+1. [Space Management with AI](05-01-space-management.md) 🎯 Step 6 — find and reclaim wasted space with the AI assistant.
+2. [WLM Queuing](05-02-wlm-queuing.md) 🎯 Step 7 — diagnose and fix a workload manager queuing problem.
+3. [Text2SQL](05-03-text2sql.md) 🎯 Step 8 — turn a plain-English question into Db2 SQL with the AI assistant.
+4. [Query Tuning](05-04-query-tuner.md) 🎯 Step 9 — run a slow query, apply the recommended index, and confirm the speedup.
 
 ---
 
