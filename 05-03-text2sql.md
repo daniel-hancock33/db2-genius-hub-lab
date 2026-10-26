@@ -8,6 +8,8 @@ Use the Db2 Genius Hub AI assistant to turn plain-English questions into product
 
 > **ℹ️ Note:** In Generate SQL mode the assistant writes and explains the SQL but does **not** run it. You decide when to run it, from the SQL Workbench.
 
+> **ℹ️ AI output varies.** The wording, number of steps, and SQL the assistant generates will differ from the screenshots. This is expected — focus on the overall flow, not the exact details.
+
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Connect to the Database and Load the Cricket Statistics Dataset</h3>
@@ -119,7 +121,7 @@ The assistant builds a structured **Todo List** and starts working through it, o
 
 <img src="images/T2S-step3-1.png" width="800"/>
 
-- **Todo List header (a).** Shows how many steps are complete. Here, 2 of 9.
+- **Todo List header (a).** Shows how many steps are complete. Here, 2 of 9 (your run may show a different total).
 - **Completed step (b).** A green check marks a finished step. Step 2, *Retrieve column metadata for all identified cricket tables*, is done.
 - **In-progress step (c).** A spinning icon marks the step that is running now.
 - **Queued steps (d).** The remaining steps wait their turn. Each step's output feeds the next one.
@@ -128,7 +130,7 @@ The assistant builds a structured **Todo List** and starts working through it, o
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Follow the Agent's Schema Analysis</h3>
 
-At 4 of 9 steps, the agent stops to look at the schema more closely. It tells you what it found: the batting tables do not have a country column. It then explains how it plans to deal with that before it writes any SQL.
+At around step 4, the agent stops to look at the schema more closely. It tells you what it found: the batting tables do not have a country column. It then explains how it plans to deal with that before it writes any SQL.
 
 <img src="images/T2S-step4-1.png" width="800"/>
 
@@ -138,11 +140,11 @@ At 4 of 9 steps, the agent stops to look at the schema more closely. It tells yo
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Review the Generated SQL</h3>
 
-When all 9 steps are complete, the assistant shows the SQL in a highlighted code block with a note and a short explanation.
+When all steps are complete, the assistant shows the SQL in a highlighted code block with a note and a short explanation.
 
 <img src="images/T2S-step5-1.png" width="800"/>
 
-- **SQL code block (a).** A 74-line Db2 query. It starts with a `WITH all_formats AS (…)` common table expression that combines the ODI, Test, and T20 batting tables. The toolbar has copy and open-in-workbench icons.
+- **SQL code block (a).** A multi-line Db2 query. It starts with a `WITH all_formats AS (…)` common table expression that combines the ODI, Test, and T20 batting tables. The toolbar has copy and open-in-workbench icons.
 - **NOTE (b).** The assistant says plainly that the batting tables have no country column. Read this before you run the query so you know what to expect.
 - **Query logic summary (c).** Three bullets explain the approach: `UNION ALL` merges the three batting tables, `ROW_NUMBER()` partitioned by format ranks the top 5 run-scorers, and a `LEFT JOIN` with a `CASE` expression compares each player to the country average.
 
@@ -158,7 +160,7 @@ The code block shows a short preview. Click **Show more (a)** to see the whole q
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 7 — Read the Full Query</h3>
 
-With the block expanded, you can read all 74 lines. The first section selects from `DB2DEMO.ODI_BATTING`, the second from `DB2DEMO.TEST_BATTING`, and the third from `DB2DEMO.T20_BATTING`.
+With the block expanded, you can read the full query. The first section selects from `DB2DEMO.ODI_BATTING`, the second from `DB2DEMO.TEST_BATTING`, and the third from `DB2DEMO.T20_BATTING`.
 
 <img src="images/T2S-step7-1.png" width="800"/>
 
@@ -174,7 +176,7 @@ When you are happy with the SQL, click **Open in workbench (a)**, the first icon
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 9 — Or Copy the SQL to the Clipboard</h3>
 
-To use the SQL somewhere else, such as another SQL editor, notebook, or IDE, click **Copy to clipboard (a)**, the second icon. This copies the full 74-line query so you can change it before you run it.
+To use the SQL somewhere else, such as another SQL editor, notebook, or IDE, click **Copy to clipboard (a)**, the second icon. This copies the full query so you can change it before you run it.
 
 <img src="images/T2S-step9-1.png" width="800"/>
 
@@ -186,7 +188,7 @@ The SQL Workbench shows the generated query in the editor, and the AI assistant 
 
 <img src="images/T2S-step10-1.png" width="800"/>
 
-- **SQL editor (a).** The complete 74-line query, with syntax highlighting. Check that the database selector shows the database you expect.
+- **SQL editor (a).** The complete query, with syntax highlighting. Check that the database selector shows the database you expect.
 - **AI Assistant panel (b).** The chat, including the agent's notes and explanation, stays visible so you can compare it with the query while you edit.
 
 ---
