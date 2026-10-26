@@ -94,6 +94,7 @@ Before the exercises, you set up your environment and connect Db2 Genius Hub to 
 - [Space Management with AI](05-01-space-management.md) 🎯 *Step 6*
 - [WLM Queuing](05-02-wlm-queuing.md) 🎯 *Step 7*
 - [Text2SQL](05-03-text2sql.md) 🎯 *Step 8*
+- [Query Tuning](05-04-query-tuner.md) 🎯 *Step 9*
 
 <h2 style="padding-left:14px; border-left:6px solid #1D9E75;">Accessing Your Lab Environment</h2>
 
