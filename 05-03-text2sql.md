@@ -40,7 +40,7 @@ Before you ask any questions, connect the simulator to the database and load the
 
 4. Click **Test Connection**. When the connection works, a green **Connected** badge appears at the top right. Do not continue until it is green.
 
-   <img src="images/SIM-db-creds.png" width="500"/>
+   <img src="images/SIM-db-creds-demo_col.png" width="500"/>
 
 5. Click the **Simulator** tab **(b)**. Check that the green **Connected** badge **(a)** is showing. Data can only be loaded when it is green.
 
