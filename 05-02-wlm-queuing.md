@@ -24,7 +24,7 @@ With the IBM Db2 Genius Hub AI assistant, you can troubleshoot the bottleneck si
 
 2. You do not need to load data. The `TPCH1`, `TPCH2` and `TPCH3` schemas are already loaded in `demo_col`, so skip **Load Data**. `TPCH1` holds the 1 GB dataset.
 
-3. Click the **WLM Queuing** dropdown. If you are running on a non-warehouse Db2 instance, review the prerequisite setup steps shown before creating the database you plan to use for the simulation.
+3. Click the **WLM Queuing** dropdown. The `db2inst1` instance and `demo_col` database have already been set up for this scenario — no prerequisite steps are needed.
 
    <img src="images/WLM-step0-5.png" width="800"/>
 
