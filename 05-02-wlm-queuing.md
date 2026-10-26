@@ -152,6 +152,14 @@ The assistant autonomously runs its investigation. Observe the **Todo List** as 
 
    <img src="images/WLM-step9-1.png" width="800"/>
 
+---
+
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 10 — Stop the Scenario</h3>
+
+Return to the Agentic AI Simulator at `http://localhost:3000`, scroll to the **Sort Memory** simulator section, and click **Clean Up** to stop the scenario.
+
+<img src="images/WLM-step10-1.png" width="800"/>
+
 > ✅ **Task complete.** You have successfully diagnosed and resolved WLM queuing using the Agentic AI Assistant in IBM Db2 Genius Hub.
 
 | Action | What You Did |
