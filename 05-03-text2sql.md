@@ -52,7 +52,7 @@ Before you ask any questions, connect the simulator to the database and load the
    | **Supply Chain Data (d)** | Products, inventory, orders, and shipments. |
    | **TPC-H Benchmark (e)** | Suppliers, customers, orders, and parts, for complex analytical queries. |
 
-3. Click **Load Data (f)** next to **Cricket Statistics**. When prompted for a schema name, enter `DB2DEMO` in upper case.
+3. Click **Load Data (f)** next to **Cricket Statistics**. When prompted for a schema name, enter `DB2DEMO` in upper case. Schema names in Db2 are case-sensitive — if the schema is wrong, the query will fail.
 
    <img src="images/T2S-step0-1.png" width="800"/>
 
@@ -159,8 +159,6 @@ The code block shows a short preview. Click **Show more (a)** to see the whole q
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 7 — Read the Full Query</h3>
 
 With the block expanded, you can read all 74 lines. The first section selects from `DB2DEMO.ODI_BATTING`, the second from `DB2DEMO.TEST_BATTING`, and the third from `DB2DEMO.T20_BATTING`.
-
-> **ℹ️ Note:** If the schema name is not `DB2DEMO`, the query will fail. Schema names in Db2 are case-sensitive — make sure the schema is entered as `DB2DEMO` in upper case.
 
 <img src="images/T2S-step7-1.png" width="800"/>
 
