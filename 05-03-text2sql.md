@@ -206,13 +206,11 @@ Click the arrow **(a)** next to **Run all** to see the run options. For a single
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 12 — Review the Results</h3>
 
-The result panel opens below the editor with the 15 rows the query returned. The columns are `PLAYER`, `COUNTRY`, `FORMAT`, `TOTAL_RUNS`, `MATCHES`, `CENTURIES`, and `CONSISTENCY_RATIO`.
+The result panel opens below the editor with the rows the query returned. The columns and row count depend on the SQL the assistant generated.
 
 <img src="images/T2S-step12-1.png" width="800"/>
 
-- **Result panel (a).** Shows *Total: 15* and a green success indicator. For example: *SR Tendulkar (INDIA), 18,426 ODI runs, 463 matches, 49 centuries*.
-
-> **ℹ️ Note:** The `COUNTRY` column shows `<country>` placeholder values. This is expected. The assistant told you in Step 5 that the batting tables do not contain a country column.
+- **Result panel (a).** Shows a green success indicator and the query results. For example: *SR Tendulkar, 18,426 ODI runs, 463 matches, 49 centuries*.
 
 ---
 
