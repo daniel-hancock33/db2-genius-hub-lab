@@ -24,7 +24,7 @@ Before you ask any questions, connect the simulator to the database and load the
 
 2. Connect the simulator to the `demo_col` database. Click **Connect DB** in the top-right corner.
 
-   <img src="images/SIM-connect-DB.png" width="800"/>
+   <img src="images/gh-sim-connection-demo_col.png" width="800"/>
 
 3. In the **Connect Database** window, enter these details:
 
