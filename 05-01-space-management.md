@@ -300,4 +300,4 @@ Check again whether SIMULATOR.REORG_F1_TEST still needs a reorg
 
 ---
 
-🎯 **TechXchange Quick Path — Step 6 of 8:** **[← AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ WLM Queuing](05-02-wlm-queuing.md)**
+🎯 **TechXchange Quick Path — Step 6 of 9:** **[← AI Configuration and Event Monitors](02-05-ai-configuration.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ WLM Queuing](05-02-wlm-queuing.md)**

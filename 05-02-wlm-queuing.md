@@ -174,4 +174,4 @@ Return to the Agentic AI Simulator at `http://localhost:3000`, scroll to the **S
 
 ---
 
-🎯 **TechXchange Quick Path — Step 7 of 8:** **[← Space Management with AI](05-01-space-management.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Text2SQL](05-03-text2sql.md)**
+🎯 **TechXchange Quick Path — Step 7 of 9:** **[← Space Management with AI](05-01-space-management.md)** &nbsp;&nbsp;|&nbsp;&nbsp; **[→ Text2SQL](05-03-text2sql.md)**
