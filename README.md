@@ -38,6 +38,7 @@ Trigger performance scenarios and see how the AI service detects and resolves is
 - [Space Management with AI](05-01-space-management.md) 🎯 *Step 6*
 - [WLM Queuing](05-02-wlm-queuing.md) 🎯 *Step 7*
 - [Text2SQL](05-03-text2sql.md) 🎯 *Step 8*
+- [Query Tuning](05-04-query-tuner.md) 🎯 *Step 9*
 
 ---
 
@@ -45,7 +46,7 @@ Trigger performance scenarios and see how the AI service detects and resolves is
 
 Start with the [Introduction](00-introduction.md) and follow each link in order — every page has a **← Previous | → Next** navigation footer to guide you through the lab.
 
-> **🎯 TechXchange Quick Path** — Short on time? To complete the three featured exercises, follow these pages in order:
+> **🎯 TechXchange Quick Path** — Short on time? To complete the four featured exercises, follow these pages in order:
 > 1. [The Setup](01-setup.md)
 > 2. [Using the Guacamole Desktop](01a-guacamole.md)
 > 3. [Login and Repository Setup](02-01-login-and-repo.md)
@@ -54,9 +55,10 @@ Start with the [Introduction](00-introduction.md) and follow each link in order 
 > 6. [Space Management with AI](05-01-space-management.md)
 > 7. [WLM Queuing](05-02-wlm-queuing.md)
 > 8. [Text2SQL](05-03-text2sql.md)
+> 9. [Query Tuning](05-04-query-tuner.md)
 >
 > **How to navigate**
-> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 8*). It takes you straight to the next required page and skips the rest.
+> - **Follow the Quick Path.** At the bottom of each page listed above, use the **🎯 TechXchange Quick Path** line (*Step N of 9*). It takes you straight to the next required page and skips the rest.
 > - **Ignore the regular "← Previous | → Next" links** at the bottom of the page for now. They walk through the full lab in order, including pages you do not need for the three featured exercises.
 > - **Finished early?** After Text2SQL, go back and complete the other pages (Interface Tour, Monitor Dashboard, Drill-Down, Alerts and Jobs, and so on) using the regular "→ Next" links. They are optional background and build on one another, so work through them in order.
 
