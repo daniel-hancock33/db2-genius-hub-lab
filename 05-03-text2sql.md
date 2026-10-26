@@ -10,11 +10,39 @@ Use the Db2 Genius Hub AI assistant to turn plain-English questions into product
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Load the Cricket Statistics Dataset</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 0 — Connect to the Database and Load the Cricket Statistics Dataset</h3>
 
-Before you ask any questions, load a dataset into Db2. Text2SQL needs tables to read.
+Before you ask any questions, connect the simulator to the database and load the cricket dataset into Db2. Text2SQL needs tables to read.
 
-1. In the Agentic AI Simulator at `http://localhost:3000`, click the **Simulator** tab **(b)**. Check that the green **Connected** badge **(a)** is showing. Data can only be loaded when it is green.
+1. Open the Agentic AI Simulator. It runs on the lab VM, so open it in **Firefox inside the Guacamole desktop**, not in a browser on your own laptop.
+
+   1. In the Guacamole desktop, switch to **Firefox**. If you cannot see it, click **Activities** (top-left corner) and click **Firefox** in the dash.
+   2. Click the **+** button in the Firefox tab bar to open a new tab.
+   3. In the address bar, type `http://localhost:3000` and press **Enter**.
+
+   > **ℹ️ Tip:** Keep the Lab Guide in one tab and the simulator in another, and click the tabs to switch between them.
+
+2. Connect the simulator to the `demo_col` database. Click **Connect DB** in the top-right corner.
+
+   <img src="images/SIM-connect-DB.png" width="800"/>
+
+3. In the **Connect Database** window, enter these details:
+
+   | Field | Value |
+   |---|---|
+   | Host | `localhost` |
+   | Database | `demo_col` |
+   | User | `db2demo` |
+   | Password | `Db2ghPassw0rd#1` |
+   | Port | `25010` |
+
+   Leave **Enable SSL Connection** unchecked.
+
+4. Click **Test Connection**. When the connection works, a green **Connected** badge appears at the top right. Do not continue until it is green.
+
+   <img src="images/SIM-db-creds.png" width="500"/>
+
+5. Click the **Simulator** tab **(b)**. Check that the green **Connected** badge **(a)** is showing. Data can only be loaded when it is green.
 
 2. Under the **Text2SQL — Natural Language to SQL** card, three datasets are available:
 
@@ -110,7 +138,7 @@ The code block shows a short preview. Click **Show more (a)** to see the whole q
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 7 — Read the Full Query</h3>
 
-With the block expanded, you can read all 74 lines. The first section selects from `DB2INST1.ODI_BATTING`, the second from `DB2INST1.TEST_BATTING`, and the third from `DB2INST1.T20_BATTING`.
+With the block expanded, you can read all 74 lines. The first section selects from `DB2DEMO.ODI_BATTING`, the second from `DB2DEMO.TEST_BATTING`, and the third from `DB2DEMO.T20_BATTING`.
 
 <img src="images/T2S-step7-1.png" width="800"/>
 
@@ -173,7 +201,7 @@ If the same table name exists in more than one schema, the agent pauses and asks
 <img src="images/T2S-step13-1.png" width="800"/>
 
 - **Paused step (a).** The *Design CTE structure* step shows a spinning icon. The agent has stopped because it cannot resolve the ambiguity on its own.
-- **Ambiguous Table Name Detected (b).** *"The table name 'ODI_BATTING' exists in multiple schemas: CRICKER, DB2INST1. Please specify which schema you want to use."*
+- **Ambiguous Table Name Detected (b).** *"The table name 'ODI_BATTING' exists in multiple schemas: CRICKER, DB2DEMO. Please specify which schema you want to use."*
 
 > **ℹ️ Note:** This prompt only appears when the same table name exists in more than one accessible schema. If your database has a single schema, the step is skipped.
 
@@ -186,12 +214,12 @@ Type your answer in the chat and send it.
 **You answer:**
 
 ```
-I want to use DB2INST1 schema.
+I want to use DB2DEMO schema.
 ```
 
 <img src="images/T2S-step14-1.png" width="800"/>
 
-- **Schema selection (a).** The agent carries on with the rest of its Todo List. It adds the `DB2INST1.` prefix to every table (for example `DB2INST1.ODI_BATTING`) and produces a fully qualified SQL statement that is ready to run.
+- **Schema selection (a).** The agent carries on with the rest of its Todo List. It adds the `DB2DEMO.` prefix to every table (for example `DB2DEMO.ODI_BATTING`) and produces a fully qualified SQL statement that is ready to run.
 
 > ✅ **Task complete.** You have used the Agentic AI Assistant in IBM Db2 Genius Hub to turn a complex plain-English question into working Db2 SQL.
 
