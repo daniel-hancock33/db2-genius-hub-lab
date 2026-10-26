@@ -213,6 +213,8 @@ If the same table name exists in more than one schema, the agent pauses and asks
 
 Type your answer in the chat and send it.
 
+> **ℹ️ Note:** Schema names in Db2 are case-sensitive. Enter `DB2DEMO` in upper case exactly as shown.
+
 **You answer:**
 
 ```
