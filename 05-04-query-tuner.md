@@ -4,7 +4,7 @@ Take a slow TPC-H query, ask the Db2 Genius Hub AI assistant to tune it, apply t
 
 **The task.** Open the SQL Workbench, run a slow correlated subquery, ask the assistant to tune it, then apply the index it recommends and optionally the rewritten query. Confirm the speedup and clean up.
 
-**The story.** The query looks up the most recent line item for each of 50 suppliers. Without an index, Db2 scans the `LINEITEM` table once per supplier — 50 full scans. The assistant identifies the bottleneck, recommends a query rewrite and a composite index, and explains why each helps. After you apply the index, the query returns in well under a second.
+**The story.** The query looks up the most recent line item for each of 50 suppliers. Without an index, Db2 scans the `LINEITEM` table once per supplier — 50 full scans taking about 4 minutes. The assistant identifies the bottleneck, recommends a query rewrite and a composite index, and explains why each helps. The rewritten query brings the runtime down to about 16 seconds.
 
 > **ℹ️ AI output varies.** The exact recommendations, query rewrites, and index names the assistant generates will differ from the screenshots. Focus on the overall approach.
 
@@ -77,7 +77,7 @@ WHERE  S.S_SUPPKEY BETWEEN 1 AND 50
 ORDER BY S.S_SUPPKEY;
 ```
 
-> **Expected:** 50 rows, after a noticeable wait (about 30 seconds). Write down the **Runtime** from the Execution log — you will compare it in Step 6.
+> **Expected:** 50 rows, after a noticeable wait (about 4 minutes). Write down the **Runtime** from the Execution log — you will compare it in Step 6.
 
 > **ℹ️ Note:** If it finishes much faster or slower than you want, change the upper bound in `BETWEEN 1 AND 50` — a smaller number shortens the wait, a larger number lengthens it.
 
@@ -183,7 +183,7 @@ WHERE  S.S_SUPPKEY BETWEEN 1 AND 50
 ORDER BY S.S_SUPPKEY;
 ```
 
-> **Expected:** the same 50 rows, now returned in well under a second. Compare the **Runtime** with Step 2.
+> **Expected:** the same 50 rows. The original query with the index in place still takes around 244 seconds — the index alone does not eliminate the correlated scans. Compare the **Runtime** with Step 2.
 
 **Rewritten query (assistant's primary recommendation):**
 
@@ -203,7 +203,7 @@ WHERE S.S_SUPPKEY BETWEEN 1 AND 50
 ORDER BY S.S_SUPPKEY;
 ```
 
-> **Expected:** the same 50 rows, also fast. The rewritten query eliminates the correlated subquery entirely.
+> **Expected:** the same 50 rows, returned in about 16 seconds. The rewrite eliminates the 50 correlated scans — this is the real improvement.
 
 ---
 
