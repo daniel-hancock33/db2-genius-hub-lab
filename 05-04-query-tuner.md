@@ -1,10 +1,12 @@
 <h1 style="padding-left:16px; border-left:8px solid #378ADD;">Query Tuning with the AI Assistant</h1>
 
-Take a slow TPC-H query, ask the Db2 Genius Hub AI assistant to tune it, apply the index it recommends, and watch the same query go from about 30 seconds to under a millisecond. Then clean up so the exercise can be repeated.
+Take a slow TPC-H query, ask the Db2 Genius Hub AI assistant to tune it, apply the recommendations, and watch the query speed up dramatically. Then clean up so the exercise can be repeated.
 
-**The task.** Open the SQL Workbench, run a slow correlated subquery, ask the assistant to tune it, apply the recommended index, and confirm the speedup. Then drop the index to leave the database in its original state.
+**The task.** Open the SQL Workbench, run a slow correlated subquery, ask the assistant to tune it, then apply the index it recommends and optionally the rewritten query. Confirm the speedup and clean up.
 
-**The story.** The query looks up the most recent line item for each of 50 suppliers. Without an index, Db2 scans the `LINEITEM` table once per supplier — 50 full scans. The assistant identifies the bottleneck, recommends a composite index that covers the `WHERE`, `ORDER BY`, and `SELECT` columns, and explains why it helps. After you create the index, the same query returns in under a millisecond.
+**The story.** The query looks up the most recent line item for each of 50 suppliers. Without an index, Db2 scans the `LINEITEM` table once per supplier — 50 full scans. The assistant identifies the bottleneck, recommends a query rewrite and a composite index, and explains why each helps. After you apply the index, the query returns in well under a second.
+
+> **ℹ️ AI output varies.** The exact recommendations, query rewrites, and index names the assistant generates will differ from the screenshots. Focus on the overall approach.
 
 ---
 
@@ -104,52 +106,69 @@ ORDER BY S.S_SUPPKEY
 
 > **Expected:** the assistant replies with:
 > - **Performance impact:** the correlated subquery runs once per supplier row (50 times), causing repeated scans of `TPCH1.LINEITEM`.
-> - **Index recommendation:** a composite index on `LINEITEM`, the `CREATE INDEX` statement, an explanation of why it helps, and an estimated improvement.
-> - **Statistics update:** `RUNSTATS` commands to run before creating the index.
+> - **Primary recommendation:** a query rewrite using a `LEFT OUTER JOIN` with `ROW_NUMBER()` to eliminate the correlated execution.
+> - **Index recommendation:** a composite index on `LINEITEM(L_SUPPKEY, L_SHIPDATE DESC)` to speed up both the original query and the rewritten version.
+> - **Alternative:** a `LATERAL` join option for Db2 11.1+.
 
 ---
 
 <h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 4 — Review the Recommendation</h3>
 
-Scroll through the reply. The index the assistant recommends looks like this:
+Scroll through the reply. The assistant typically gives three recommendations:
+
+**1. Query rewrite (primary)** — replaces the correlated subquery with a `LEFT OUTER JOIN` and `ROW_NUMBER()`:
 
 ```sql
-CREATE INDEX IDX2611041339480 ON "TPCH1"."LINEITEM"
-  ("L_SUPPKEY" ASC, "L_SHIPDATE" DESC, "L_EXTENDEDPRICE" ASC)
-  ALLOW REVERSE SCANS
-  COLLECT SAMPLED DETAILED STATISTICS;
+SELECT S.S_SUPPKEY,
+       S.S_NAME,
+       L.L_EXTENDEDPRICE AS LATEST_LINE_PRICE
+FROM TPCH1.SUPPLIER S
+LEFT OUTER JOIN (
+    SELECT L_SUPPKEY,
+           L_EXTENDEDPRICE,
+           ROW_NUMBER() OVER (PARTITION BY L_SUPPKEY ORDER BY L_SHIPDATE DESC) AS RN
+    FROM TPCH1.LINEITEM
+    WHERE L_SUPPKEY BETWEEN 1 AND 50
+) L ON L.L_SUPPKEY = S.S_SUPPKEY AND L.RN = 1
+WHERE S.S_SUPPKEY BETWEEN 1 AND 50
+ORDER BY S.S_SUPPKEY;
 ```
 
-The assistant explains that the index covers the three columns the subquery uses:
+This eliminates the 50 separate subquery executions and allows Db2 to use a single join.
 
-- `L_SUPPKEY` is the `WHERE` filter.
-- `L_SHIPDATE` (descending) is the `ORDER BY`.
-- `L_EXTENDEDPRICE` is the selected column — Db2 can read the latest price directly from the index without touching the table.
+**2. Composite index** — covers the join predicate and `ORDER BY`:
 
-> **ℹ️ Note:** The index name contains a timestamp and is different on every run. Use the statement the assistant gives you, not the example above.
+```sql
+CREATE INDEX IDX_LINEITEM_SUPPKEY_SHIPDATE
+ON TPCH1.LINEITEM(L_SUPPKEY, L_SHIPDATE DESC);
+```
+
+**3. Alternative LATERAL join** — keeps the correlated structure but may be optimized better by Db2 11.1+.
+
+> **ℹ️ Note:** The assistant may give a different index name or column list. Use the statement it gives you.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Create the Recommended Index</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 5 — Create the Index</h3>
 
-The assistant suggests refreshing statistics first. In the **SQL Workbench**, run these two statements one at a time:
+In the assistant's reply, click **Open in workbench** on the `CREATE INDEX` block. The statement opens in the SQL Workbench. Select it and click **Run selected**.
 
 ```sql
-CALL SYSPROC.ADMIN_CMD('RUNSTATS ON TABLE TPCH1.SUPPLIER WITH DISTRIBUTION AND DETAILED INDEXES ALL');
-CALL SYSPROC.ADMIN_CMD('RUNSTATS ON TABLE TPCH1.LINEITEM WITH DISTRIBUTION AND DETAILED INDEXES ALL');
+CREATE INDEX IDX_LINEITEM_SUPPKEY_SHIPDATE
+ON TPCH1.LINEITEM(L_SUPPKEY, L_SHIPDATE DESC);
 ```
 
-Then create the index. In the assistant's reply, click **Open in workbench** on the `CREATE INDEX` block. The statement opens in the SQL Workbench with your own index name. Select the statement and click **Run selected**.
+> **Expected:** the statement succeeds.
 
-> **Expected:** all three statements succeed.
-
-> **ℹ️ Note:** The index is created in your connection's schema (`DB2DEMO`). Note the schema — you will need it in Step 8.
+> **ℹ️ Note:** The index is created in your connection's schema (`DB2DEMO`). You will need it in Step 8.
 
 ---
 
-<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Re-Run the Query and Compare</h3>
+<h3 style="padding-left:14px; border-left:5px solid #EF9F27;">Step 6 — Re-Run and Compare</h3>
 
-Run the same query from Step 2 again:
+Run the original query from Step 2 again and compare the runtime. Then optionally run the rewritten query from Step 4 and compare that too.
+
+**Original query (with index now in place):**
 
 ```sql
 SELECT S.S_SUPPKEY,
@@ -164,7 +183,27 @@ WHERE  S.S_SUPPKEY BETWEEN 1 AND 50
 ORDER BY S.S_SUPPKEY;
 ```
 
-> **Expected:** the same 50 rows, now returned in well under a second. Compare the **Runtime** with the one you noted in Step 2.
+> **Expected:** the same 50 rows, now returned in well under a second. Compare the **Runtime** with Step 2.
+
+**Rewritten query (assistant's primary recommendation):**
+
+```sql
+SELECT S.S_SUPPKEY,
+       S.S_NAME,
+       L.L_EXTENDEDPRICE AS LATEST_LINE_PRICE
+FROM TPCH1.SUPPLIER S
+LEFT OUTER JOIN (
+    SELECT L_SUPPKEY,
+           L_EXTENDEDPRICE,
+           ROW_NUMBER() OVER (PARTITION BY L_SUPPKEY ORDER BY L_SHIPDATE DESC) AS RN
+    FROM TPCH1.LINEITEM
+    WHERE L_SUPPKEY BETWEEN 1 AND 50
+) L ON L.L_SUPPKEY = S.S_SUPPKEY AND L.RN = 1
+WHERE S.S_SUPPKEY BETWEEN 1 AND 50
+ORDER BY S.S_SUPPKEY;
+```
+
+> **Expected:** the same 50 rows, also fast. The rewritten query eliminates the correlated subquery entirely.
 
 ---
 
@@ -180,7 +219,7 @@ WHERE  TABSCHEMA = 'TPCH1'
   AND  COLNAMES LIKE '+L_SUPPKEY%';
 ```
 
-> **Expected:** one row — `DB2DEMO`, the generated index name, and `+L_SUPPKEY-L_SHIPDATE+L_EXTENDEDPRICE`.
+> **Expected:** one row — `DB2DEMO`, `IDX_LINEITEM_SUPPKEY_SHIPDATE`, `+L_SUPPKEY-L_SHIPDATE`.
 
 ---
 
@@ -189,7 +228,7 @@ WHERE  TABSCHEMA = 'TPCH1'
 Drop the index so the exercise can be run again. Substitute the index name from the Step 7 result.
 
 ```sql
-DROP INDEX DB2DEMO.<index_name_from_step_7>;
+DROP INDEX DB2DEMO.IDX_LINEITEM_SUPPKEY_SHIPDATE;
 ```
 
 Then refresh the statistics:
@@ -222,10 +261,10 @@ WHERE  TABSCHEMA = 'TPCH1'
 |---|---|
 | **Confirmed the baseline** | Verified no index on `L_SUPPKEY` existed, then ran the slow query and noted the runtime |
 | **Asked the assistant** | Pasted the query and asked for tuning recommendations |
-| **Reviewed the plan** | Read the assistant's explanation of the correlated subquery bottleneck and the composite index it recommended |
-| **Applied the fix** | Ran RUNSTATS, then created the index from the assistant's reply |
-| **Confirmed the speedup** | Re-ran the query and compared runtimes |
-| **Cleaned up** | Dropped the index and refreshed statistics so the exercise can be repeated |
+| **Reviewed the plan** | Read the assistant's query rewrite, index recommendation, and explanation |
+| **Applied the fix** | Created the composite index from the assistant's reply |
+| **Confirmed the speedup** | Re-ran the original and rewritten queries and compared runtimes |
+| **Cleaned up** | Dropped the index so the exercise can be repeated |
 
 ---
 
